@@ -16,7 +16,7 @@ import useStyles from "./styles";
 export default function Header() {
   const classes = useStyles();
   return (
-    <AppBar className={classes.root} position="fixed" elevation={0}>
+    <AppBar className={classes.root} position="static" elevation={0}>
       <Toolbar>
         <Grid container alignItems="center">
           <Grid container row alignItems="center">

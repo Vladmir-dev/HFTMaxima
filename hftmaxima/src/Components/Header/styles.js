@@ -3,13 +3,14 @@ export default makeStyles((theme) => ({
   div: {
     "& .MuiTypography-root": {
       margin: theme.spacing(2),
+      fontWeight: "600",
       "&:hover": {
         color: "#9bc400",
         borderBottom: "1px solid #9bc400",
         paddingBottom: "-6px",
       },
       color: "silver",
-      textDecorationLine:'4px',
+      textDecorationLine: "4px",
     },
     display: "flex",
     alignItems: "center",
@@ -38,7 +39,7 @@ export default makeStyles((theme) => ({
   },
   root: {
     background: "#000",
-    borderBottom:'2px solid #8e8e90'
+    borderBottom: "2px solid #333",
   },
   divT: {
     "& .MuiTypography-root": {
@@ -68,19 +69,19 @@ export default makeStyles((theme) => ({
       left: " 50px",
       marginLeft: "3em",
     },
-    '& .MuiSvgIcon-root':{
-        marginRight:theme.spacing(1),
-        marginLeft:theme.spacing(1),
+    "& .MuiSvgIcon-root": {
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
     },
-    '& .MuiIconButton-label':{
-        background:'#9bc400',
-        borderRadius:'40px',
-        '& .MuiSvgIcon-root':{
-            color:'#fff',
-        },
-    }
+    "& .MuiIconButton-label": {
+      background: "#9bc400",
+      borderRadius: "40px",
+      "& .MuiSvgIcon-root": {
+        color: "#fff",
+      },
+    },
   },
-  gridMid:{
-      alignItems:'center'
-  }
+  gridMid: {
+    alignItems: "center",
+  },
 }));
