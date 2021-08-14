@@ -6,7 +6,6 @@ export default makeStyles((theme) => ({
     margin: "2em",
   },
   gridInner: {
-    flexDirection: "column",
     marginLeft: "5em",
     flexDirection: "column",
     backgroundImage: `url(${image1})`,
@@ -66,5 +65,20 @@ export default makeStyles((theme) => ({
       marginBlockEnd: "1em",
     },
     alignItems: "center",
+  },
+  gridCards: {
+    marginLeft: "1em",
+    alignItems: "center",
+    marginTop: "4em",
+    "& .MuiTypography-root": {
+      fontWeight: "bold",
+      marginBottom: theme.spacing(6),
+      lineHeight: "1.5rem",
+      color: "#9bc400",
+    },
+  },
+  gridMiddles: {
+    marginTop: "7em",
+    marginLeft: "5em",
   },
 }));

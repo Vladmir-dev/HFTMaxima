@@ -1,6 +1,5 @@
 import {
   Collapse,
-  Divider,
   List,
   ListItem,
   Typography,
