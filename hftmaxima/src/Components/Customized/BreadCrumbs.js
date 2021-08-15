@@ -13,7 +13,7 @@ export default function BreadCrumbs({ separator }) {
       <Typography variant="subtitle1" component={Link} to="/">
         Tools and Platforms
       </Typography>
-      <Typography variant="subtitle1">HFTMaxima Trading Platform</Typography>
+      <Typography variant="subtitle2">HFTMaxima Trading Platform</Typography>
     </Breadcrumbs>
   );
 }

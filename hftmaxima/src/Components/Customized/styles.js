@@ -44,6 +44,11 @@ export default makeStyles((theme) => ({
     "& .MuiBreadcrumbs-separator": {
       color: "#333",
     },
+    "& .MuiTypography-subtitle1": {
+      "&:hover": {
+        color: "#9bc400",
+      },
+    },
   },
   cardRoot: {
     maxWidth: 280,
@@ -53,20 +58,19 @@ export default makeStyles((theme) => ({
       fontSize: "1rem",
       lineHeight: "26px",
     },
-    
   },
   cardMedia: {
     height: 140,
     backgroundSize: "cover",
-    objectFit:'contain',
+    objectFit: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     alignSelf: "normal",
     marginBottom: "1.875rem",
     width: "100%",
   },
-  cardButton:{
-    marginLeft:'4.2em',
+  cardButton: {
+    marginLeft: "4.2em",
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
       background: theme.palette.background.default,
@@ -75,8 +79,8 @@ export default makeStyles((theme) => ({
       borderRadius: "30px",
       fontSize: " 1.16625rem",
       fontWeight: " 600",
-      paddingRight: '0.8em',
-      paddingLeft: '0.8em',
+      paddingRight: "0.8em",
+      paddingLeft: "0.8em",
       position: "relative",
       display: "inline-block",
       lineHeight: " 26px",
@@ -84,11 +88,11 @@ export default makeStyles((theme) => ({
         color: "#fff",
         background: "#9bc400",
         border: "2px solid #9bc400",
-      }
-    }
+      },
+    },
   },
-  gridC1:{
-    display:'flex',
-    justifyContent:'space-around'
-  }
+  gridC1: {
+    display: "flex",
+    justifyContent: "space-around",
+  },
 }));

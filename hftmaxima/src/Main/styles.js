@@ -81,4 +81,19 @@ export default makeStyles((theme) => ({
     marginTop: "7em",
     marginLeft: "5em",
   },
+  tabs:{
+    marginLeft: "5em",
+  },
+  tabTypo:{
+    "& .MuiTypography-root": {
+      marginRight: theme.spacing(4),
+      fontWeight: "bold",
+      color: "#97979d",
+      marginTop: theme.spacing(4),
+      lineHeight: "1.5rem",
+      display: " block",
+      marginBlockStart: "1em",
+      marginBlockEnd: "1em",
+    }
+  }
 }));

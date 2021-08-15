@@ -36,7 +36,7 @@ export default function Header() {
                 <Typography component={Link} to="/" variant="subtitle2">
                   Top FAQs
                 </Typography>
-                <Typography component={Link} to="/" variant="body1" style={{color:'#fff',fontWeight:'600'}}>
+                <Typography component={Link} to="/" variant="body1">
                   Open New Account
                 </Typography>
               </div>

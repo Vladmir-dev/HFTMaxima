@@ -4,7 +4,9 @@ import BreadCrumbs from "./BreadCrumbs";
 import Lists from "./List";
 import Cards from "./Cards";
 import Middles from "./Middles";
-import Awards from './Awards'
+import Awards from "./Awards";
+import TabContent from "./Tabs";
+import News from "./News";
 export const Customized = {
   Button,
   Input,
@@ -13,4 +15,6 @@ export const Customized = {
   Cards,
   Middles,
   Awards,
+  TabContent,
+  News,
 };

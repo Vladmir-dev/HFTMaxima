@@ -6,11 +6,14 @@ export default makeStyles((theme) => ({
       fontWeight: "600",
       "&:hover": {
         color: "#9bc400",
-        borderBottom: "1px solid #9bc400",
-        paddingBottom: "-6px",
       },
       color: "silver",
-      textDecorationLine: "4px",
+    },
+    "& .MuiTypography-body1": {
+      color:'#fff',
+      "&:hover": {
+        color: "#9bc400",
+      },
     },
     display: "flex",
     alignItems: "center",

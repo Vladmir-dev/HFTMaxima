@@ -6,7 +6,7 @@ import { Customized } from "../Components/Customized/Customized";
 export default function Main() {
   const classes = useStyles();
   return (
-    <Grid container style={{ display: "block" }}>
+    <Grid container style={{ display: "block",marginBottom:'4em' }}>
       <Grid item row style={{ margin: "2em" }}>
         <Customized.BreadCrumbs separator=">" />
       </Grid>
@@ -41,16 +41,55 @@ export default function Main() {
               </Typography>
             </div>
           </Grid>
-          <Grid direction="row" className={classes.gridCards} align="center" styles={{marginBottom:'4em'}}>
+          <Grid
+            direction="row"
+            className={classes.gridCards}
+            align="center"
+            styles={{ marginBottom: "4em" }}
+          >
             <Typography variant="h4">Start Trading Now</Typography>
             <Customized.Cards />
           </Grid>
           <Grid direction="row" className={classes.gridMiddles}>
-              <Customized.Middles styles={{marginBottom:'4em'}}/>
+            <Customized.Middles styles={{ marginBottom: "4em" }} />
           </Grid>
-          <Grid direction="row" className={classes.gridCards} align="center" styles={{marginBottom:'4em'}}>
+          <Grid
+            direction="row"
+            className={classes.gridCards}
+            align="center"
+            styles={{ marginBottom: "4em" }}
+          >
             <Typography variant="h4">Awards Speak Louder Than Words</Typography>
             <Customized.Awards />
+          </Grid>
+          <Grid
+            direction="row"
+            styles={{ marginBottom: "4em" }}
+            className={classes.tabs}
+          >
+            <div className={classes.tabTypo}>
+              <Typography variant="h4" style={{color:'#9bc400'}}>
+                We take trading as seriously as you do
+              </Typography>
+              <Typography variant="subtitle1" style={{color:'#8e8e90'}}>
+                Discover a complete trading experience powered by real traders
+              </Typography>
+            </div>
+            <Grid align='center'>
+            <Customized.TabContent />
+            </Grid>
+          </Grid>
+          <Grid direction="row" className={classes.gridMiddles}>
+            <Customized.News styles={{ marginBottom: "4em" }} />
+          </Grid>
+          <Grid direction="row" className={classes.rowMargin}>
+            <div style={{ marginTop: "4em" }}>
+              <Typography variant="subtitle1" component="p">
+                HFTmaxima Trading Network is brought to you by HFTmaxima company. HFTmaxima is a company that supports or 
+                is supported by the HFTmaxima website application. The HFTmaxima is not a financial adviser but it helps traders
+                get an efficent automated trading experience while maximazing profits.
+              </Typography>
+            </div>
           </Grid>
         </Grid>
       </Grid>

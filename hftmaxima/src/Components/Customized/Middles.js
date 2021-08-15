@@ -8,7 +8,7 @@ export default function Middles() {
       <Middle
         styles={{ marginBottom: "9em" }}
         image={image12}
-        titleTop=" Be an explorer! Explorer the deepth of HFTmaxima"
+        titleTop=" Be an explorer! Explore the deepth of HFTmaxima"
         topSubtitle="Compare the unique features of our platform and discover how each can
             help you enhance your profits"
         titleMiddle="HFTmaxima web "
