@@ -4,7 +4,6 @@ import "./App.css";
 import Header from "../Components/Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Components/Footer/Footer";
-import Login from "../Auth/Login/Login";
 
 function App() {
   return <ThemeProvider theme={theme}>
