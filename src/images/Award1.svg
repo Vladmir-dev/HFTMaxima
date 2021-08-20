@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="234px" height="234px" viewBox="0 0 234 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>standard/180-default/background/ribbon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="standard/234-large/background/ribbon">
+            <g id="standard/180-default/background/ribbon">
+                <g id="ribbon-icon">
+                    <circle id="background" fill="#0E3128" cx="117" cy="117" r="117"></circle>
+                    <g id="icon" transform="translate(65.000000, 50.700000)" fill-rule="nonzero">
+                        <g id="ribbon" transform="translate(0.000000, 58.721000)">
+                            <polygon id="right-green" fill="#40A829" points="104 61.269 86.177 53.794 80.431 72.254 51.87 10.985 75.426 -3.55271368e-14"></polygon>
+                            <polygon id="right-white" fill="#FFFFFF" points="86.177 53.794 104 61.269 75.426 4.97379915e-14 63.648 5.499"></polygon>
+                            <polygon id="left-green" fill="#40A829" points="-7.2475359e-13 61.269 17.823 53.794 23.569 72.254 52.13 10.985 28.574 -3.55271368e-14"></polygon>
+                            <polygon id="left-white" fill="#FFFFFF" points="17.823 53.794 4.33431069e-13 61.269 28.574 4.97379915e-14 40.352 5.499"></polygon>
+                        </g>
+                        <g id="medal" transform="translate(17.550000, 0.975000)">
+                            <circle id="border" fill="#417369" cx="34.45" cy="34.45" r="34.45"></circle>
+                            <circle id="circle" fill="#64A1C6" cx="34.45" cy="34.45" r="27.3"></circle>
+                            <polygon id="star" fill="#FBE89A" points="34.45 18.083 39.273 27.794 50.05 29.341 42.25 36.907 44.096 47.567 34.45 42.536 24.804 47.567 26.65 36.907 18.85 29.341 29.627 27.794"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
