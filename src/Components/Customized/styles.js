@@ -95,17 +95,52 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
   },
-  img:{
-    backgroundRepeat:'no-repeat',
-    backgroundCover:'center',
-    position:'relative',
-    objectFit:'contain',
-    width:'100%',
-    
+  img: {
+    backgroundRepeat: "no-repeat",
+    backgroundCover: "center",
+    position: "relative",
+    objectFit: "contain",
+    width: "100%",
   },
-  menu:{
-    background:theme.palette.background.paper,
-    maxWidth:'50%',
-    color:'#fff',
-  }
+  menu: {
+    background: theme.palette.background.paper,
+    maxWidth: "50%",
+    color: "#fff",
+  },
+  paper: {
+    background: theme.palette.background.paper,
+    width: "75%",
+    height: "50%",
+    borderRadius: "8px",
+  },
+  papergrid1: {
+    marginLeft: "1.5em",
+    margin: theme.spacing(4),
+    "& .MuiTypography-root": {
+      margin: theme.spacing(2),
+      fontWeight: "600",
+      position: "relative",
+      display: " block",
+      lineHeight: "1",
+      color: "#a28089",
+    },
+    "& .MuiTypography-subtitle2": {
+      color: "#9bc400",
+      "&:hover": {
+        color: "#9bc400",
+      },
+    },
+    "& .MuiTypography-caption": {
+      marginTop: "-1em",
+    },
+  },
+  paperdiv: {
+    "& .MuiTypography-subtitle2": {
+      color: "#8D91B4",
+      marginLeft: "-1em",
+      "&:hover": {
+        color: "#8D91B4",
+      },
+    },
+  },
 }));

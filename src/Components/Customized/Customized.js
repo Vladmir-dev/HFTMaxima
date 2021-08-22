@@ -9,7 +9,7 @@ import TabContent from "./Tabs";
 import News from "./News";
 import Carousel from "./Carousel";
 import Images from "./Images";
-
+import MenuPaper from "./MenuPaper";
 export const Customized = {
   Button,
   Input,
@@ -22,6 +22,5 @@ export const Customized = {
   News,
   Carousel,
   Images,
-
-
+  MenuPaper,
 };

@@ -7,23 +7,24 @@ export default makeStyles((theme) => ({
       position: "relative",
       display: " block",
       lineHeight: "1",
+      marginRight: "3em",
       "&:hover": {
         color: "#9bc400",
         paddingBottom: "1em",
         borderBottom: "2px solid #9bc400",
-        transition: '0.5s',
+        transition: "0.5s",
       },
       color: "silver",
     },
     "& .MuiSvgIcon-root": {
-      position:'relative',
-      display:'inline-block',
-      
+      position: "relative",
+      display: "inline-block",
     },
     display: "flex",
     alignItems: "center",
   },
   gridB: {
+    display: "flex",
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
       fontSize: " 1.16625rem",
@@ -39,6 +40,7 @@ export default makeStyles((theme) => ({
       position: "relative",
       lineHeight: " 26px",
       background: "#fff",
+      marginLeft: "0.8em",
       "&:hover": {
         color: "#fff",
         background: "#9bc400",
@@ -51,6 +53,7 @@ export default makeStyles((theme) => ({
       fontWeight: " 600",
       position: "relative",
       lineHeight: " 26px",
+      marginRight: "1.6em",
       "&:hover": {
         color: "#9bc400",
       },
@@ -58,7 +61,7 @@ export default makeStyles((theme) => ({
   },
   root: {
     background: "#000",
-    marginTop:'2em'
+    marginTop: "2em",
   },
   divT: {
     "& .MuiTypography-root": {
@@ -100,8 +103,8 @@ export default makeStyles((theme) => ({
       },
     },
   },
-  gridMid: {
-    alignItems: "center",
+  popper: {
+    margin: "8em auto",
+    marginLeft: "25em",
   },
-  
 }));

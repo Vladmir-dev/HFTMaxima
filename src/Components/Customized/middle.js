@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { Avatar, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Customized } from "./Customized";
@@ -18,11 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridDiv2: {
-    marginBottom: theme.spacing(2),
     color: "silver",
-    "& .MuiTypography-root": {
-      marginBottom: theme.spacing(1),
-    },
   },
   gridContainer: {
     "& .MuiTypography-root": {
@@ -63,13 +59,14 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  Menuimage: {
-    height: "2em",
-    width: "10%",
-    display: "block",
-    backgroundPosition: "center",
-    objectFit: "contain",
-    backgroundRepeat: "no-repeat",
+
+  avatar: {
+    marginTop: "1.1em",
+    "& .MuiAvatar-root": {
+      height: "1.7em",
+      width: "1.7em",
+      display: "inline-block",
+    },
   },
 }));
 
@@ -140,18 +137,20 @@ export function MiddleMid({
     </Grid>
   );
 }
-export function ProductMenuiItem({ titleMiddle, middleSubtitle, image }) {
+export function ProductMenuiItem({ subTitle, captionTitle, icon, image,component,to }) {
   const classes = useStyles();
   return (
     <Grid container spacing={1}>
       <Grid container className={classes.gridContainerInner} direction="row">
-        <Grid direction="column" xs={6}>
-          <img src={image} alt="HFTmaxima web" className={classes.Menuimage} />
+        <Grid item className={classes.avatar} align="center">
+          <Avatar align="center" src={image} alt={icon}>
+            
+          </Avatar>
         </Grid>
-        <Grid direction="column" xs={6}>
+        <Grid item>
           <div className={classes.gridDiv2}>
-            <Typography variant="subtitle2">{titleMiddle}</Typography>
-            <Typography variant="subtitle2">{middleSubtitle}</Typography>
+            <Typography variant="subtitle2" component={component} to={to}>{subTitle}</Typography>
+            <Typography variant="caption" component={component} to={to}>{captionTitle}</Typography>
           </div>
         </Grid>
       </Grid>
