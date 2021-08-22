@@ -27,7 +27,7 @@ export default function Cards() {
         />
       </Grid>
       <Grid item className={classes.gridC}>
-        <Card text="Watch Now" /> 
+        <Card text="Watch Now" />
       </Grid>
     </Grid>
   );

@@ -43,14 +43,14 @@ export default function Lists({ separator }) {
           </ListItem>
           <ListItem className={classes.nested}>
             <Typography variant="body1" component={Link} to="/">
-              HFTmaxima mobile App
+              HFTMaxima mobile App
             </Typography>
           </ListItem>
         </List>
       </Collapse>
       <ListItem divider onClick={handleClick1}>
         <Typography variant="body1" component={Link} to="/">
-          HFTmaxima Trading Platforms
+          HFTMaxima Trading Platforms
         </Typography>
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
@@ -58,17 +58,17 @@ export default function Lists({ separator }) {
         <List component="div" disablePadding>
           <ListItem className={classes.nested}>
             <Typography variant="body1" component={Link} to="/">
-              HFTmaxima Desktop
+              HFTMaxima Desktop
             </Typography>
           </ListItem>
           <ListItem className={classes.nested}>
             <Typography variant="body1" component={Link} to="/">
-              HFTmaxima web
+              HFTMaxima web
             </Typography>
           </ListItem>
           <ListItem className={classes.nested}>
             <Typography variant="body1" component={Link} to="/">
-              HFTmaxima Mobile App
+              HFTMaxima Mobile App
             </Typography>
           </ListItem>
         </List>

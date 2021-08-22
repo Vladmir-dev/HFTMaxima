@@ -41,7 +41,7 @@ export default makeStyles((theme) => ({
     },
   },
   root: {
-    background: "#000",
+    background: "#00010a",
     borderBottom: "2px solid #333",
   },
   divT: {
