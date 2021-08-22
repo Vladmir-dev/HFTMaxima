@@ -95,4 +95,17 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
   },
+  img:{
+    backgroundRepeat:'no-repeat',
+    backgroundCover:'center',
+    position:'relative',
+    objectFit:'contain',
+    width:'100%',
+    
+  },
+  menu:{
+    background:theme.palette.background.paper,
+    maxWidth:'50%',
+    color:'#fff',
+  }
 }));

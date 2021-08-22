@@ -7,6 +7,9 @@ import Middles from "./Middles";
 import Awards from "./Awards";
 import TabContent from "./Tabs";
 import News from "./News";
+import Carousel from "./Carousel";
+import Images from "./Images";
+
 export const Customized = {
   Button,
   Input,
@@ -17,4 +20,8 @@ export const Customized = {
   Awards,
   TabContent,
   News,
+  Carousel,
+  Images,
+
+
 };

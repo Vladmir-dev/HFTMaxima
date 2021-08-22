@@ -1,5 +1,6 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import { Link } from "react-router-dom";
 import { Customized } from "./Customized";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,6 +15,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(6),
     "& .MuiTypography-root": {
       marginBottom: theme.spacing(2),
+    },
+  },
+  gridDiv2: {
+    marginBottom: theme.spacing(2),
+    color: "silver",
+    "& .MuiTypography-root": {
+      marginBottom: theme.spacing(1),
     },
   },
   gridContainer: {
@@ -54,6 +62,14 @@ const useStyles = makeStyles((theme) => ({
         border: "2px solid #9bc400",
       },
     },
+  },
+  Menuimage: {
+    height: "2em",
+    width: "10%",
+    display: "block",
+    backgroundPosition: "center",
+    objectFit: "contain",
+    backgroundRepeat: "no-repeat",
   },
 }));
 
@@ -118,7 +134,25 @@ export function MiddleMid({
             </Typography>
             <Typography variant="subtitle2">{middleSubtitle}</Typography>
           </div>
-          <Customized.Button text="Learn more" />
+          <Customized.Button text="Learn more" component={Link} to="/news" />
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+}
+export function ProductMenuiItem({ titleMiddle, middleSubtitle, image }) {
+  const classes = useStyles();
+  return (
+    <Grid container spacing={1}>
+      <Grid container className={classes.gridContainerInner} direction="row">
+        <Grid direction="column" xs={6}>
+          <img src={image} alt="HFTmaxima web" className={classes.Menuimage} />
+        </Grid>
+        <Grid direction="column" xs={6}>
+          <div className={classes.gridDiv2}>
+            <Typography variant="subtitle2">{titleMiddle}</Typography>
+            <Typography variant="subtitle2">{middleSubtitle}</Typography>
+          </div>
         </Grid>
       </Grid>
     </Grid>

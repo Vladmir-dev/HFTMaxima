@@ -4,45 +4,61 @@ export default makeStyles((theme) => ({
     "& .MuiTypography-root": {
       margin: theme.spacing(2),
       fontWeight: "600",
+      position: "relative",
+      display: " block",
+      lineHeight: "1",
       "&:hover": {
         color: "#9bc400",
+        paddingBottom: "1em",
+        borderBottom: "2px solid #9bc400",
+        transition: '0.5s',
       },
       color: "silver",
     },
-    "& .MuiTypography-body1": {
-      color:'#fff',
-      "&:hover": {
-        color: "#9bc400",
-      },
+    "& .MuiSvgIcon-root": {
+      position:'relative',
+      display:'inline-block',
+      
     },
     display: "flex",
     alignItems: "center",
   },
   gridB: {
-    marginLeft: "20em",
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
-      background: "#9bc400",
-      color: "#fff",
-      border: "2px solid transparent",
-      borderRadius: "30px",
       fontSize: " 1.16625rem",
       fontWeight: " 600",
-      padding: theme.spacing(1),
       position: "relative",
-      display: "inline-block",
-      width: "18em",
+      lineHeight: " 26px",
+    },
+    "& .MuiButton-contained": {
+      color: "#9bc400",
+      borderBottom: "2px solid transparent",
+      fontSize: " 1.16625rem",
+      fontWeight: " 600",
+      position: "relative",
+      lineHeight: " 26px",
+      background: "#fff",
+      "&:hover": {
+        color: "#fff",
+        background: "#9bc400",
+      },
+    },
+    "& .MuiButton-text": {
+      textTransform: "capitalize",
+      color: "silver",
+      fontSize: " 1.16625rem",
+      fontWeight: " 600",
+      position: "relative",
       lineHeight: " 26px",
       "&:hover": {
         color: "#9bc400",
-        background: "#fff",
-        border: "2px solid #9bc400",
       },
     },
   },
   root: {
     background: "#000",
-    borderBottom: "2px solid #333",
+    marginTop:'2em'
   },
   divT: {
     "& .MuiTypography-root": {
@@ -87,4 +103,5 @@ export default makeStyles((theme) => ({
   gridMid: {
     alignItems: "center",
   },
+  
 }));

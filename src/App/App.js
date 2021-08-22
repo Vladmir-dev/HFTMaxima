@@ -1,23 +1,20 @@
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { theme } from "./theme";
 import "./App.css";
-import Header from "../Components/Header/Header";
-import Main from "../Main/Main";
-import Footer from "../Components/Footer/Footer";
-import { fetchNews } from "../Axios/NewsApi";
-import { useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import Home from "../Components/Home/Home";
+import NewsPage from "../Components/News/NewsPage";
 
 function App() {
-  useEffect(()=>{
-      const data = fetchNews()
-      console.log(data)
-  },[])
-  return <ThemeProvider theme={theme}>
-    <Header/>
-    <Main/>
-    <Footer/>
-    <CssBaseline/>
-  </ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/news" component={NewsPage} />
+      </Switch>
+      <CssBaseline />
+    </ThemeProvider>
+  );
 }
 
 export default App;
