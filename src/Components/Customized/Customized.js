@@ -10,6 +10,9 @@ import News from "./News";
 import Carousel from "./Carousel";
 import Images from "./Images";
 import MenuPaper from "./MenuPaper";
+import AppBar from "./AppBar";
+import InputBase from "./InputBase";
+import Supports from "./Supports";
 export const Customized = {
   Button,
   Input,
@@ -23,4 +26,7 @@ export const Customized = {
   Carousel,
   Images,
   MenuPaper,
+  AppBar,
+  InputBase,
+  Supports,
 };

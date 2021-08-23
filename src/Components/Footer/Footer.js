@@ -1,35 +1,45 @@
 import {
-    AppBar,
-    Grid,
-    Toolbar,
-    Typography,
-  } from "@material-ui/core";
-  import AddIcon from "@material-ui/icons/Add";
-  import React from "react";
-  import { Customized } from "../Customized/Customized";
-  import { Link } from "react-router-dom";
-  import useStyles from "./styles";
-  export default function Footer() {
-    const classes = useStyles();
-    return (
-      <AppBar position="fixed" elevation={0} className={classes.appBar}>
+  AppBar,
+  Container,
+  Grid,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import logo1 from "../../images/logo/logo1.png";
+import React from "react";
+import { Link } from "react-router-dom";
+import useStyles from "./styles";
+export default function Footer() {
+  const classes = useStyles();
+  return (
+    <AppBar position="static" elevation={0} className={classes.appBar}>
+      <Container>
         <Toolbar>
-          <Grid container alignItems="center">
-            <Grid item className={classes.leftButton} align='center'>
-            <Customized.Button variant="text" startIcon={<AddIcon fontSize='large'/>} component={Link} to='/'/>
-            <div className={classes.flex}>
-                <Typography variant='subtitle2' align='center'>DOW</Typography>
-                <Typography variant='subtitle2' align='center'>NASDAQ</Typography>
-                <Typography variant='subtitle2' align='center'>S and P</Typography>
-            </div>
+          <Grid container alignItems="center" className={classes.center}>
+            <Grid container alignItems="center" direction="row">
+              <div className={classes.flex1}>
+                <Typography variant="subtitle2" align="center" component={Link} to='/'>
+                  <img
+                    src={logo1}
+                    alt="HFTMaxima logo"
+                    style={{ position: "relative", display: "block" }}
+                  />
+                </Typography>
+              </div>
             </Grid>
-            <Grid item sm></Grid>
-            <Grid item className={classes.rightButton}>
-                <Customized.Button text='Open New Account' variant='text' component={Link} to='/'/>
+            <Grid container direction="row" alignItems='center'>
+              <div className={classes.flex}>
+                <Typography variant="subtitle1" align="center">
+                  HFTMaxima.com, All rights reserved
+                </Typography>
+                <Typography variant="subtitle1" align="center">
+                contact:0800014037
+                </Typography>
+              </div>
             </Grid>
           </Grid>
         </Toolbar>
-      </AppBar>
-    );
-  }
-  
+      </Container>
+    </AppBar>
+  );
+}

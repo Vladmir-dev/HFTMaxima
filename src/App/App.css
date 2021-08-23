@@ -5,11 +5,3 @@
   text-decoration: none;
   font-family: "Graphik";
 }
-
-.hide {
-  display: none;
-}
-    
-.show:hover + .hide{
-  display:block;
-}

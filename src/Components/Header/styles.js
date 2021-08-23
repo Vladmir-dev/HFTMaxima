@@ -61,7 +61,11 @@ export default makeStyles((theme) => ({
   },
   root: {
     background: "#000",
-    marginTop: "2em",
+    top: 0,
+    transition:'0.5s',
+  },
+  newRoot: {
+    background: "#fff",
   },
   divT: {
     "& .MuiTypography-root": {
