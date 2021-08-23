@@ -57,7 +57,7 @@ export default function MenuPaper() {
                 icon="Help Icon"
                 image={image5}
                 component={Link}
-                to='/'
+                to='/support'
               />
             </Grid>
             <Grid item>
