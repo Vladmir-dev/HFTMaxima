@@ -15,19 +15,18 @@ export default function Footer() {
     <AppBar position="static" elevation={0} className={classes.appBar}>
       <Container>
         <Toolbar>
-          <Grid container alignItems="center" className={classes.center}>
-            <Grid container alignItems="center" direction="row">
+          <Grid container>
+            <Grid item container alignItems="center">
               <div className={classes.flex1}>
-                <Typography variant="subtitle2" align="center" component={Link} to='/'>
+                <Typography align="center" component={Link} to='/'>
                   <img
                     src={logo1}
                     alt="HFTMaxima logo"
-                    style={{ position: "relative", display: "block" }}
                   />
                 </Typography>
               </div>
             </Grid>
-            <Grid container direction="row" alignItems='center'>
+            <Grid item container direction="row" alignItems='center'>
               <div className={classes.flex}>
                 <Typography variant="subtitle1" align="center">
                   HFTMaxima.com, All rights reserved

@@ -1,17 +1,17 @@
 import React from "react";
 import {
+  Grid,
   IconButton,
   InputBase as MuiInputBase,
-  Paper,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 export default function InputBase({placeholder}) {
   return (
-    <Paper component='form'>
+    <Grid item align='center'>
       <IconButton>
         <SearchIcon />
       </IconButton>
       <MuiInputBase placeholder={placeholder}/>
-    </Paper>
+   </Grid>
   );
 }

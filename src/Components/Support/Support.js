@@ -1,7 +1,7 @@
-import { Grid, makeStyles } from "@material-ui/core";
+import { Container, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import { Customized } from "../Customized/Customized";
-import Footer from '../Footer/Footer';
+import Footer from "../Footer/Footer";
 const useStyles = makeStyles((theme) => ({
   root: {
     background: "#f4f5fd",
@@ -16,10 +16,12 @@ export default function Support() {
         <Customized.AppBar />
       </Grid>
       <Grid container direction="row" id={id}>
-        <Customized.Supports />
+        <Container>
+          <Customized.Supports/>
+        </Container>
       </Grid>
       <Grid container direction="row">
-        <Footer/>
+        <Footer />
       </Grid>
     </Grid>
   );

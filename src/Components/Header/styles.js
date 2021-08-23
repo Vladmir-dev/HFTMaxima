@@ -67,6 +67,9 @@ export default makeStyles((theme) => ({
   newRoot: {
     background: "#fff",
   },
+  margins:{
+    margin:'2em 0px 2em 0px',
+  },
   divT: {
     "& .MuiTypography-root": {
       right: " -15.5em",

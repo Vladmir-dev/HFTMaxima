@@ -1,5 +1,5 @@
 import { Avatar, Grid, makeStyles, Typography } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Customized } from "./Customized";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(2),
     },
   },
-  
+
   gridDiv2: {
     color: "silver",
   },
@@ -29,9 +29,6 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
     },
   },
-  gridContainerInner: {
-    display: "flex",
-  },
   image: {
     height: "20em",
     width: "100%",
@@ -41,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
   },
   image2: {
-    marginTop:'2em',
+    marginTop: "2em",
     height: "4em",
     width: "38%",
     display: "block",
@@ -79,16 +76,17 @@ const useStyles = makeStyles((theme) => ({
       display: "inline-block",
     },
   },
-  lower:{
-    marginBottom:'4em',
-    display:'flex',
-    flexDirection:'column',
+  lower: {
+    marginBottom: "2em",
+    display: "flex",
+    flexDirection: "column",
   },
-  lowerup:{
-    marginTop:'1.5em',
-    marginBottom:'0.8em',
+  lowerup: {
+    marginTop: "1.5em",
+    marginBottom: "0.8em",
   },
   gridContainer1: {
+    display: "flex",
     "& .MuiTypography-root": {
       color: "#565867",
       fontWeight: "600",
@@ -96,23 +94,24 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiTypography-body1": {
       color: "#9bc400",
-      marginBottom:theme.spacing(1),
+      marginBottom: theme.spacing(1),
     },
     "& .MuiTypography-body2": {
       fontWeight: "380",
     },
     "& .MuiTypography-caption": {
       fontWeight: "350",
-      display:'block',
+      display: "block",
     },
+  
   },
-  column:{
-    marginRight:'3em',
+  column: {
+    marginRight: "3em",
   },
-  column1:{
-    marginLeft:'6.2em',
-    marginTop:'-2.22em',
-  }
+  column1: {
+    marginLeft: "6.2em",
+    marginTop: "-2.22em",
+  },
 }));
 
 export function Middle({
@@ -187,7 +186,6 @@ export function ProductMenuiItem({
   captionTitle,
   icon,
   image,
-  component,
   to,
 }) {
   const classes = useStyles();
@@ -199,10 +197,10 @@ export function ProductMenuiItem({
         </Grid>
         <Grid item>
           <div className={classes.gridDiv2}>
-            <Typography variant="subtitle2" component={component} to={to}>
+            <Typography variant="subtitle2" component={Link} to={to}>
               {subTitle}
             </Typography>
-            <Typography variant="caption" component={component} to={to}>
+            <Typography variant="caption" component={Link} to={to}>
               {captionTitle}
             </Typography>
           </div>
@@ -222,33 +220,35 @@ export function SupportMid({
   max,
 }) {
   const classes = useStyles();
+  const [avatar, setAvatar] = useState([]);
+  useEffect(() => {
+    setAvatar(max);
+  }, [max]);
   return (
-    <Grid className={classes.gridContainer1}>
-      <Grid container className={classes.gridContainerInner} direction="row">
-        <Grid direction="column" xs={3} align="center">
-          <img src={src} alt={alt} className={classes.image2} />
+    <Grid container className={classes.gridContainer1} direction="row">
+      <Grid item direction="column" xs={3} align="center">
+        <img src={src} alt={alt} className={classes.image2} />
+      </Grid>
+      <Grid item direction="column" xs={9} container>
+        <Grid item container direction="row" className={classes.lowerup}>
+          <div>
+            <Typography variant="body1">{topTitle}</Typography>
+            <Typography variant="body2">{topSubtitle}</Typography>
+          </div>
         </Grid>
-        <Grid direction="column" xs={9} container>
-          <Grid container direction="row" className={classes.lowerup}>
-            <div >
-              <Typography variant="body1">{topTitle}</Typography>
-              <Typography variant="body2">{topSubtitle}</Typography>
-            </div>
+        <Grid item container direction="row" className={classes.lower}>
+          <Grid item container className={classes.column} xs={6}>
+            <AvatarGroup max={max}>
+              <Avatar alt={alt} srx={src}></Avatar>
+              <Avatar alt={alt} srx={src}></Avatar>
+              <Avatar alt={alt} srx={src}></Avatar>
+            </AvatarGroup>
           </Grid>
-          <Grid container direction="row" className={classes.lower}>
-            <Grid container direction="column" className={classes.column}>
-              <AvatarGroup max={max}>
-                <Avatar alt={alt} srx={src}></Avatar>
-                <Avatar alt={alt} srx={src}></Avatar>
-                <Avatar alt={alt} srx={src}></Avatar>
-              </AvatarGroup>
-            </Grid>
-            <Grid container direction="column"className={classes.column1}>
-              <div>
-                <Typography variant="caption">{middleTitle}</Typography>
-                <Typography variant="caption">{middleSubtitle}</Typography>
-              </div>
-            </Grid>
+          <Grid item container className={classes.column1} xs={6}>
+            <div>
+              <Typography variant="caption">{middleTitle}</Typography>
+              <Typography variant="caption">{middleSubtitle}</Typography>
+            </div>
           </Grid>
         </Grid>
       </Grid>

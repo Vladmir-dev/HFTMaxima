@@ -8,6 +8,7 @@ import {
   makeStyles,
   Toolbar,
   Typography,
+  Paper,
 } from "@material-ui/core";
 import { Customized } from "./Customized";
 import { Link } from "react-router-dom";
@@ -39,15 +40,13 @@ const useStyles = makeStyles((theme) => ({
     },
 
     "& .MuiPaper-root": {
-      border: "none",
-      outline: "none",
       fontSize: "18px",
       borderRadius: "4px",
       background: theme.palette.background.paper,
       padding: "2px 4px",
       display: "flex",
       alignItems: "center",
-      width: 900,
+      width: "99%",
       "&:hover": {
         opacity: ".6",
       },
@@ -71,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 export default function AppBar() {
   const classes = useStyles();
   return (
-    <MuiAppBar position="static" className={classes.appBar}>
+    <MuiAppBar position="static">
       <Container>
         <Toolbar>
           <Grid container className={classes.container}>
@@ -102,9 +101,9 @@ export default function AppBar() {
               </Grid>
             </Grid>
             <Grid container direction="row">
-              <Grid item>
+              <Paper component="form">
                 <Customized.InputBase placeholder="Search for articles..." />
-              </Grid>
+              </Paper>
             </Grid>
           </Grid>
         </Toolbar>

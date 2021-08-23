@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import React from "react";
 import { ProductMenuiItem } from "./middle";
-export default function Item({ subTitle, captionTitle, icon, title,image,component,to }) {
+export default function Item({ subTitle, captionTitle, icon, title,image,to }) {
   return (
     <Grid container>
       <ProductMenuiItem
@@ -10,7 +10,6 @@ export default function Item({ subTitle, captionTitle, icon, title,image,compone
         icon={icon}
         title={title}
         image={image}
-        component={component}
         to={to}
       />
     </Grid>

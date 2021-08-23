@@ -10,7 +10,6 @@ import image5 from "../../images/image23.png";
 import image6 from "../../images/image1.jpeg";
 import image7 from "../../images/image24.png";
 import image8 from "../../images/image25.png";
-import { Link } from "react-router-dom";
 export default function MenuPaper() {
   const classes = useStyles();
   return (
@@ -27,16 +26,14 @@ export default function MenuPaper() {
                 captionTitle="Try out demo account trade"
                 icon="Account Icon"
                 image={image6}
-                component={Link}
-                to='/'
+                to="/"
               />
               <Item
                 subTitle="Transfer Account"
                 captionTitle="Do your real trade"
                 icon="Account Icon"
                 image={image4}
-                component={Link}
-                to='/'
+                to="/"
               />
             </Grid>
             <Grid item>
@@ -48,16 +45,14 @@ export default function MenuPaper() {
                 captionTitle="Best at its algorithm"
                 ialt="HFMaxima Icon"
                 image={image2}
-                component={Link}
-                to='/'
+                to="/"
               />
               <Item
                 subTitle="Guidance"
                 captionTitle="A D-tour of HFTMaxima"
                 icon="Help Icon"
                 image={image5}
-                component={Link}
-                to='/support'
+                to="/support"
               />
             </Grid>
             <Grid item>
@@ -69,16 +64,14 @@ export default function MenuPaper() {
                 captionTitle="Check out your funds"
                 icon="money Icon"
                 image={image8}
-                component={Link}
-                to='/'
+                to="/"
               />
               <Item
                 subTitle="News"
                 captionTitle="what's hot"
                 icon="news icon"
                 image={image1}
-                component={Link}
-                to='/'
+                to="/"
               />
             </Grid>
           </Grid>
@@ -92,16 +85,14 @@ export default function MenuPaper() {
                 captionTitle="Alpaca"
                 icon="Algorithm Icon"
                 image={image7}
-                component={Link}
-                to='/'
+                to="/"
               />
               <Item
                 subTitle="Charts"
                 captionTitle="Currency calender and others"
                 icon="charts Icon"
                 image={image3}
-                component={Link}
-                to='/'
+                to="/"
               />
             </Grid>
           </Grid>

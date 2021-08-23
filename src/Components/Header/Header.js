@@ -37,29 +37,31 @@ export default function Header() {
   }, []);
 
   return (
-    <Container>
-      <AppBar
-        className={`${classes.root} ${
-          background && `${classes.newRoot}`
-        } `}
-        position="fixed"
-        elevation={0}
-      >
+    <AppBar
+      className={`${classes.root} ${background && `${classes.newRoot}`} `}
+      position="fixed"
+      elevation={0}
+    >
+      <Container>
         <Toolbar>
-          <Grid container alignItems="center">
+          <Grid container alignItems="center"className={classes.margins}>
             <Grid container row alignItems="center">
-              <Grid item className="typo">
+              <Grid item>
                 <div>
                   <Typography component={Link} to="/">
-                    {!background? (<img
-                      src={logo}
-                      alt="HFTMaxima logo"
-                      style={{ position: "relative", display: "block" }}
-                    />):(<img
-                      src={logo1}
-                      alt="HFTMaxima logo"
-                      style={{ position: "relative", display: "block" }}
-                    />)}
+                    {!background ? (
+                      <img
+                        src={logo}
+                        alt="HFTMaxima logo"
+                        style={{ position: "relative", display: "block" }}
+                      />
+                    ) : (
+                      <img
+                        src={logo1}
+                        alt="HFTMaxima logo"
+                        style={{ position: "relative", display: "block" }}
+                      />
+                    )}
                   </Typography>
                 </div>
               </Grid>
@@ -80,11 +82,15 @@ export default function Header() {
                 >
                   <Customized.MenuPaper />
                 </Popper>
-                <div className={classes.div}>
+                <Grid item className={classes.div}>
                   <Typography component={Link} to="/" variant="subtitle2">
                     Featured In
                   </Typography>
-                  <Typography component={Link} to="/support" variant="subtitle2">
+                  <Typography
+                    component={Link}
+                    to="/support"
+                    variant="subtitle2"
+                  >
                     Support
                   </Typography>
                   <Typography component={Link} to="/" variant="subtitle2">
@@ -94,12 +100,12 @@ export default function Header() {
                     text="Open an Account"
                     variant="contained"
                   />
-                </div>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
         </Toolbar>
-      </AppBar>
-    </Container>
+      </Container>
+    </AppBar>
   );
 }
