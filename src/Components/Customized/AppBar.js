@@ -56,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(1),
       flex: 1,
     },
+
   },
   flex: {
     display: "flex",
@@ -65,7 +66,13 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "-0.5em",
       padding: "0.1em",
     },
+
   },
+  input:{
+    "& .MuiInputBase-input": {
+      width: "50em",
+    },
+  }
 }));
 export default function AppBar() {
   const classes = useStyles();
@@ -74,10 +81,10 @@ export default function AppBar() {
       <Container>
         <Toolbar>
           <Grid container className={classes.container}>
-            <Grid container direction="row" alignItems="center">
+            <Grid item container direction="row" alignItems="center">
               <Grid item align="center">
                 <div>
-                  <Typography>
+                  <Typography component={Link} to="/  ">
                     <img src={logo2} alt="HFTMaxima logo" />
                   </Typography>
                 </div>
@@ -92,7 +99,7 @@ export default function AppBar() {
                 </div>
               </Grid>
             </Grid>
-            <Grid container direction="row">
+            <Grid item container direction="row">
               <Grid item>
                 <Typography variant="body1">
                   How can we help you? Consider yourself lucky,answers to your
@@ -100,7 +107,7 @@ export default function AppBar() {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid container direction="row">
+            <Grid item container direction="row" className={classes.input}>
               <Paper component="form">
                 <Customized.InputBase placeholder="Search for articles..." />
               </Paper>

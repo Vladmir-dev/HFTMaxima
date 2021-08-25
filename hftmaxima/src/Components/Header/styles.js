@@ -4,70 +4,45 @@ export default makeStyles((theme) => ({
     "& .MuiTypography-root": {
       margin: theme.spacing(2),
       fontWeight: "600",
-      position: "relative",
-      display: " block",
-      lineHeight: "1",
-      marginRight: "3em",
       "&:hover": {
         color: "#9bc400",
-        paddingBottom: "1em",
-        borderBottom: "2px solid #9bc400",
-        transition: "0.5s",
       },
       color: "silver",
     },
-    "& .MuiSvgIcon-root": {
-      position: "relative",
-      display: "inline-block",
+    "& .MuiTypography-body1": {
+      color:'#fff',
+      "&:hover": {
+        color: "#9bc400",
+      },
     },
     display: "flex",
     alignItems: "center",
   },
   gridB: {
-    display: "flex",
+    marginLeft: "20em",
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
+      background: "#9bc400",
+      color: "#fff",
+      border: "2px solid transparent",
+      borderRadius: "30px",
       fontSize: " 1.16625rem",
       fontWeight: " 600",
+      padding: theme.spacing(1),
       position: "relative",
+      display: "inline-block",
+      width: "18em",
       lineHeight: " 26px",
-    },
-    "& .MuiButton-contained": {
-      color: "#9bc400",
-      borderBottom: "2px solid transparent",
-      fontSize: " 1.16625rem",
-      fontWeight: " 600",
-      position: "relative",
-      lineHeight: " 26px",
-      background: "#fff",
-      marginLeft: "0.8em",
-      "&:hover": {
-        color: "#fff",
-        background: "#9bc400",
-      },
-    },
-    "& .MuiButton-text": {
-      textTransform: "capitalize",
-      color: "silver",
-      fontSize: " 1.16625rem",
-      fontWeight: " 600",
-      position: "relative",
-      lineHeight: " 26px",
-      marginRight: "1.6em",
       "&:hover": {
         color: "#9bc400",
+        background: "#fff",
+        border: "2px solid #9bc400",
       },
     },
   },
   root: {
-    background: "#000",
-    top: 0,
-    transition:'0.5s',
-    padding:theme.spacing(2.5),
-    
-  },
-  newRoot: {
-    background: "#fff",
+    background: "#00010a",
+    borderBottom: "2px solid #333",
   },
   divT: {
     "& .MuiTypography-root": {
@@ -109,8 +84,7 @@ export default makeStyles((theme) => ({
       },
     },
   },
-  popper: {
-    margin: "8em auto",
-    marginLeft: "25em",
+  gridMid: {
+    alignItems: "center",
   },
 }));

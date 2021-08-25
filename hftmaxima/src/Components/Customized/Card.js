@@ -44,7 +44,7 @@ export default function Card({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Grid item align='center' className={classes.cardButton}>
+        <Grid className={classes.cardButton}>
           <Customized.Button text={text} />
         </Grid>
       </CardActions>

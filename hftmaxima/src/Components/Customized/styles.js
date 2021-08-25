@@ -56,7 +56,7 @@ export default makeStyles((theme) => ({
     "& .MuiTypography-root": {
       fontWeight: 600,
       fontSize: "1rem",
-      lineHeight: "1em",
+      lineHeight: "26px",
     },
   },
   cardMedia: {
@@ -70,6 +70,7 @@ export default makeStyles((theme) => ({
     width: "100%",
   },
   cardButton: {
+    marginLeft: "4.2em",
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
       background: theme.palette.background.default,
@@ -82,65 +83,16 @@ export default makeStyles((theme) => ({
       paddingLeft: "0.8em",
       position: "relative",
       display: "inline-block",
-      lineHeight: " 1em",
+      lineHeight: " 26px",
       "&:hover": {
         color: "#fff",
         background: "#9bc400",
         border: "2px solid #9bc400",
       },
     },
-    margin:'0px auto',
   },
   gridC1: {
     display: "flex",
-    justifyContent:'space-between',
-  },
-  img: {
-    backgroundRepeat: "no-repeat",
-    backgroundCover: "center",
-    position: "relative",
-    objectFit: "contain",
-    width: "100%",
-  },
-  menu: {
-    background: theme.palette.background.paper,
-    maxWidth: "50%",
-    color: "#fff",
-  },
-  paper: {
-    background: theme.palette.background.paper,
-    width: "75%",
-    height: "50%",
-    borderRadius: "8px",
-  },
-  papergrid1: {
-    marginLeft: "1.5em",
-    margin: theme.spacing(4),
-    "& .MuiTypography-root": {
-      margin: theme.spacing(2),
-      fontWeight: "600",
-      position: "relative",
-      display: " block",
-      lineHeight: "1",
-      color: "#a28089",
-    },
-    "& .MuiTypography-subtitle2": {
-      color: "#9bc400",
-      "&:hover": {
-        color: "#9bc400",
-      },
-    },
-    "& .MuiTypography-caption": {
-      marginTop: "-1em",
-    },
-  },
-  paperdiv: {
-    "& .MuiTypography-subtitle2": {
-      color: "#8D91B4",
-      marginLeft: "-1em",
-      "&:hover": {
-        color: "#8D91B4",
-      },
-    },
+    justifyContent: "space-around",
   },
 }));

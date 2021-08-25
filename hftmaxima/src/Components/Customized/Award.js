@@ -2,15 +2,12 @@ import React from "react";
 import {
   Card as MuiCard,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
-  Grid,
   Typography,
 } from "@material-ui/core";
 import useStyles from "./styles";
-import { Customized } from "./Customized";
-export default function Card({
+export default function Award({
   image,
   text,
   title,
@@ -43,11 +40,6 @@ export default function Card({
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Grid item align='center' className={classes.cardButton}>
-          <Customized.Button text={text} />
-        </Grid>
-      </CardActions>
     </MuiCard>
   );
 }

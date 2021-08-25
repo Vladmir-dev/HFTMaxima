@@ -44,7 +44,7 @@ export default function Header() {
     >
       <Container>
         <Toolbar>
-          <Grid container alignItems="center"className={classes.margins}>
+          <Grid container alignItems="center">
             <Grid container row alignItems="center">
               <Grid item>
                 <div>

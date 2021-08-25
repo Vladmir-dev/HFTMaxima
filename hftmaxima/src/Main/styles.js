@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
     margin: "2em",
   },
   gridInner: {
+    marginLeft: "5em",
     flexDirection: "column",
     backgroundImage: `url(${image1})`,
     backgroundRepeat: "no-repeat",
@@ -51,6 +52,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   rowMargin: {
+    marginLeft: "5em",
     "& .MuiTypography-root": {
       marginRight: theme.spacing(4),
       fontWeight: "400",
@@ -65,6 +67,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   gridCards: {
+    marginLeft: "1em",
     alignItems: "center",
     marginTop: "4em",
     "& .MuiTypography-root": {
@@ -73,13 +76,13 @@ export default makeStyles((theme) => ({
       lineHeight: "1.5rem",
       color: "#9bc400",
     },
-    display:'flex',
   },
   gridMiddles: {
     marginTop: "7em",
+    marginLeft: "5em",
   },
   tabs:{
-
+    marginLeft: "5em",
   },
   tabTypo:{
     "& .MuiTypography-root": {
@@ -91,11 +94,6 @@ export default makeStyles((theme) => ({
       display: " block",
       marginBlockStart: "1em",
       marginBlockEnd: "1em",
-    }
-  },
-  gridContainer:{
-    [theme.breakpoints.down('xs')]:{
-      flexDirection:'column'
     }
   }
 }));
