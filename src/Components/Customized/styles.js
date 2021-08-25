@@ -89,11 +89,12 @@ export default makeStyles((theme) => ({
         border: "2px solid #9bc400",
       },
     },
-    margin:'0px auto',
+    margin: "0px auto",
   },
   gridC1: {
     display: "flex",
-    justifyContent:'space-between',
+    justifyContent: "space-between",
+    marginRight: "4%",
   },
   img: {
     backgroundRepeat: "no-repeat",

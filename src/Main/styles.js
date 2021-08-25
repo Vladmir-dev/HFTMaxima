@@ -14,12 +14,14 @@ export default makeStyles((theme) => ({
     backgroundSize: "center",
     backgroundPosition: "center",
     height: "23em",
+    width: "100%",
+    marginRight: "4%",
+    marginTop: "3em",
   },
   gridInner1: {
     flexDirection: "column",
   },
   gridB: {
-    marginLeft: "4em",
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
       background: "#9bc400",
@@ -47,6 +49,7 @@ export default makeStyles((theme) => ({
       fontWeight: "600",
       color: "#fff",
       marginTop: theme.spacing(4),
+      position: "relative",
     },
     alignItems: "center",
   },
@@ -73,15 +76,13 @@ export default makeStyles((theme) => ({
       lineHeight: "1.5rem",
       color: "#9bc400",
     },
-    display:'flex',
+    display: "flex",
   },
   gridMiddles: {
     marginTop: "7em",
   },
-  tabs:{
-
-  },
-  tabTypo:{
+  tabs: {},
+  tabTypo: {
     "& .MuiTypography-root": {
       marginRight: theme.spacing(4),
       fontWeight: "bold",
@@ -91,11 +92,11 @@ export default makeStyles((theme) => ({
       display: " block",
       marginBlockStart: "1em",
       marginBlockEnd: "1em",
-    }
+    },
   },
-  gridContainer:{
-    [theme.breakpoints.down('xs')]:{
-      flexDirection:'column'
-    }
-  }
+  gridContainer: {
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
+  },
 }));

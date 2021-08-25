@@ -56,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(1),
       flex: 1,
     },
-
   },
   flex: {
     display: "flex",
@@ -66,13 +65,12 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "-0.5em",
       padding: "0.1em",
     },
-
   },
-  input:{
+  input: {
     "& .MuiInputBase-input": {
       width: "50em",
     },
-  }
+  },
 }));
 export default function AppBar() {
   const classes = useStyles();

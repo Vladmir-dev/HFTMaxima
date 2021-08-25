@@ -14,17 +14,19 @@ export default function Main() {
       >
         <Grid item container direction="row" className={classes.gridFlex}>
           <Grid container direction="row" className={classes.gridInner}>
-            <Grid item className={classes.gridB}>
-              <div className={classes.div}>
-                <Typography variant="h6">
-                  HFTmaxima Trading Platforms
-                </Typography>
-                <Typography variant="h3">
-                  Have power over your Trading
-                </Typography>
-              </div>
-              <Customized.Button text="Open new Account" />
-            </Grid>
+            <Container>
+              <Grid item className={classes.gridB}>
+                <div className={classes.div}>
+                  <Typography variant="h6">
+                    HFTmaxima Trading Platforms
+                  </Typography>
+                  <Typography variant="h3">
+                    Have power over your Trading
+                  </Typography>
+                </div>
+                <Customized.Button text="Open new Account" />
+              </Grid>
+            </Container>
           </Grid>
           <Grid container direction="row" className={classes.rowMargin}>
             <div style={{ marginTop: "4em" }}>
@@ -47,7 +49,9 @@ export default function Main() {
             styles={{ marginBottom: "4em" }}
             container
           >
-            <Typography variant="h4">Start Trading Now</Typography>
+            <Typography variant="h4" align="center">
+              Start Trading Now
+            </Typography>
             <Customized.Cards />
           </Grid>
           <Grid item direction="row" className={classes.gridMiddles} container>

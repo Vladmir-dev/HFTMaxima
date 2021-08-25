@@ -62,9 +62,8 @@ export default makeStyles((theme) => ({
   root: {
     background: "#000",
     top: 0,
-    transition:'0.5s',
-    padding:theme.spacing(2.5),
-    
+    transition: "0.5s",
+    padding: theme.spacing(2.5),
   },
   newRoot: {
     background: "#fff",
