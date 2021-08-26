@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     },
   },
   right: {
-    background: " #9bc400", //170041
+    background: " #170041",
     boxShadow: "0px 0px 40px 16px rgba(0,0,0,0.22)",
     color: "#F1F1F2",
     position: "relative",

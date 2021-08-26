@@ -15,7 +15,7 @@ import useStyles from "./styles";
 import GoogleLogin from "react-google-login";
 import { Image } from "../../images/Img";
 import FacebookIcon from '@material-ui/icons/Facebook';
-import SaveIcon from '@material-ui/icons/Save';
+import EmailIcon from '@material-ui/icons/Email';
 import Forgot from "../forgot/Forgot";
 export default function Login() {
   const [openPopup,setOpenPopup]= React.useState(false)
@@ -82,19 +82,16 @@ export default function Login() {
               type={passwordShow ? "text" : "password"}
               onChange={handleInputChange}
               variant='filled'
-              inputProps={{
-                endAdorment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleShowPassword} fontSize="small">
-                      {passwordShow ? (
-                        <Visibility fontSize="small" />
-                      ) : (
-                        <VisibilityOff fontSize="small" />
-                      )}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleShowPassword}
+                  >
+                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              }
             />
             <div>
                 <Typography 
