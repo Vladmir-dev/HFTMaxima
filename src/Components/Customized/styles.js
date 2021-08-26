@@ -144,4 +144,39 @@ export default makeStyles((theme) => ({
       },
     },
   },
+  flex: {
+    display: "flex",
+    justifyContent: "space-between",
+    color: "#A3BCB6",
+    marginLeft: theme.spacing(1),
+    "& .MuiSvgIcon-root": {
+      marginLeft: "10px",
+      opacity: ".6",
+    },
+  },
+  dialog: {
+    "& .MuiDialog-paper": {
+      width: "26%",
+      padding: theme.spacing(3),
+      margin: "30px auto",
+    },
+    "& .MuiDialogContent-root": {
+      marginRight: theme.spacing(-2),
+      marginLeft: theme.spacing(-2.5),
+    },
+    "& .MuiButtonBase-root": {
+      textTransform:'capitalize',
+      fontWeight:'bold'
+    },
+  },
+  forgotBut: {
+    marginLeft: "70%",
+    "& .MuiButtonBase-root": {
+      marginLeft: theme.spacing(1),
+      "& .MuiSvgIcon-root": {
+        marginLeft: "10px",
+        opacity: ".6",
+      },
+    },
+  },
 }));

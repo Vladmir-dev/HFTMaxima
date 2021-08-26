@@ -10,7 +10,7 @@ export function UseForm(initialState){
         })
     }
     const handleShowPassword=()=>{
-        setPasswordShow(true)
+        setPasswordShow((prevpasswordShow) => !prevpasswordShow)
     }
     return{
         handleInputChange,

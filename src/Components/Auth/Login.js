@@ -14,8 +14,11 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import useStyles from "./styles";
 import GoogleLogin from "react-google-login";
 import { Image } from "../../images/Img";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import FacebookIcon from '@material-ui/icons/Facebook';
+import SaveIcon from '@material-ui/icons/Save';
+import Forgot from "../forgot/Forgot";
 export default function Login() {
+  const [openPopup,setOpenPopup]= React.useState(false)
   const classes = useStyles();
   const {
     values,
@@ -35,7 +38,7 @@ export default function Login() {
         <Grid item container direction="column" className={classes.left}>
           <div>
             <Typography variant="h4">Login</Typography>
-            <Typography color="textSecondary" variant="body2">
+            <Typography variant="body2" gutterBottom>
               By logging in, you agree to the terms and conditions for HFTmaxima
               application
             </Typography>
@@ -57,7 +60,7 @@ export default function Login() {
           />
           <Customized.Button
             className={classes.facebook}
-            startIcon={<FacebookIcon fontSize='small'/>}
+            startIcon={<FacebookIcon/>}
             text="Sign in with facebook"
             fullWidth
           />
@@ -94,12 +97,21 @@ export default function Login() {
               }}
             />
             <div>
-                <Typography variant='subtitle2' align='center'>Forgot password?</Typography>
+                <Typography 
+                variant='subtitle2' 
+                align='center'
+                style={{cursor:'pointer'}}
+                onClick={()=>setOpenPopup(true)}>Forgot password?</Typography>
             </div>
             <Customized.Button text="Submit" type="submit" />
           </Form>
         </Grid>
       </Grid>
+      <Customized.Popup 
+      openPopup={openPopup}
+      setOpenPopup={setOpenPopup}>
+        <Forgot/>
+      </Customized.Popup>
     </Container>
   );
 }

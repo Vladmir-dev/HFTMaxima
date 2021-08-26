@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
     },
   },
   left: {
-    background: "white;",
+    background: "#fff",
     height: "calc(100% - 40px)",
     top: "20px",
     position: "relative",
@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     },
   },
   right: {
-    background: " #170041",
+    background: " #9bc400", //170041
     boxShadow: "0px 0px 40px 16px rgba(0,0,0,0.22)",
     color: "#F1F1F2",
     position: "relative",
@@ -46,7 +46,7 @@ export default makeStyles((theme) => ({
     "& .MuiInputBase-root": {
       width: "85%",
       background:'#fdfdfd',
-      color:'#333',
+      color:'#fff',
     },
     "& .MuiFormControl-root": {
       margin: theme.spacing(2),
@@ -58,19 +58,12 @@ export default makeStyles((theme) => ({
       transition: "color 300ms",
       textTransform: "capitalize",
       "&:hover": {
-        color: "#d0d0d2",
+        color: "#fff",
         background: "#9bc400",
       },
+      
     },
-    right: {
-      [theme.breakpoints.down("xs")]: {
-        flexDirection: "column",
-        flexShrink: 0,
-        height: "100%",
-        width: "100%",
-        maxHeight: "350px",
-      },
-    },
+    
   },
   google: {
     background: "#fff",
@@ -84,8 +77,15 @@ export default makeStyles((theme) => ({
   facebook: {
     background: "#fff",
     "&:hover": {
-      background: "#fff",
+      background: "#101357",
+      color:'#fff',
+      '& .MuiSvgIcon-root':{
+        color:'#fff',
+      }
     },
+    '& .MuiSvgIcon-root':{
+      color:'#101357',
+    }
   },
  
 }));
