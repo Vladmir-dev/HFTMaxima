@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 import { Customized } from "../Components/Customized/Customized";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const classes = useStyles();
@@ -24,7 +25,7 @@ export default function Main() {
                     Have power over your Trading
                   </Typography>
                 </div>
-                <Customized.Button text="Open new Account" />
+                <Customized.Button text="Open new Account" component={Link} to='auth/login'/>
               </Grid>
             </Container>
           </Grid>

@@ -154,6 +154,7 @@ export function MiddleMid({
   titleMiddle,
   middleSubtitle,
   image,
+  to,
 }) {
   const classes = useStyles();
   return (
@@ -175,7 +176,7 @@ export function MiddleMid({
             </Typography>
             <Typography variant="subtitle2">{middleSubtitle}</Typography>
           </div>
-          <Customized.Button text="Learn more" component={Link} to="/news" />
+          <Customized.Button text="Learn more" component={Link} to={to}/>
         </Grid>
       </Grid>
     </Grid>

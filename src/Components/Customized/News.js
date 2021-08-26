@@ -19,6 +19,7 @@ export default function News() {
         titleMiddle="HFTmaxima trade network"
         middleSubtitle="Live stream with the industry news from our media affiliate, with exclusive insights from
         industry props that help you interpret the market events and put them to work in your portfolio"
+        to='/news'
       />
     </div>
   );

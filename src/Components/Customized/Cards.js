@@ -16,6 +16,7 @@ export default function Cards() {
           className={classes.cardMedia}
           textTitle="HFTmaxima Website"
           textSubtitle="Essential trading tools in a web-based platform"
+          to='/auth/login'
         />
       </Grid>
       <Grid item className={classes.gridC}>

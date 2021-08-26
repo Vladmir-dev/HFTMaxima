@@ -99,6 +99,8 @@ export default function Header() {
                   <Customized.Button
                     text="Open an Account"
                     variant="contained"
+                    component={Link}
+                    to='auth/login'
                   />
                 </Grid>
               </Grid>

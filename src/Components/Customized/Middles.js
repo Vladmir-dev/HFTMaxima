@@ -17,6 +17,7 @@ export default function Middles() {
             features a streamlined trading experiences. It's perfect for those
             who want to trade equities and derivatives while accessing essential
             tools from their everyday browser."
+        
       />
       <MiddleMid
         image={image14}

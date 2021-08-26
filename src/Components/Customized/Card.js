@@ -10,12 +10,14 @@ import {
 } from "@material-ui/core";
 import useStyles from "./styles";
 import { Customized } from "./Customized";
+import { Link } from "react-router-dom";
 export default function Card({
   image,
   text,
   title,
   textTitle,
   textSubtitle,
+  to,
   ...others
 }) {
   const classes = useStyles();
@@ -45,7 +47,7 @@ export default function Card({
       </CardActionArea>
       <CardActions>
         <Grid item align='center' className={classes.cardButton}>
-          <Customized.Button text={text} />
+          <Customized.Button text={text} component={Link} to={to}/>
         </Grid>
       </CardActions>
     </MuiCard>
