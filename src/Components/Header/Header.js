@@ -100,7 +100,7 @@ export default function Header() {
                     text="Open an Account"
                     variant="contained"
                     component={Link}
-                    to='auth/login'
+                    to='auth/register'
                   />
                 </Grid>
               </Grid>

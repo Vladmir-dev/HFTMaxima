@@ -3,7 +3,6 @@ import image1 from "../images/image5.jpg";
 export default makeStyles((theme) => ({
   gridFlex: {
     display: "flex",
-    margin: "2em",
   },
   gridInner: {
     flexDirection: "column",
@@ -13,10 +12,9 @@ export default makeStyles((theme) => ({
     position: "relative",
     backgroundSize: "center",
     backgroundPosition: "center",
-    height: "23em",
     width: "100%",
-    marginRight: "4%",
-    marginTop: "3em",
+    marginTop:theme.spacing(1.9),
+    
   },
   gridInner1: {
     flexDirection: "column",
@@ -28,14 +26,13 @@ export default makeStyles((theme) => ({
       color: "#fff",
       border: "2px solid transparent",
       borderRadius: "30px",
-      fontSize: " 1.16625rem",
+      fontSize: " 1rem",
       fontWeight: " 600",
-      padding: theme.spacing(1),
       position: "relative",
-      display: "inline-block",
-      width: "12em",
+      width: "20%",
       lineHeight: " 26px",
-      marginTop: theme.spacing(10),
+      marginTop: theme.spacing(6),
+      marginBottom: theme.spacing(6),
       "&:hover": {
         color: "#9bc400",
         background: "#fff",
@@ -45,13 +42,12 @@ export default makeStyles((theme) => ({
   },
   div: {
     "& .MuiTypography-root": {
-      marginRight: theme.spacing(4),
       fontWeight: "600",
       color: "#fff",
-      marginTop: theme.spacing(4),
+      marginTop: theme.spacing(3),
       position: "relative",
     },
-    alignItems: "center",
+    
   },
   rowMargin: {
     "& .MuiTypography-root": {

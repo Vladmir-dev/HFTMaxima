@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 export default function Main() {
   const classes = useStyles();
   return (
-    <Container>
       <Grid
         container
         style={{ display: "block", marginBottom: "4em", marginTop: "5em" }}
@@ -25,10 +24,11 @@ export default function Main() {
                     Have power over your Trading
                   </Typography>
                 </div>
-                <Customized.Button text="Open new Account" component={Link} to='auth/login'/>
+                <Customized.Button text="Open new Account" component={Link} to='auth/register'/>
               </Grid>
             </Container>
           </Grid>
+          <Container>
           <Grid container direction="row" className={classes.rowMargin}>
             <div style={{ marginTop: "4em" }}>
               <Typography variant="subtitle1" component="p">
@@ -89,8 +89,8 @@ export default function Main() {
               </Typography>
             </div>
           </Grid>
+          </Container>
         </Grid>
       </Grid>
-    </Container>
   );
 }
