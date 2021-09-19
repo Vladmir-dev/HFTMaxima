@@ -6,7 +6,6 @@ export default function Middles() {
   return (
     <div>
       <Middle
-        styles={{ marginBottom: "9em" }}
         image={image12}
         titleTop=" Be an explorer! Explore the deepth of HFTmaxima"
         topSubtitle="Compare the unique features of our platform and discover how each can

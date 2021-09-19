@@ -58,12 +58,20 @@ export default makeStyles((theme) => ({
         color: "#9bc400",
       },
     },
+    
+    
   },
   root: {
     background: "#000",
     top: 0,
     transition: "0.5s",
     padding: theme.spacing(2.5),
+    [theme.breakpoints.down("xs")]: {
+      display: "flex",
+      flexDirection: "column",
+
+      
+    },
   },
   newRoot: {
     background: "#fff",
@@ -109,7 +117,25 @@ export default makeStyles((theme) => ({
     },
   },
   popper: {
-    margin: "8em auto",
-    marginLeft: "25em",
+    margin: "6em auto",
+    marginLeft: "10%",
+    '& .MuiPopover-paper':{
+      width:'65%',
+    },
+    position:'relative',
   },
+  userdiv:{
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+    '& .MuiTypography-root':{
+      color:'#8e8e90',
+      marginTop:'1.5em',
+      marginLeft:theme.spacing(2)
+    },
+    '& .MuiSvgIcon-root':{
+      color:'#8e8e90',
+    }
+  }
 }));

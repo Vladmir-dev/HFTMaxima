@@ -51,22 +51,18 @@ export default makeStyles((theme) => ({
     },
   },
   cardRoot: {
-    maxWidth: 280,
+    maxWidth: 250,
+    maxHeight:230,
+    borderRadius: "12px",
     backgroundColor: theme.palette.background.default,
     "& .MuiTypography-root": {
       fontWeight: 600,
       fontSize: "1rem",
-      lineHeight: "1em",
+      lineHeight: "1.3em",
     },
   },
   cardMedia: {
-    height: 140,
-    backgroundSize: "cover",
-    objectFit: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    alignSelf: "normal",
-    marginBottom: "1.875rem",
+    height: 190,
     width: "100%",
   },
   cardButton: {
@@ -90,19 +86,18 @@ export default makeStyles((theme) => ({
       },
     },
     margin: "0px auto",
+    marginBottom:'50%',
   },
   gridC1: {
     display: "flex",
     justifyContent: "space-between",
-    marginRight: "4%",
+    "& .MuiSvgIcon-root": {
+      color: "#9bc400",
+      margin: "4% 0% 0% 43%",
+    },
+    marginLeft:'12%',
   },
-  img: {
-    backgroundRepeat: "no-repeat",
-    backgroundCover: "center",
-    position: "relative",
-    objectFit: "contain",
-    width: "100%",
-  },
+ 
   menu: {
     background: theme.palette.background.paper,
     maxWidth: "50%",
@@ -165,8 +160,8 @@ export default makeStyles((theme) => ({
       marginLeft: theme.spacing(-2.5),
     },
     "& .MuiButtonBase-root": {
-      textTransform:'capitalize',
-      fontWeight:'bold'
+      textTransform: "capitalize",
+      fontWeight: "bold",
     },
   },
   forgotBut: {

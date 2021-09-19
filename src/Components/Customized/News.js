@@ -6,7 +6,6 @@ export default function News() {
   return (
     <div>
       <Middle
-        styles={{ marginBottom: "9em" }}
         image={image12}
         titleTop="Up-to-the-minute news and the analysis to help you interpret it"
         topSubtitle="Stay on the top of the market and execute with the confidence of a well-informed trader"

@@ -56,6 +56,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(1),
       flex: 1,
     },
+    [theme.breakpoints.down("xs")]:{
+      display:'flex',
+      flexDirection:'column',
+      "& .MuiPaper-root": {
+        width: "100%",
+      },
+      "& .MuiInputBase-input": {
+        width: "100%",
+      },
+    }
   },
   flex: {
     display: "flex",
@@ -68,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     "& .MuiInputBase-input": {
-      width: "50em",
+      width: "50rem",
     },
   },
 }));

@@ -1,7 +1,9 @@
 import {
   AppBar,
+  Avatar,
   Container,
   Grid,
+  Popover,
   Popper,
   Toolbar,
   Typography,
@@ -13,16 +15,20 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 import logo1 from "../../images/logo/logo1.png";
 import useStyles from "./styles";
-export default function Header() {
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [background, setBackground] = useState(false);
-  const handleClick = (event) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
-  };
-  const open = Boolean(anchorEl);
-  const id = open ? "MenuPaper" : undefined;
 
+export default function Header({ user }) {
+  const classes = useStyles();
+  const [show, setShow] = useState(null);
+  const [background, setBackground] = useState(false);
+
+  const handleShow = (event) => {
+    setShow(open ? null : event.target.current);
+  };
+
+  const handleClose = () => {
+    setShow(null);
+  };
+  const open = Boolean(show);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
@@ -66,44 +72,59 @@ export default function Header() {
                 </div>
               </Grid>
               <Grid item sm></Grid>
-              <Grid item className={classes.gridB} align="center">
-                <Customized.Button
-                  text="Products"
-                  endIcon={<ExpandMoreOutlinedIcon />}
-                  variant="text"
-                  disableRipple
-                  onClick={handleClick}
-                />
-                <Popper
-                  id={id}
-                  open={open}
-                  placement="left"
-                  className={classes.popper}
-                >
-                  <Customized.MenuPaper />
-                </Popper>
-                <Grid item className={classes.div}>
-                  <Typography component={Link} to="/" variant="subtitle2">
-                    Featured In
+              {user ? (
+                <Grid item>
+                  <Avatar
+                    src={user.results.imageUrl}
+                    alt={user.results.name}
+                  ></Avatar>
+                  <Typography variant="subtitle2">
+                    {user.results.name}
                   </Typography>
-                  <Typography
-                    component={Link}
-                    to="/support"
-                    variant="subtitle2"
-                  >
-                    Support
-                  </Typography>
-                  <Typography component={Link} to="/" variant="subtitle2">
-                    Blog
-                  </Typography>
-                  <Customized.Button
-                    text="Open an Account"
-                    variant="contained"
-                    component={Link}
-                    to='auth/register'
-                  />
                 </Grid>
-              </Grid>
+              ) : (
+                <Grid
+                  item
+                  className={`${classes.gridB} ${classes.div} `}
+                  align="center"
+                >
+                  <Typography
+                    variant="subtitle2"
+                    onMouseEnter={handleShow}
+                    onMouseLeave={handleClose}
+                  >
+                    Products
+                  </Typography>
+                  <Popover
+                    open={show}
+                    placement="center"
+                    className={classes.popper}
+                  >
+                    <Customized.MenuPaper />
+                  </Popover>
+                  <Grid item className={classes.div}>
+                    <Typography component={Link} to="/" variant="subtitle2">
+                      Featured In
+                    </Typography>
+                    <Typography
+                      component={Link}
+                      to="/support"
+                      variant="subtitle2"
+                    >
+                      Support
+                    </Typography>
+                    <Typography component={Link} to="/" variant="subtitle2">
+                      Blog
+                    </Typography>
+                    <Customized.Button
+                      text="Open an Account"
+                      variant="contained"
+                      component={Link}
+                      to="auth/register"
+                    />
+                  </Grid>
+                </Grid>
+              )}
             </Grid>
           </Grid>
         </Toolbar>

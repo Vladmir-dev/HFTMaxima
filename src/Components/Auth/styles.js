@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import image from "../../images/svg3.jpeg";
 export default makeStyles((theme) => ({
   Container: {
     display: " flex",
@@ -19,7 +18,7 @@ export default makeStyles((theme) => ({
     top: "20px",
     position: "relative",
     width: " 50%",
-    height: "100%",
+    minHeight: "100%",
     "& .MuiButton-root": {
       textTransform:'capitalize',
       marginTop: "1em",
@@ -41,7 +40,7 @@ export default makeStyles((theme) => ({
     top: "20px",
     position: "relative",
     width: " 50%",
-    height: "120%",
+    minHeight: "120%",
     "& .MuiButton-root": {
       textTransform: "capitalize",
       marginTop: "1em",
@@ -95,7 +94,7 @@ export default makeStyles((theme) => ({
     "& .MuiInputBase-root": {
       width: "85%",
       background: "#fdfdfd",
-      color: "#fff",
+      color: "#000",
     },
     "& .MuiFormControl-root": {
       margin: theme.spacing(2),

@@ -59,6 +59,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: " #9bc400",
       color: "#9bc400",
     },
+    "& .MuiTabs-root": {
+      marginLeft:'4%'
+    },
   },
 }));
 
@@ -95,7 +98,6 @@ export default function TabContent() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Middle
-          styles={{ marginBottom: "9em" }}
           image={image12}
           titleMiddle="Built by the trading obsessed"
           middleSubtitle="The people who build thinkorswim aren't just experts,
@@ -106,7 +108,6 @@ export default function TabContent() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Middle
-          styles={{ marginBottom: "9em" }}
           image={image11}
           titleMiddle="Join a community of passionate traders"
           middleSubtitle="Build a more informed strategy 
@@ -118,13 +119,13 @@ export default function TabContent() {
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Middle
-          styles={{ marginBottom: "9em" }}
           image={image13}
           titleMiddle="Answers to your toughest trading questions"
           middleSubtitle=" Our trade desk is filled with former floor traders who know the ins and outs of the 
           market. They're availabe day and night to help you when you need it the most. Whether it's to get out
           check trade, fine-tune a strategy or help your master out trading platforms, they can do it all. You can
           get in touch at 569864233 or share your screen with our in-app chat."
+          to="/support"
         />
       </TabPanel>
     </div>

@@ -23,7 +23,7 @@ export function UseForm(initialState){
 
 export function Form({children,...others}){
     return(
-        <form autoComplete='off' {...others}>
+        <form autoComplete='on' {...others}>
         {children}
         </form>
     )

@@ -7,7 +7,7 @@ import NewsPage from "../Components/News/NewsPage";
 import Support from "../Components/Support/Support";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
-
+import AlgoInterface from "../Components/Algorithm/AlgoInterface";
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -17,6 +17,7 @@ function App() {
         <Route exact path="/support" component={Support} />
         <Route exact path="/auth/login" component={Login} />
         <Route exact path="/auth/register" component={Register} />
+        <Route exact path="/algorithm" component={AlgoInterface} />
       </Switch>
       <CssBaseline />
     </ThemeProvider>

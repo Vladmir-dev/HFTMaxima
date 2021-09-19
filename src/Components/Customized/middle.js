@@ -1,4 +1,10 @@
-import { Avatar, Grid, makeStyles, Typography } from "@material-ui/core";
+import {
+  Avatar,
+  Divider,
+  Grid,
+  makeStyles,
+  Typography,
+} from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Customized } from "./Customized";
@@ -8,14 +14,26 @@ const useStyles = makeStyles((theme) => ({
   gridDiv: {
     marginBottom: theme.spacing(6),
     "& .MuiTypography-root": {
-      top: "4px",
-      marginBottom: theme.spacing(3),
+      fontWeight: "300",
+      marginLeft: "5%",
+    },
+    "& .MuiTypography-h4": {
+      fontWeight: "300",
     },
   },
   gridDiv1: {
-    marginBottom: theme.spacing(6),
+    marginLeft: "5%",
+    marginRight: "1%",
     "& .MuiTypography-root": {
       marginBottom: theme.spacing(2),
+      lineHeight: "2rem",
+    },
+  },
+  gridDiv3: {
+    marginLeft: "7%",
+    "& .MuiTypography-root": {
+      marginBottom: theme.spacing(2),
+      lineHeight: "2rem",
     },
   },
 
@@ -25,17 +43,24 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     "& .MuiTypography-root": {
       color: "#8e8e90",
-      fontWeight: "600",
       position: "relative",
     },
+    marginBottom: "-10%",
   },
   image: {
-    height: "20em",
-    width: "100%",
+    maxHeight: "40vh",
+    maxWidth: "100%",
     display: "block",
-    backgroundPosition: "center",
-    objectFit: "contain",
-    backgroundRepeat: "no-repeat",
+    position: "relative",
+    borderRadius: "12px",
+  },
+  image3: {
+    maxHeight: "50vh",
+    Width: "50vw",
+    display: "block",
+    position: "relative",
+    borderRadius: "12px",
+    marginLeft: "15%",
   },
   image2: {
     marginTop: "2em",
@@ -103,7 +128,6 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "350",
       display: "block",
     },
-  
   },
   column: {
     marginRight: "3em",
@@ -120,27 +144,30 @@ export function Middle({
   titleMiddle,
   middleSubtitle,
   image,
+  to,
 }) {
   const classes = useStyles();
   return (
-    <Grid className={classes.gridContainer}>
+    <Grid container spacing={3} className={classes.gridContainer}>
       <div className={classes.gridDiv}>
-        <Typography variant="h4" style={{ color: "#9bc400" }}>
+        <Typography variant="h4" style={{ color: "#9bc400" }} gutterBottom>
           {titleTop}
         </Typography>
-        <Typography variant="subtitle2">{topSubtitle}</Typography>
+        <Typography variant="subtitle2" gutterBottom>
+          {topSubtitle}
+        </Typography>
       </div>
-      <Grid container className={classes.gridContainerInner} row>
-        <Grid direction="column" xs={6} className={classes.button}>
-          <div className={classes.gridDiv1}>
-            <Typography variant="subtitle2" style={{ color: "#fff" }}>
-              {titleMiddle}
-            </Typography>
-            <Typography variant="subtitle2">{middleSubtitle}</Typography>
-          </div>
-          <Customized.Button text="Learn more" />
+      <Grid item container direction="column" className={classes.button}>
+        <Grid item xs={12} sm={6} className={classes.gridDiv1}>
+          <Typography variant="subtitle2" style={{ color: "#333" }}>
+            {titleMiddle}
+          </Typography>
+          <Divider />
+          <br />
+          <Typography variant="subtitle2">{middleSubtitle}</Typography>
+          <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
-        <Grid direction="column" xs={6}>
+        <Grid direction="column" xs={12} sm={6}>
           <img src={image} alt="HFTmaxima web" className={classes.image} />
         </Grid>
       </Grid>
@@ -158,37 +185,31 @@ export function MiddleMid({
 }) {
   const classes = useStyles();
   return (
-    <Grid className={classes.gridContainer}>
+    <Grid container spacing={3} className={classes.gridContainer}>
       <div className={classes.gridDiv}>
         <Typography variant="h4" style={{ color: "#9bc400" }}>
           {titleTop}
         </Typography>
         <Typography variant="subtitle2">{topSubtitle}</Typography>
       </div>
-      <Grid container className={classes.gridContainerInner} row>
-        <Grid direction="column" xs={6}>
-          <img src={image} alt="HFTmaxima web" className={classes.image} />
+      <Grid item container direction="column" className={classes.button}>
+        <Grid direction="column" xs={12} sm={6}>
+          <img src={image} alt="HFTmaxima web" className={classes.image3} />
         </Grid>
-        <Grid direction="column" xs={6} className={classes.button}>
-          <div className={classes.gridDiv1}>
-            <Typography variant="subtitle2" style={{ color: "#fff" }}>
-              {titleMiddle}
-            </Typography>
-            <Typography variant="subtitle2">{middleSubtitle}</Typography>
-          </div>
-          <Customized.Button text="Learn more" component={Link} to={to}/>
+        <Grid className={classes.gridDiv3} xs={12} sm={6}>
+          <Typography variant="subtitle2" style={{ color: "#333" }}>
+            {titleMiddle}
+          </Typography>
+          <Divider />
+          <br />
+          <Typography variant="subtitle2">{middleSubtitle}</Typography>
+          <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
       </Grid>
     </Grid>
   );
 }
-export function ProductMenuiItem({
-  subTitle,
-  captionTitle,
-  icon,
-  image,
-  to,
-}) {
+export function ProductMenuiItem({ subTitle, captionTitle, icon, image, to }) {
   const classes = useStyles();
   return (
     <Grid container spacing={1}>
