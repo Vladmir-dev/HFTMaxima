@@ -71,6 +71,9 @@ export default makeStyles((theme) => ({
     opacity: ".6",
     transitionTimingFunction: "ease-in",
     zIndex: 1,
+    "& .MuiSvgIcon-root": {
+      color: "#fff",
+    },
   },
   newRoot: {
     background: "#fff",
@@ -80,6 +83,9 @@ export default makeStyles((theme) => ({
         display: "block",
         borderBottom:'2px solid #164A41'
       },
+    },
+    "& .MuiSvgIcon-root": {
+      color: "#000",
     },
   },
   divT: {
@@ -123,12 +129,12 @@ export default makeStyles((theme) => ({
     },
   },
   popper: {
-    margin: "6em auto",
-    marginLeft: "10%",
+    margin: "3.4% auto",
     "& .MuiPopover-paper": {
-      width: "65%",
+      width: "60%",
     },
     position: "relative",
+    opacity:'.9',
   },
   userdiv: {
     display: "flex",

@@ -3,6 +3,7 @@ import {
   Avatar,
   Container,
   Grid,
+  IconButton,
   Toolbar,
   Typography,
 } from "@material-ui/core";
@@ -11,12 +12,16 @@ import React, { useEffect, useState } from "react";
 import { Customized } from "../Customized/Customized";
 import { Link } from "react-router-dom";
 import logo from "../../images/price.png";
-import logo1 from "../../images/logo/logo1.png";
 import useStyles from "./styles";
 import Popover from "@mui/material/Popover";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
-export default function Header({ user }) {
+export default function Header() {
   const classes = useStyles();
+  const [xsMenu, setXsMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [xs, setXs] = useState(false);
   const [background, setBackground] = useState(false);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,8 +33,20 @@ export default function Header({ user }) {
   const handlePopoverClose = () => {
     setAnchorEl(null);
   };
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleSmallDevice = () => {
+    setXsMenu((prevxsDeviceOpen) => !prevxsDeviceOpen);
+    setMenu(true);
+  };
 
   const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
@@ -42,6 +59,14 @@ export default function Header({ user }) {
       window.removeEventListener("scroll", () => {});
     };
   }, []);
+  const showSmallDeviceWindowContent = () => {
+    if (window.innerWidth <= 960) {
+      setXs(true);
+    } else {
+      setXs(false);
+    }
+  };
+  window.addEventListener("resize", showSmallDeviceWindowContent);
 
   return (
     <AppBar
@@ -54,36 +79,36 @@ export default function Header({ user }) {
           <Grid container alignItems="center">
             <Grid container row alignItems="center">
               <Grid item align="center">
-                <div style={{marginBottom:'12%'}}>
+                <div style={{ marginBottom: "12%" }}>
                   {!background ? (
                     <Typography
-                    component={Link}
-                    to="/"
-                    variant="h5"
-                    align="center"
-                    style={{ color: "#fff" }}
-                  >
-                    <img
-                      src={logo}
-                      alt="HFTMaxima logo"
-                      className={classes.logo}
-                    />
-                    <Typography
-                      variant="h2 "
+                      component={Link}
+                      to="/"
+                      variant="h5"
                       align="center"
                       style={{ color: "#fff" }}
                     >
-                      HFT
+                      <img
+                        src={logo}
+                        alt="HFTMaxima logo"
+                        className={classes.logo}
+                      />
+                      <Typography
+                        variant="h2 "
+                        align="center"
+                        style={{ color: "#fff" }}
+                      >
+                        HFT
+                      </Typography>
+                      Maxima
                     </Typography>
-                    Maxima
-                  </Typography>
                   ) : (
                     <Typography
                       component={Link}
                       to="/"
                       variant="h5"
                       align="center"
-                      style={{ color: "#000",marginBottom:'20%' }}
+                      style={{ color: "#000", marginBottom: "20%" }}
                     >
                       <img
                         src={logo}
@@ -103,15 +128,25 @@ export default function Header({ user }) {
                 </div>
               </Grid>
               <div style={{ flexGrow: 1 }} />
-              {user ? (
+              {xs ? (
                 <Grid item>
-                  <Avatar
-                    src={user.results.imageUrl}
-                    alt={user.results.name}
-                  ></Avatar>
-                  <Typography variant="subtitle2">
-                    {user.results.name}
-                  </Typography>
+                  <div className={classes.menu}>
+                    <IconButton onClick={(handleSmallDevice, handleClick)}>
+                      {!xsMenu ? <MenuIcon /> : <CloseIcon />}
+                    </IconButton>
+                    <Popover
+                      id={id}
+                      open={open}
+                      anchorEl={anchorEl}
+                      onClose={handleClose}
+                      anchorOrigin={{
+                        vertical: "bottom",
+                        horizontal: "left",
+                      }}
+                    >
+                      <Customized.Lists/>
+                    </Popover>
+                  </div>
                 </Grid>
               ) : (
                 <Grid
@@ -144,6 +179,7 @@ export default function Header({ user }) {
                         vertical: "top",
                         horizontal: "center",
                       }}
+                      className={classes.popper}
                     >
                       <Customized.MenuPaper />
                     </Popover>

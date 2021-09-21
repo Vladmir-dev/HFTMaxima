@@ -9,6 +9,7 @@ import AppBar from "./AppBar";
 import InputBase from "./InputBase";
 import Supports from "./Supports";
 import Popup from "./Popup";
+import Lists from "./List";
 export const Customized = {
   Button,
   Input,
@@ -21,4 +22,5 @@ export const Customized = {
   InputBase,
   Supports,
   Popup,
+  Lists,
 };
