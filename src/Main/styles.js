@@ -15,10 +15,12 @@ export default makeStyles((theme) => ({
       position: "relative",
       width: "20%",
       lineHeight: " 26px",
+      transition: "transform all .450ms",
       "&:hover": {
         color: "#9bc400",
         background: "#fff",
         border: "2px solid #9bc400",
+        transform: "scale(1.06)",
       },
     },
     "& .MuiTypography-root": {
@@ -33,13 +35,14 @@ export default makeStyles((theme) => ({
     },
   },
   back: {
-    background: `url(${image1}) 50% 50%`,
+    background: `url(${image1}) 40% 40%`,
     objectFit: "contain",
     backgroundSize: "cover",
     width: "100vw",
     height: "100vh",
     left: 0,
-    marginLeft: '-2%',
+    marginLeft: "-2%",
+    marginTop: "-2%",
     position: "relative",
   },
   toolbar: theme.mixins.toolbar,
@@ -105,11 +108,11 @@ export default makeStyles((theme) => ({
   middleBack: {
     background: "#fff5d7",
     width: "100vw",
-    marginLeft: '-2%',
+    marginLeft: "-2%",
   },
   middlelow: {
     background: "#f5f5f5",
     width: "100vw",
-    marginLeft: '-2%',
+    marginLeft: "-2%",
   },
 }));
