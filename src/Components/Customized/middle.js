@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
+import RubberBand from "react-reveal/RubberBand";
 import { Link } from "react-router-dom";
 import { Customized } from "./Customized";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
@@ -150,26 +151,36 @@ export function Middle({
   return (
     <Grid container spacing={3} className={classes.gridContainer}>
       <div className={classes.gridDiv}>
+
         <Typography variant="h4" style={{ color: "#9bc400" }} gutterBottom>
           {titleTop}
         </Typography>
         <Typography variant="subtitle2" gutterBottom>
           {topSubtitle}
         </Typography>
+
       </div>
       <Grid item container direction="column" className={classes.button}>
         <Grid item xs={12} sm={6} className={classes.gridDiv1}>
           <Typography variant="subtitle2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
+
           <Divider />
+
           <br />
+
           <Typography variant="subtitle2">{middleSubtitle}</Typography>
           <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
-        <Grid direction="column" xs={12} sm={6}>
-          <img src={image} alt="HFTmaxima web" className={classes.image} />
-        </Grid>
+
+          <Grid direction="column" xs={12} sm={6}>
+          <RubberBand>
+
+                        <img src={image} alt="HFTmaxima web" className={classes.image} />
+
+          </RubberBand>
+         </Grid>
       </Grid>
     </Grid>
   );
@@ -186,24 +197,40 @@ export function MiddleMid({
   const classes = useStyles();
   return (
     <Grid container spacing={3} className={classes.gridContainer}>
+
       <div className={classes.gridDiv}>
         <Typography variant="h4" style={{ color: "#9bc400" }}>
           {titleTop}
         </Typography>
         <Typography variant="subtitle2">{topSubtitle}</Typography>
       </div>
+
+
       <Grid item container direction="column" className={classes.button}>
-        <Grid direction="column" xs={12} sm={6}>
-          <img src={image} alt="HFTmaxima web" className={classes.image3} />
-        </Grid>
+
+
+
+              <Grid direction="column" xs={12} sm={6}>
+                  <img src={image} alt="HFTmaxima web" className={classes.image3} />
+              </Grid>
+
+
+
         <Grid className={classes.gridDiv3} xs={12} sm={6}>
+
           <Typography variant="subtitle2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
-          <Divider />
-          <br />
-          <Typography variant="subtitle2">{middleSubtitle}</Typography>
+
+            <Divider />
+
+              <br />
+
+          <Typography variant="subtitle2">
+            {middleSubtitle}
+          </Typography>
           <Customized.Button text="Learn more" component={Link} to={to} />
+
         </Grid>
       </Grid>
     </Grid>
@@ -218,14 +245,18 @@ export function ProductMenuiItem({ subTitle, captionTitle, icon, image, to }) {
           <Avatar align="center" src={image} alt={icon}></Avatar>
         </Grid>
         <Grid item>
+
           <div className={classes.gridDiv2}>
-            <Typography variant="subtitle2" component={Link} to={to}>
-              {subTitle}
+
+          <Typography variant="subtitle2" component={Link} to={to}>
+            {subTitle}
+          </Typography>
+          <Typography variant="caption" component={Link} to={to}>
+            {captionTitle}
             </Typography>
-            <Typography variant="caption" component={Link} to={to}>
-              {captionTitle}
-            </Typography>
+
           </div>
+
         </Grid>
       </Grid>
     </Grid>
