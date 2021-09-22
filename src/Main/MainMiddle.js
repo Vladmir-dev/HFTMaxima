@@ -2,7 +2,6 @@ import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 import { Customized } from "../Components/Customized/Customized";
-import { Link } from "react-router-dom";
 
 export default function MainMiddle() {
   const classes = useStyles();

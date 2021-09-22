@@ -11,7 +11,7 @@ export default function Main() {
       <div className={classes.toolbar} />
       <Container>
         <Grid container spacing={3}>
-          <Grid item container className={classes.grid}>
+          <Grid item container className={classes.grid} xs={12}>
             <div className={classes.div}>
               <Typography variant="h6" gutterBottom>HFTmaxima Trading Platforms</Typography>
               <Typography variant="h3" gutterBottom>Have power over your Trading</Typography>

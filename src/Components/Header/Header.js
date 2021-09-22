@@ -1,6 +1,5 @@
 import {
   AppBar,
-  Avatar,
   Container,
   Grid,
   IconButton,
@@ -20,7 +19,6 @@ import CloseIcon from "@material-ui/icons/Close";
 export default function Header() {
   const classes = useStyles();
   const [xsMenu, setXsMenu] = useState(false);
-  const [menu, setMenu] = useState(false);
   const [xs, setXs] = useState(false);
   const [background, setBackground] = useState(false);
 
@@ -42,7 +40,6 @@ export default function Header() {
 
   const handleSmallDevice = () => {
     setXsMenu((prevxsDeviceOpen) => !prevxsDeviceOpen);
-    setMenu(true);
   };
 
   const open = Boolean(anchorEl);
@@ -131,7 +128,7 @@ export default function Header() {
               {xs ? (
                 <Grid item>
                   <div className={classes.menu}>
-                    <IconButton onClick={(handleSmallDevice, handleClick)}>
+                    <IconButton onClick={handleSmallDevice && handleClick}>
                       {!xsMenu ? <MenuIcon /> : <CloseIcon />}
                     </IconButton>
                     <Popover
@@ -163,6 +160,7 @@ export default function Header() {
                       style={{ position: "relative" }}
                     >
                       Products
+                      <ExpandMoreOutlinedIcon/>
                     </Typography>
                     <Popover
                       id="mouse-over-popover"

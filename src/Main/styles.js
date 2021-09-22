@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
     margin: theme.spacing(10),
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
-      background: "#9bc400",
+      background: "#008900",
       color: "#fff",
       border: "2px solid transparent",
       borderRadius: "30px",
@@ -17,9 +17,9 @@ export default makeStyles((theme) => ({
       lineHeight: " 26px",
       transition: "transform all .450ms",
       "&:hover": {
-        color: "#9bc400",
+        color: "#008900",
         background: "#fff",
-        border: "2px solid #9bc400",
+        border: "2px solid #008900",
         transform: "scale(1.06)",
       },
     },
@@ -33,6 +33,23 @@ export default makeStyles((theme) => ({
     "& .MuiTypography-h6": {
       marginTop: theme.spacing(5),
     },
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+      margin: theme.spacing(4),
+      "& .MuiButtonBase-root": {
+        width: "70%",
+        lineHeight: " 26px",
+        "&:hover": {
+          color: "#008900",
+          background: "#fff",
+          border: "2px solid #008900",
+          transform: "scale(1.06)",
+        },
+      },
+      "& .MuiTypography-root": {
+        fontWeight: "500",
+      },
+    },
   },
   back: {
     background: `url(${image1}) 40% 40%`,
@@ -40,10 +57,13 @@ export default makeStyles((theme) => ({
     backgroundSize: "cover",
     width: "100vw",
     height: "100vh",
-    left: 0,
     marginLeft: "-2%",
-    marginTop: "-2%",
     position: "relative",
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "-6%",
+      marginTop: "-1%",
+      height: "100vh",
+    },
   },
   toolbar: theme.mixins.toolbar,
   gridInner: {
@@ -57,14 +77,14 @@ export default makeStyles((theme) => ({
   },
   rowMargin: {
     "& .MuiTypography-root": {
-      fontWeight: "300",
       color: "#97979d",
-      marginTop: theme.spacing(4),
-      fontSize: "1rem",
       lineHeight: "1.5rem",
       display: " block",
       marginBlockStart: "1em",
       marginBlockEnd: "1em",
+      fontWeight: 400,
+      fontSize: 18,
+      marginLeft:'-8%',
     },
     "& .MuiTypography-h4": {
       fontWeight: "400",
@@ -83,13 +103,17 @@ export default makeStyles((theme) => ({
       fontWeight: "bold",
       marginBottom: theme.spacing(6),
       lineHeight: "1.5rem",
-      color: "#9bc400",
+      color: "#008900",
       margin: "0 auto",
     },
     display: "flex",
   },
   gridMiddles: {
     marginTop: "3em",
+    [theme.breakpoints.down("xs")]:{
+      display:'flex',
+      flexDirection:'column',
+    }
   },
   top: { marginTop: theme.spacing(8) },
   tabTypo: {
@@ -104,15 +128,31 @@ export default makeStyles((theme) => ({
     },
     margin: "0 auto",
   },
-  tabs: { marginTop: "4em" },
+  tabs: {
+    marginTop: "4em",
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "-1%",
+      "& .MuiTypography-root": {
+        fontWeight: "bold",
+        fontSize: "18",
+        margin:'4% 4% 4% 4%',
+      },
+    },
+  },
   middleBack: {
     background: "#fff5d7",
     width: "100vw",
     marginLeft: "-2%",
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "-6%",
+    },
   },
   middlelow: {
     background: "#f5f5f5",
     width: "100vw",
     marginLeft: "-2%",
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "-6%",
+    },
   },
 }));

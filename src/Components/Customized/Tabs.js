@@ -50,18 +50,27 @@ const useStyles = makeStyles((theme) => ({
 
     "& .MuiButtonBase-root": {
       color: "#8e8e90",
+      fontSize:17,
       textTransform: "none",
       "&:hover": {
-        color: "#9bc400",
+        color: "#008900",
       },
     },
     "& .MuiTabs-indicator": {
-      backgroundColor: " #9bc400",
-      color: "#9bc400",
+      backgroundColor: "#008900",
+      color: "#008900",
     },
     "& .MuiTabs-root": {
-      marginLeft:'4%'
+      marginLeft:'5.4%'
     },
+    [theme.breakpoints.down("xs")]:{
+      display:'flex',
+      flexDirection:'column',
+      "& .MuiTab-root": {
+        marginleft:'70%',
+      },
+     
+    }
   },
 }));
 

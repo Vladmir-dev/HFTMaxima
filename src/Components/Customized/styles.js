@@ -14,14 +14,14 @@ export default makeStyles((theme) => ({
       fontWeight: "400",
       position: "relative",
       "&:hover": {
-        color: "#9bc400",
+        color: "#008900",
       },
     },
     "& .MuiSvgIcon-root": {
       color: "#8e8e90",
       marginLeft: "3em",
       "&:hover": {
-        color: "#9bc400",
+        color: "#008900",
       },
     },
     "& .MuiListItem-divider": {
@@ -30,25 +30,6 @@ export default makeStyles((theme) => ({
   },
   nested: {
     paddingLeft: theme.spacing(4),
-  },
-  breadC: {
-    "& .MuiTypography-root": {
-      top: "1px",
-      marginTop: "1px",
-      bottom: " -1.5em",
-      color: "#8e8e90",
-      fontSize: ".875rem",
-      fontWeight: "600",
-      position: "relative",
-    },
-    "& .MuiBreadcrumbs-separator": {
-      color: "#333",
-    },
-    "& .MuiTypography-subtitle1": {
-      "&:hover": {
-        color: "#9bc400",
-      },
-    },
   },
   cardRoot: {
     maxWidth: 250,
@@ -69,8 +50,8 @@ export default makeStyles((theme) => ({
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
       background: theme.palette.background.default,
-      color: "#9bc400",
-      border: "2px solid #9bc400",
+      color: "#008900",
+      border: "2px solid #008900",
       borderRadius: "30px",
       fontSize: " 1.16625rem",
       fontWeight: " 600",
@@ -81,8 +62,8 @@ export default makeStyles((theme) => ({
       lineHeight: " 1em",
       "&:hover": {
         color: "#fff",
-        background: "#9bc400",
-        border: "2px solid #9bc400",
+        background: "#008900",
+        border: "2px solid #008900",
       },
     },
     margin: "0px auto",
@@ -92,10 +73,17 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     "& .MuiSvgIcon-root": {
-      color: "#9bc400",
+      color: "#008900",
       margin: "4% 0% 0% 43%",
     },
     marginLeft:'12%',
+  },
+  xs:{
+    [theme.breakpoints.down("xs")]:{
+      display: "flex",
+      flexDirection:'column',
+      marginBottom:theme.spacing(6)
+    }
   },
  
   menu: {

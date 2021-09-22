@@ -17,7 +17,7 @@ export default makeStyles((theme) => ({
       transition: "width .3s",
       "&:hover": {
         display: "block",
-        borderBottom:'2px solid #fff'
+        borderBottom:'2px solid #008900'
       },
     },
     "& .MuiSvgIcon-root": {
@@ -37,7 +37,7 @@ export default makeStyles((theme) => ({
       lineHeight: " 26px",
     },
     "& .MuiButton-contained": {
-      color: "#164A41",
+      color: "#008900",
       borderBottom: "2px solid transparent",
       fontSize: " 1.16625rem",
       fontWeight: " 600",
@@ -47,7 +47,7 @@ export default makeStyles((theme) => ({
       marginLeft: "0.8em",
       "&:hover": {
         color: "#fff",
-        background: "#164A41",
+        background: "#008900",
       },
     },
     "& .MuiButton-text": {
@@ -59,7 +59,7 @@ export default makeStyles((theme) => ({
       lineHeight: " 26px",
       marginRight: "1.6em",
       "&:hover": {
-        color: "#9bc400",
+        color: "#008900",
       },
     },
   },
@@ -81,7 +81,7 @@ export default makeStyles((theme) => ({
       color: "#000",
       "&:hover": {
         display: "block",
-        borderBottom:'2px solid #164A41'
+        borderBottom:'2px solid #008900'
       },
     },
     "& .MuiSvgIcon-root": {
@@ -94,28 +94,12 @@ export default makeStyles((theme) => ({
       top: "1px",
       marginTop: "1px",
       bottom: " -1.5em",
-      color: "#9bc400",
+      color: "#008900",
       fontSize: ".875rem",
       fontWeight: "600",
       position: "relative",
     },
-  },
-  gridIn: {
-    "& .MuiInputBase-root": {
-      color: "#f7f7f7",
-      backgroundColor: "#333",
-      margin: theme.spacing(2),
-      position: "relative",
-      width: "110%",
-      height: "46px",
-      fontSize: "1rem",
-      paddingTop: "12px",
-      paddingBottom: "12px",
-      paddingLeft: "2px",
-      top: "-10px",
-      left: " 50px",
-      marginLeft: "3em",
-    },
+  
     "& .MuiSvgIcon-root": {
       marginRight: theme.spacing(1),
       marginLeft: theme.spacing(1),

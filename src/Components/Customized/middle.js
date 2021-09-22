@@ -15,10 +15,21 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(6),
     "& .MuiTypography-root": {
       fontWeight: "300",
-      marginLeft: "5%",
+      marginLeft: "3%",
+    },
+    "& .MuiTypography-subtitle1": {
+      fontSize:18,  
     },
     "& .MuiTypography-h4": {
-      fontWeight: "300",
+      marginTop: "3%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: theme.spacing(1),
+      "& .MuiTypography-root": {
+        fontWeight: "600",
+        fontSize: "19",
+        marginRight: "18%",
+      },
     },
   },
   gridDiv1: {
@@ -27,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiTypography-root": {
       marginBottom: theme.spacing(2),
       lineHeight: "2rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: theme.spacing(1),
     },
   },
   gridDiv3: {
@@ -44,15 +58,25 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiTypography-root": {
       color: "#8e8e90",
       position: "relative",
+      fontWeight: "300",
     },
-    marginBottom: "-10%",
+    marginBottom: "4%",
+    [theme.breakpoints.down("xs")]: {
+      display: "flex",
+      flexDirection: "column",
+    },
   },
   image: {
-    maxHeight: "40vh",
-    maxWidth: "100%",
+    maxHeight: "50vh",
+    Width: "50vw",
     display: "block",
     position: "relative",
     borderRadius: "12px",
+    marginLeft: "15%",
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "80%",
+      margin: "0 0 6% 6%",
+    },
   },
   image3: {
     maxHeight: "50vh",
@@ -60,7 +84,12 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     position: "relative",
     borderRadius: "12px",
-    marginLeft: "15%",
+    marginLeft: "11%",
+    marginBottom: "7%",
+    [theme.breakpoints.down("xs")]: {
+      margin: "10% 1% 6% 13%",
+      maxHeight: "50vw",
+    },
   },
   image2: {
     marginTop: "2em",
@@ -75,8 +104,8 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiButtonBase-root": {
       textTransform: "capitalize",
       background: theme.palette.background.default,
-      color: "#9bc400",
-      border: "2px solid #9bc400",
+      color: "#008900",
+      border: "2px solid #008900",
       borderRadius: "30px",
       fontSize: " 1.16625rem",
       fontWeight: " 600",
@@ -85,14 +114,42 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
       display: "inline-block",
       lineHeight: " 26px",
+      marginLeft: "10%",
       "&:hover": {
         color: "#fff",
-        background: "#9bc400",
-        border: "2px solid #9bc400",
+        background: "#008900",
+        border: "2px solid #008900",
+      },
+    },
+    "& .MuiTypography-root": {
+      marginLeft: "10%",
+      fontSize:18,  
+      marginBottom:theme.spacing(2) 
+    },
+    "& .MuiDivider-root": {
+      marginLeft: "10%",
+      marginTop:theme.spacing(2) 
+    },
+    [theme.breakpoints.down("xs")]: {
+      display: "flex",
+      flexDirection: "column-reverse",
+      "& .MuiTypography-root": {
+        color: "#8e8e90",
+        fontSize: "18px",
+        fontWeight: "300",
+        marginRight: "7%",
+        marginBottom: "4%",
       },
     },
   },
-
+  typoMiddle:{
+    "& .MuiTypography-root": {
+      marginRight: "15%",
+    },
+    "& .MuiDivider-root": {
+      marginRight: "15%",
+    },
+  },
   avatar: {
     marginTop: "1.1em",
     "& .MuiAvatar-root": {
@@ -118,7 +175,7 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
     },
     "& .MuiTypography-body1": {
-      color: "#9bc400",
+      color: "#008900",
       marginBottom: theme.spacing(1),
     },
     "& .MuiTypography-body2": {
@@ -148,26 +205,26 @@ export function Middle({
 }) {
   const classes = useStyles();
   return (
-    <Grid container spacing={3} className={classes.gridContainer}>
-      <div className={classes.gridDiv}>
-        <Typography variant="h4" style={{ color: "#9bc400" }} gutterBottom>
+    <Grid container className={classes.gridContainer}>
+      <Grid item xs={12} className={classes.gridDiv} container direction="row">
+        <Typography variant="h4" style={{ color: "#008900" }} gutterBottom>
           {titleTop}
         </Typography>
-        <Typography variant="subtitle2" gutterBottom>
+        <Typography variant="subtitle1" gutterBottom>
           {topSubtitle}
         </Typography>
-      </div>
-      <Grid item container direction="column" className={classes.button}>
-        <Grid item xs={12} sm={6} className={classes.gridDiv1}>
-          <Typography variant="subtitle2" style={{ color: "#333" }}>
+      </Grid>
+      <Grid container direction="row" spacing={10} className={classes.button}>
+        <Grid item xs={12} sm={6} >
+          <Typography variant="body2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
           <Divider />
           <br />
-          <Typography variant="subtitle2">{middleSubtitle}</Typography>
+          <Typography variant="subtitle2" gutterBottom>{middleSubtitle}</Typography>
           <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
-        <Grid direction="column" xs={12} sm={6}>
+        <Grid item xs={12} sm={6}>
           <img src={image} alt="HFTmaxima web" className={classes.image} />
         </Grid>
       </Grid>
@@ -186,23 +243,23 @@ export function MiddleMid({
   const classes = useStyles();
   return (
     <Grid container spacing={3} className={classes.gridContainer}>
-      <div className={classes.gridDiv}>
+      <Grid xs={12} className={classes.gridDiv}>
         <Typography variant="h4" style={{ color: "#9bc400" }}>
           {titleTop}
         </Typography>
         <Typography variant="subtitle2">{topSubtitle}</Typography>
-      </div>
-      <Grid item container direction="column" className={classes.button}>
-        <Grid direction="column" xs={12} sm={6}>
+      </Grid>
+      <Grid container direction="row" spacing={3} className={classes.button}>
+        <Grid item xs={12} sm={6}>
           <img src={image} alt="HFTmaxima web" className={classes.image3} />
         </Grid>
-        <Grid className={classes.gridDiv3} xs={12} sm={6}>
+        <Grid item xs={12} sm={6} className={classes.typoMiddle} >
           <Typography variant="subtitle2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
           <Divider />
           <br />
-          <Typography variant="subtitle2">{middleSubtitle}</Typography>
+          <Typography variant="subtitle2" gutterBottom>{middleSubtitle}</Typography>
           <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
       </Grid>

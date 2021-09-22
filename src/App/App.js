@@ -8,9 +8,12 @@ import Support from "../Components/Support/Support";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
 import AlgoInterface from "../Components/Algorithm/AlgoInterface";
+import Header from "../Components/Header/Header";
+import Footer from "../Components/Footer/Footer";
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Header/>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/news" component={NewsPage} />
@@ -19,6 +22,7 @@ function App() {
         <Route exact path="/auth/register" component={Register} />
         <Route exact path="/algorithm" component={AlgoInterface} />
       </Switch>
+      <Footer/>
       <CssBaseline />
     </ThemeProvider>
   );

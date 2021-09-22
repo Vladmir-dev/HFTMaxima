@@ -3,7 +3,6 @@ import React from "react";
 import useStyles from "./styles";
 import { Customized } from "../Components/Customized/Customized";
 
-
 export default function MainLow() {
   const classes = useStyles();
   return (
@@ -13,7 +12,7 @@ export default function MainLow() {
           <div className={classes.tabTypo}>
             <Typography
               variant="h4"
-              style={{ color: "#9bc400" }}
+              style={{ color: "#008900" }}
               gutterBottom
               align="center"
             >
@@ -28,16 +27,15 @@ export default function MainLow() {
               Discover a complete trading experience powered by real traders
             </Typography>
           </div>
-          <Grid align="center">
-            <Customized.TabContent />
-          </Grid>
+
+          <Customized.TabContent />
         </Grid>
         <Grid className={classes.gridMiddles} item>
           <Customized.News styles={{ marginBottom: "4em" }} />
         </Grid>
-        <Grid item className={classes.rowMargin}>
+        <Grid item className={classes.rowMargin} xs={12}>
           <div style={{ marginTop: "4em" }}>
-            <Typography variant="subtitle1" component="p">
+            <Typography variant="subtitle2">
               HFTmaxima Trading Network is brought to you by HFTmaxima company.
               HFTmaxima is a company that supports or is supported by the
               HFTmaxima website application. The HFTmaxima is not a financial
