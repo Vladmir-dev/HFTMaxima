@@ -1,6 +1,7 @@
 import { Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
+import Pulse from "react-reveal/Pulse";
 import { Customized } from "../Components/Customized/Customized";
 import { Link } from "react-router-dom";
 
@@ -13,10 +14,12 @@ export default function Main() {
         <Grid container spacing={3}>
           <Grid item container className={classes.grid} xs={12}>
             <div className={classes.div}>
-              <Typography variant="h6" gutterBottom>HFTmaxima Trading Platforms</Typography>
-              <Typography variant="h3" gutterBottom>Have power over your Trading</Typography>
-              <Typography variant="body2" gutterBottom>Enrich your Trading skills with HFTMaxima Algorithm and accomplish your goals</Typography>
-            </div>
+              <Pulse>
+                <Typography variant="h6" gutterBottom>HFTmaxima Trading Platforms</Typography>
+                <Typography variant="h3" gutterBottom>Have power over your Trading</Typography>
+                <Typography variant="body2" gutterBottom>Enrich your Trading skills with HFTMaxima Algorithm and accomplish your goals</Typography>
+              </Pulse>
+              </div>
             <div className={classes.div1}>
               <Customized.Button
                 text="Create new Account"

@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
+import RubberBand from "react-reveal/RubberBand";
 import { Link } from "react-router-dom";
 import { Customized } from "./Customized";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "3%",
     },
     "& .MuiTypography-subtitle1": {
-      fontSize:18,  
+      fontSize: 18,
     },
     "& .MuiTypography-h4": {
       marginTop: "3%",
@@ -123,12 +124,12 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiTypography-root": {
       marginLeft: "10%",
-      fontSize:18,  
-      marginBottom:theme.spacing(2) 
+      fontSize: 18,
+      marginBottom: theme.spacing(2),
     },
     "& .MuiDivider-root": {
       marginLeft: "10%",
-      marginTop:theme.spacing(2) 
+      marginTop: theme.spacing(2),
     },
     [theme.breakpoints.down("xs")]: {
       display: "flex",
@@ -142,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  typoMiddle:{
+  typoMiddle: {
     "& .MuiTypography-root": {
       marginRight: "15%",
     },
@@ -207,7 +208,7 @@ export function Middle({
   return (
     <Grid container className={classes.gridContainer}>
       <Grid item xs={12} className={classes.gridDiv} container direction="row">
-        <Typography variant="h4" style={{ color: "#008900" }} gutterBottom>
+        <Typography variant="h4" style={{ color: "#9bc400" }} gutterBottom>
           {titleTop}
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
@@ -215,17 +216,23 @@ export function Middle({
         </Typography>
       </Grid>
       <Grid container direction="row" spacing={10} className={classes.button}>
-        <Grid item xs={12} sm={6} >
+        <Grid item xs={12} sm={6}>
           <Typography variant="body2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
+
           <Divider />
+
           <br />
-          <Typography variant="subtitle2" gutterBottom>{middleSubtitle}</Typography>
+          <Typography variant="subtitle2" gutterBottom>
+            {middleSubtitle}
+          </Typography>
           <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <img src={image} alt="HFTmaxima web" className={classes.image} />
+          <RubberBand>
+            <img src={image} alt="HFTmaxima web" className={classes.image} />
+          </RubberBand>
         </Grid>
       </Grid>
     </Grid>
@@ -242,7 +249,7 @@ export function MiddleMid({
 }) {
   const classes = useStyles();
   return (
-    <Grid container spacing={3} className={classes.gridContainer}>
+    <Grid container className={classes.gridContainer}>
       <Grid xs={12} className={classes.gridDiv}>
         <Typography variant="h4" style={{ color: "#9bc400" }}>
           {titleTop}
@@ -253,13 +260,15 @@ export function MiddleMid({
         <Grid item xs={12} sm={6}>
           <img src={image} alt="HFTmaxima web" className={classes.image3} />
         </Grid>
-        <Grid item xs={12} sm={6} className={classes.typoMiddle} >
+        <Grid item xs={12} sm={6} className={classes.typoMiddle}>
           <Typography variant="subtitle2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
           <Divider />
           <br />
-          <Typography variant="subtitle2" gutterBottom>{middleSubtitle}</Typography>
+          <Typography variant="subtitle2" gutterBottom>
+            {middleSubtitle}
+          </Typography>
           <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
       </Grid>
