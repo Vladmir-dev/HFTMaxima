@@ -153,6 +153,9 @@ export default makeStyles((theme) => ({
     marginLeft: "-2%",
     [theme.breakpoints.down("xs")]: {
       marginLeft: "-6%",
+      '& .MuiTypography-subtitle2':{
+        marginLeft:'20px',
+      }
     },
   },
 }));

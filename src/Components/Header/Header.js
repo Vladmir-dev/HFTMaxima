@@ -70,6 +70,7 @@ export default function Header() {
       className={`${classes.root} ${background && `${classes.newRoot}`} `}
       position="fixed"
       elevation={0}
+      xs={12}
     >
       <Container>
         <Toolbar>

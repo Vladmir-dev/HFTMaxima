@@ -34,7 +34,7 @@ export default function MainLow() {
           <Customized.News styles={{ marginBottom: "4em" }} />
         </Grid>
         <Grid item className={classes.rowMargin} xs={12}>
-          <div style={{ marginTop: "4em" }}>
+          <div style={{ marginTop: "2.5em" }}>
             <Typography variant="subtitle2">
               HFTmaxima Trading Network is brought to you by HFTmaxima company.
               HFTmaxima is a company that supports or is supported by the

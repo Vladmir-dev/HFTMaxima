@@ -27,10 +27,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       marginBottom: theme.spacing(1),
       "& .MuiTypography-root": {
-        fontWeight: "600",
-        fontSize: "19",
-        marginRight: "18%",
+        margin: "4% 11% 0 14%",
       },
+      "& .MuiTypography-subtitle1": {
+        fontSize: 18,
+        fontWeight: "600",
+        fontSize: '19px',
+      },
+
     },
   },
   gridDiv1: {
@@ -76,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "15%",
     [theme.breakpoints.down("xs")]: {
       maxWidth: "80%",
-      margin: "0 0 6% 6%",
+      margin: "5% auto",
     },
   },
   image3: {
@@ -88,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "11%",
     marginBottom: "7%",
     [theme.breakpoints.down("xs")]: {
-      margin: "10% 1% 6% 13%",
+      margin: "5% auto",
       maxHeight: "50vw",
     },
   },
@@ -136,10 +140,13 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column-reverse",
       "& .MuiTypography-root": {
         color: "#8e8e90",
-        fontSize: "18px",
+        fontSize: 18,
         fontWeight: "300",
         marginRight: "7%",
-        marginBottom: "4%",
+        marginBottom: "2%",
+      },
+      "& .MuiButtonBase-root": {
+        margin:'5% 0 0 30%'
       },
     },
   },
@@ -216,7 +223,7 @@ export function Middle({
         </Typography>
       </Grid>
       <Grid container direction="row" spacing={10} className={classes.button}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} >
           <Typography variant="body2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
