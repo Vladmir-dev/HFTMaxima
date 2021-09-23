@@ -24,9 +24,18 @@ export default makeStyles((theme) => ({
         color: "#008900",
       },
     },
-    "& .MuiListItem-divider": {
-      borderBottom: "0.2px solid #333",
-    },
+    [theme.breakpoints.down("xs")]:{
+      '& .MuiListItemButton-root':{
+        alignItems:'center',
+        width:'100%',
+      },
+      '& .MuiListItemText-root':{
+        alignItems:'center',
+        marginLeft:'5%',
+      },
+      
+    }
+
   },
   nested: {
     paddingLeft: theme.spacing(4),

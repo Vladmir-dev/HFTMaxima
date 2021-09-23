@@ -17,13 +17,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
 export default function Header() {
-  const classes = useStyles();
-  const [xsMenu, setXsMenu] = useState(false);
-  const [xs, setXs] = useState(false);
+  const [xsMenuOpen, setXsMenuOpen] = useState(false);
   const [background, setBackground] = useState(false);
-
   const [anchorEl, setAnchorEl] = React.useState(null);
-
+  const classes = useStyles({ xsMenuOpen });
   const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -31,19 +28,15 @@ export default function Header() {
   const handlePopoverClose = () => {
     setAnchorEl(null);
   };
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleClick = () => {
+    setXsMenuOpen(true);
   };
   const handleClose = () => {
-    setAnchorEl(null);
+    setXsMenuOpen(false);
   };
-
-  const handleSmallDevice = () => {
-    setXsMenu((prevxsDeviceOpen) => !prevxsDeviceOpen);
-  };
-
   const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
+  const openMenu = Boolean(xsMenuOpen);
+  const id = openMenu ? "simple-popover" : undefined;
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
@@ -56,14 +49,6 @@ export default function Header() {
       window.removeEventListener("scroll", () => {});
     };
   }, []);
-  const showSmallDeviceWindowContent = () => {
-    if (window.innerWidth <= 960) {
-      setXs(true);
-    } else {
-      setXs(false);
-    }
-  };
-  window.addEventListener("resize", showSmallDeviceWindowContent);
 
   return (
     <AppBar
@@ -126,84 +111,87 @@ export default function Header() {
                 </div>
               </Grid>
               <div style={{ flexGrow: 1 }} />
-              {xs ? (
-                <Grid item>
-                  <div className={classes.menu}>
-                    <IconButton onClick={handleSmallDevice && handleClick}>
-                      {!xsMenu ? <MenuIcon /> : <CloseIcon />}
-                    </IconButton>
-                    <Popover
-                      id={id}
-                      open={open}
-                      anchorEl={anchorEl}
-                      onClose={handleClose}
-                      anchorOrigin={{
-                        vertical: "bottom",
-                        horizontal: "left",
-                      }}
-                    >
-                      <Customized.Lists/>
-                    </Popover>
-                  </div>
+              <Grid item className={classes.xs}>
+                <div className={classes.menu}>
+                  <IconButton onClick={handleClick}>
+                    <MenuIcon />
+                  </IconButton>
+                  <Popover
+                    id={id} 
+                    open={openMenu}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left",
+                    }}
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "center",
+                    }}
+                    className={classes.popper1}
+                  >
+                    <Customized.Lists />
+                  </Popover>
+                </div>
+              </Grid>
+
+              <Grid
+                item
+                className={`${classes.gridB} ${classes.div}  ${classes.lg}`}
+                align="center"
+              >
+                <Grid item className={classes.div}>
+                  <Typography
+                    aria-owns={open ? "mouse-over-popover" : undefined}
+                    aria-haspopup="true"
+                    onMouseEnter={handlePopoverOpen}
+                    onMouseLeave={handlePopoverClose}
+                    style={{ position: "relative" }}
+                  >
+                    Products
+                    <ExpandMoreOutlinedIcon fontSize='small'/>
+                  </Typography>
+                  <Popover
+                    id="mouse-over-popover"
+                    sx={{
+                      pointerEvents: "none",
+                    }}
+                    open={open}
+                    anchorEl={anchorEl}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "center",
+                    }}
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "center",
+                    }}
+                    className={classes.popper}
+                  >
+                    <Customized.MenuPaper />
+                  </Popover>
+                  <Typography component={Link} to="/" variant="subtitle2">
+                    Featured In
+                  </Typography>
+                  <Typography
+                    component={Link}
+                    to="/support"
+                    variant="subtitle2"
+                  >
+                    Support
+                  </Typography>
+                  <Typography component={Link} to="/" variant="subtitle2">
+                    Blog
+                  </Typography>
+                  <Customized.Button
+                    text="Open an Account"
+                    variant="contained"
+                    component={Link}
+                    to="auth/register"
+                  />
                 </Grid>
-              ) : (
-                <Grid
-                  item
-                  className={`${classes.gridB} ${classes.div} `}
-                  align="center"
-                >
-                  <Grid item className={classes.div}>
-                    <Typography
-                      aria-owns={open ? "mouse-over-popover" : undefined}
-                      aria-haspopup="true"
-                      onMouseEnter={handlePopoverOpen}
-                      onMouseLeave={handlePopoverClose}
-                      style={{ position: "relative" }}
-                    >
-                      Products
-                      <ExpandMoreOutlinedIcon/>
-                    </Typography>
-                    <Popover
-                      id="mouse-over-popover"
-                      sx={{
-                        pointerEvents: "none",
-                      }}
-                      open={open}
-                      anchorEl={anchorEl}
-                      anchorOrigin={{
-                        vertical: "bottom",
-                        horizontal: "center",
-                      }}
-                      transformOrigin={{
-                        vertical: "top",
-                        horizontal: "center",
-                      }}
-                      className={classes.popper}
-                    >
-                      <Customized.MenuPaper />
-                    </Popover>
-                    <Typography component={Link} to="/" variant="subtitle2">
-                      Featured In
-                    </Typography>
-                    <Typography
-                      component={Link}
-                      to="/support"
-                      variant="subtitle2"
-                    >
-                      Support
-                    </Typography>
-                    <Typography component={Link} to="/" variant="subtitle2">
-                      Blog
-                    </Typography>
-                    <Customized.Button
-                      text="Open an Account"
-                      variant="contained"
-                      component={Link}
-                      to="auth/register"
-                    />
-                  </Grid>
-                </Grid>
-              )}
+              </Grid>
             </Grid>
           </Grid>
         </Toolbar>

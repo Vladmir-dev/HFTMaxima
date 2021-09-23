@@ -23,6 +23,7 @@ export default makeStyles((theme) => ({
     "& .MuiSvgIcon-root": {
       position: "relative",
       display: "inline-block",
+      marginBottom:'-5%'
     },
     display: "flex",
     alignItems: "center",
@@ -120,6 +121,29 @@ export default makeStyles((theme) => ({
     position: "relative",
     opacity:'.9',
   },
+  popper1: {
+    "& .MuiPopover-paper": {
+      width: "60%",
+    },
+    position: "relative",
+    opacity:'.9',
+    marginTop:'-30%',
+    [theme.breakpoints.down("sm")]:{
+      display:({xsMenuOpen})=>  (xsMenuOpen ? 'flex':'none'),
+      "& .MuiPopover-paper": {
+        width: "100vw",
+        height:'70vh',
+        margin:'-5% 2% 0% -3.5%'
+      },
+      "& .MuiTypography-root": {
+        color:'#000'
+      },
+    },
+    [theme.breakpoints.up("sm")]:{
+      display:({xsMenuOpen})=>  (xsMenuOpen ? 'none':'none')
+    }
+    
+  },
   userdiv: {
     display: "flex",
     "& > *": {
@@ -134,5 +158,21 @@ export default makeStyles((theme) => ({
       color: "#8e8e90",
     },
   },
-  
+  xs:{
+    display:'none',
+    [theme.breakpoints.down("md")]:{
+      display:'block'
+    }
+  },
+  lg:{
+    display:'none',
+    [theme.breakpoints.up("md")]:{
+      display:'block'
+    }
+  },
+  menu:{
+    '& .MuiSvgIcon-root':{
+      position:'relative',
+    }
+  }
 }));

@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiTypography-h4": {
       marginTop: "3%",
+      color: "#008900",
     },
     [theme.breakpoints.down("xs")]: {
       marginBottom: theme.spacing(1),
@@ -32,9 +33,7 @@ const useStyles = makeStyles((theme) => ({
       "& .MuiTypography-subtitle1": {
         fontSize: 18,
         fontWeight: "600",
-        fontSize: '19px',
       },
-
     },
   },
   gridDiv1: {
@@ -144,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "2%",
       },
       "& .MuiButtonBase-root": {
-        margin:'5% 0 0 30%'
+        margin: "5% 0 0 30%",
       },
     },
   },
@@ -213,7 +212,7 @@ export function Middle({
   return (
     <Grid container className={classes.gridContainer}>
       <Grid item xs={12} className={classes.gridDiv} container direction="row">
-        <Typography variant="h4" style={{ color: "#9bc400" }} gutterBottom>
+        <Typography variant="h4" style={{ color: "#008900" }} gutterBottom>
           {titleTop}
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
@@ -221,7 +220,7 @@ export function Middle({
         </Typography>
       </Grid>
       <Grid container direction="row" spacing={10} className={classes.button}>
-        <Grid item xs={12} sm={6} >
+        <Grid item xs={12} sm={6}>
           <Typography variant="body2" style={{ color: "#333" }}>
             {titleMiddle}
           </Typography>
@@ -256,7 +255,7 @@ export function MiddleMid({
   return (
     <Grid container className={classes.gridContainer}>
       <Grid xs={12} className={classes.gridDiv}>
-        <Typography variant="h4" style={{ color: "#9bc400" }}>
+        <Typography variant="h4" style={{ color: "#008900" }}>
           {titleTop}
         </Typography>
         <Typography variant="subtitle2">{topSubtitle}</Typography>

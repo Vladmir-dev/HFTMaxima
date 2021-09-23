@@ -3,7 +3,6 @@ export default makeStyles((theme) => ({
   appBar: {
     bottom: 0,
     background: "#363636",
-    marginTop: "4em",
     width: "100vw",
     height: "100%",
     marginLeft: "-2%",
@@ -30,6 +29,11 @@ export default makeStyles((theme) => ({
       position: "relative",
       marginLeft: "3em",
       marginTop: "0.8em",
+    },
+    "& .MuiTypography-subtitle2": {
+      fontSize: "20",
+      fontWeight: "300",
+      margin: theme.spacing(4),
     },
     "& .MuiTypography-subtitle1": {
       fontSize: "20",
