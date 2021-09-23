@@ -23,7 +23,7 @@ export default function Lists() {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton sx={{ pl: 4 }}>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
             <ListItemText primary="Account Types" />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>

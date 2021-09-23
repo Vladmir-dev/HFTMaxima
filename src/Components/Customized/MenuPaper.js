@@ -1,4 +1,4 @@
-import { Container, Grid, Paper, Typography } from "@material-ui/core";
+import { Container, Grid,Typography } from "@material-ui/core";
 import React from "react";
 import Item from "./Item";
 import useStyles from "./styles";

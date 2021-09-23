@@ -260,7 +260,7 @@ export function MiddleMid({
         </Typography>
         <Typography variant="subtitle2">{topSubtitle}</Typography>
       </Grid>
-      <Grid container direction="row" spacing={3} className={classes.button}>
+      <Grid container direction="row" spacing={10} className={classes.button}>
         <Grid item xs={12} sm={6}>
           <img src={image} alt="HFTmaxima web" className={classes.image3} />
         </Grid>

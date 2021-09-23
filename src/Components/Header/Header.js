@@ -14,7 +14,7 @@ import logo from "../../images/price.png";
 import useStyles from "./styles";
 import Popover from "@mui/material/Popover";
 import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 export default function Header() {
   const [xsMenuOpen, setXsMenuOpen] = useState(false);
@@ -56,7 +56,7 @@ export default function Header() {
       position="fixed"
       elevation={0}
       xs={12}
-    >
+    > 
       <Container>
         <Toolbar>
           <Grid container alignItems="center">
