@@ -11,7 +11,7 @@ export default function Cards() {
   const classes = useStyles();
   return (
     <Grid container className={classes.gridC1}>
-      <Grid item xs={12} sm={4} className={classes.xs}>
+      <Grid item xs={12} sm={4} md={4} className={classes.xs}>
         <Slide bottom>
           <Card
             text="Login"
@@ -23,7 +23,7 @@ export default function Cards() {
         </Slide>
       </Grid>
 
-      <Grid item xs={12} sm={4} className={classes.xs}>
+      <Grid item xs={12} sm={4} md={4} className={classes.xs}>
         <Slide bottom>
           <Card
             text="Download Now"

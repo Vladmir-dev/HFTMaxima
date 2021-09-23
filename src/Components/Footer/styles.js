@@ -2,34 +2,70 @@ import { makeStyles } from "@material-ui/core";
 export default makeStyles((theme) => ({
   appBar: {
     bottom: 0,
-    background: '#fff',
-    marginTop:'4em',
+    background: "#363636",
+    marginTop: "4em",
+    width: "100vw",
+    height: "100%",
+    marginLeft: "-2%",
+    marginTop: "-2%",
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+      marginLeft: "-6%",
+      marginBottom: "-6%",
+    },
   },
   flex1: {
-    opacity:'.6',
-    marginBottom:'2em',
-    marginTop:'2em',
-    margin:'0 auto',
+    justifyContent: "space-between",
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "8%",
+      marginRight: "8%",
+    },
   },
   flex: {
     display: "flex",
-    marginBottom:'1em',
+    marginTop: "1em",
     "& .MuiTypography-root": {
       color: "silver",
-      fontSize: ".875rem",
       fontWeight: "600",
       position: "relative",
       marginLeft: "3em",
-      marginTop:'0.8em',
+      marginTop: "0.8em",
     },
-    '& .MuiTypography-subtitle1':{
-        fontSize:'20',
-        fontWeight:'300',
-        margin:theme.spacing(4)
+    "& .MuiTypography-subtitle1": {
+      fontSize: "20",
+      fontWeight: "300",
+      margin: theme.spacing(4),
     },
-    margin:'0 auto',
+    "& .MuiSvgIcon-root": {
+      marginLeft: theme.spacing(2),
+    },
+    marginLeft: "8%",
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+      marginLeft: "8%",
+      "& .MuiTypography-subtitle2": {
+        fontSize: "20",
+        fontWeight: "300",
+        margin: "0 8% 4% -3%",
+      },
+    },
   },
-  center:{
-    margin:'0 auto'
-  }
+
+  logo: {
+    height: 40,
+    position: "relative",
+    marginRight: theme.spacing(1),
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "25%",
+      marginTop: "4%",
+    },
+  },
+  xs: {
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+      "& .MuiTypography-root": {
+        marginLeft: "25%",
+      },
+    },
+  },
 }));

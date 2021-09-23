@@ -117,8 +117,6 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: "0.8em",
       paddingLeft: "0.8em",
       position: "relative",
-      display: "inline-block",
-      lineHeight: " 26px",
       marginLeft: "10%",
       "&:hover": {
         color: "#fff",

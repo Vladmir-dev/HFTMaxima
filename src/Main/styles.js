@@ -13,8 +13,7 @@ export default makeStyles((theme) => ({
       fontSize: " 1rem",
       fontWeight: " 600",
       position: "relative",
-      width: "20%",
-      lineHeight: " 26px",
+
       transition: "transform all .450ms",
       "&:hover": {
         color: "#008900",
@@ -58,11 +57,13 @@ export default makeStyles((theme) => ({
     width: "100vw",
     height: "100vh",
     marginLeft: "-2%",
+    marginTop: "-4%",
     position: "relative",
     [theme.breakpoints.down("xs")]: {
       marginLeft: "-6%",
       marginTop: "-1%",
       height: "100vh",
+      width: "100vw",
     },
   },
   toolbar: theme.mixins.toolbar,
@@ -145,6 +146,7 @@ export default makeStyles((theme) => ({
     marginLeft: "-2%",
     [theme.breakpoints.down("xs")]: {
       marginLeft: "-6%",
+      width: "100vw",
     },
   },
   middlelow: {
@@ -153,6 +155,7 @@ export default makeStyles((theme) => ({
     marginLeft: "-2%",
     [theme.breakpoints.down("xs")]: {
       marginLeft: "-6%",
+      width: "100vw",
       '& .MuiTypography-subtitle2':{
         marginLeft:'20px',
       }

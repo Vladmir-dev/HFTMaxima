@@ -83,7 +83,7 @@ export default makeStyles((theme) => ({
       display: "flex",
       flexDirection:'column',
       marginBottom:theme.spacing(6)
-    }
+    },
   },
  
   menu: {
