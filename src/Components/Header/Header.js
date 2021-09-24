@@ -140,6 +140,7 @@ export default function Header() {
                         vertical: "bottom",
                         horizontal: "left",
                       }}
+                      dura
                     >
                       <Customized.Lists/>
                     </Popover>
