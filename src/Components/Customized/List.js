@@ -19,7 +19,7 @@ export default function Lists() {
     <List component="nav" className={classes.root}>
       <ListItemButton onClick={handleClick} alignItems='center'>
         <ListItemText primary="Products" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>

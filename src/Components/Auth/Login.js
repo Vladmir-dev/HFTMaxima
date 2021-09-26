@@ -1,16 +1,16 @@
 import React from "react";
-import { Container, Grid, Typography } from "@material-ui/core";
+import {Grid, Typography } from "@material-ui/core";
 import { Customized } from "../../Components/Customized/Customized";
 import { Form, UseForm } from "../Customized/UseForm";
-import {initialState } from "../../state";
+import { initialState } from "../../state";
 import useStyles from "./styles";
 import GoogleLogin from "react-google-login";
 import { Image } from "../../images/Img";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import Forgot from "../forgot/Forgot";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { GOOGLE_LOGIN } from "../../Actions/types";
+import logo from "../../images/price.png";
 export default function Login() {
   const [openPopup, setOpenPopup] = React.useState(false);
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ export default function Login() {
     const token = res?.tokenId;
     try {
       dispatch({ type: GOOGLE_LOGIN, payload: { results, token } });
-      history.push('/algorithm')
+      history.push("/algorithm");
     } catch (error) {
       console.log(error);
     }
@@ -34,26 +34,37 @@ export default function Login() {
     console.log("Google sign in was unsuccessful, try again later");
   };
   return (
-    <Container className={classes.page}>
-      <Grid container className={classes.Container} spacing={3}>
-        <Grid
-          item
-          container
-          direction="column"
-          className={classes.left}
-          xs={12}
-          md={6}
-        >
-          <div className={classes.div}>
-            <Typography variant="h4" style={{ fontWeight: "450",color:'#000' }} component={Link} to='/'>
-              Sign in to HFTMaxima
+    <main className={classes.container}>
+      <Grid container spacing={6} justify='center'>
+        <Grid item xs={12} sm={6} className={classes.leftImage}>
+        <div className={classes.div}>
+        <Typography
+              variant="h4"
+              style={{ fontWeight: "bold"}}
+              gutterBottom
+            >
+              Welcome! To <span style={{color:'#008900'}}>Maxima.</span>
             </Typography>
-            <Typography variant="body2" gutterBottom color="textSecondary">
-              Enter your details to access your account
+            <Typography
+              variant="subtitle1"
+              style={{ fontWeight: "300"}}
+              gutterBottom
+            >
+              We got you covered in your trading interest, have your
+              way with our platform. Our interest is giving you the best experience a trader can ever 
+              receive. Learn basic skills to make profit and regulate volatility.
+              Play around with our features and you might get lucky but this is only possible if you login with
+              your email
+            </Typography>
+            <Typography
+              variant="h6"
+              style={{ fontWeight: "100"}}
+              align="center"
+            >
+              Or
             </Typography>
           </div>
-
-          <div className={classes.div}>
+          <div className={classes.divButton}>
             <GoogleLogin
               clientId={process.env.CLIENTID}
               render={(renderProps) => (
@@ -77,8 +88,7 @@ export default function Login() {
               fullWidth
             />
           </div>
-
-          <div className={`${classes.divTop} ${classes.div}`}>
+          <div className={classes.div}>
             <Typography variant="body2" gutterBottom align="right">
               Don't have an account?
               <Typography
@@ -91,48 +101,79 @@ export default function Login() {
             </Typography>
           </div>
         </Grid>
-        <Grid
-          item
-          container
-          direction="column"
-          className={classes.right}
-          xs={12}
-          md={6}
-        >
-          <Form onSubmit={handleSubmit} className={classes.form}>
-            <Customized.Input
-              label="Email"
-              value={values.email}
-              name="email"
-              type="email"
-              onChange={handleInputChange}
-              variant="filled"
-            />
-            <Customized.Input
-              label="Password"
-              value={values.password}
-              name="password"
-              type="password"
-              onChange={handleInputChange}
-              variant="filled"
-            />
-            <div>
+        <Grid item xs={12} sm={6} align="center" className={classes.divRight}>
+          <div className={classes.divLogo}>
+            <Typography
+              component={Link}
+              to="/"
+              variant="h5"
+              align="center"
+            >
+              <img src={logo} alt="Maxima logo" className={classes.logo} />
+              Maxima
+            </Typography>
+          </div>
+          <div className={classes.xs}>
+            <Typography
+              variant="h4"
+              gutterBottom
+
+            >
+              Sign in to Maxima
+            </Typography>
+            <Typography variant="caption" gutterBottom>
+              Enter your details to access your account
+            </Typography>
+          </div>
+          <div className={classes.divForm}>
+            <Form
+              onSubmit={handleSubmit}
+              className={classes.form}
+            >
+              <Customized.Input
+                label="Email"
+                value={values.email}
+                name="email"
+                type="email"
+                onChange={handleInputChange}
+                variant="outlined"
+              />
+              <Customized.Input
+                label="Password"
+                value={values.password}
+                name="password"
+                type="password"
+                onChange={handleInputChange}
+                variant="outlined"
+              />
+              <div className={classes.xs}>
+                <Typography
+                  variant="subtitle2"
+                  align="center"
+                  component={Link}
+                  to='/auth/forgot'
+                >
+                  Forgot password?
+                </Typography>
+              </div>
+              <Customized.Button text="Login" type="submit" fullWidth />
+            </Form>
+          </div>
+          <div className={classes.divTop} >
+            <Typography variant="body2" gutterBottom align="right">
+              Don't have an account?
               <Typography
                 variant="subtitle2"
-                align="center"
-                style={{ cursor: "pointer" }}
-                onClick={() => setOpenPopup(true)}
+                component={Link}
+                to="/auth/register"
               >
-                Forgot password?
+                Sign up
               </Typography>
-            </div>
-            <Customized.Button text="Login" type="submit" />
-          </Form>
+            </Typography>
+          </div>
+          
         </Grid>
       </Grid>
-      <Customized.Popup openPopup={openPopup} setOpenPopup={setOpenPopup}>
-        <Forgot />
-      </Customized.Popup>
-    </Container>
+    </main>
   );
 }

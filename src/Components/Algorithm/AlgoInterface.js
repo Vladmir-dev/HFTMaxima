@@ -1,10 +1,11 @@
+import { Grid } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { LOGOUT } from "../../Actions/types";
-import Header from "../Header/Header";
-import Main from "./Main";
-import SideBar from "./sideBar";
+import Leftbar from "./Leftbar.";
+import Topbar from "./Topbar";
+
 export default function AlgoInterface() {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -22,9 +23,13 @@ export default function AlgoInterface() {
   };
   return (
     <React.Fragment>
-      <Main user={user} logout={logout}/>
-      
-      <SideBar/>
+      <Topbar />
+     <Grid container>
+     <Grid item sm={3} xs={2}>
+        <Leftbar />
+      </Grid>
+      <Grid item sm={9} xs={10}></Grid>
+     </Grid>
     </React.Fragment>
   );
 }

@@ -115,10 +115,10 @@ export default makeStyles((theme) => ({
       position: "relative",
       display: " block",
       lineHeight: "1",
-      color: "#a28089",
+      color: "#008900",
     },
     "& .MuiTypography-subtitle2": {
-      color: "#9bc400",
+      color: "#008900",
       "&:hover": {
         color: "#9bc400",
       },

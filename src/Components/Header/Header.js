@@ -60,7 +60,7 @@ export default function Header() {
       <Container>
         <Toolbar>
           <Grid container alignItems="center">
-            <Grid container row alignItems="center">
+            <Grid container alignItems="center">
               <Grid item align="center">
                 <div style={{ marginBottom: "12%" }}>
                   {!background ? (
@@ -73,16 +73,9 @@ export default function Header() {
                     >
                       <img
                         src={logo}
-                        alt="HFTMaxima logo"
+                        alt="Maxima logo"
                         className={classes.logo}
                       />
-                      <Typography
-                        variant="h2 "
-                        align="center"
-                        style={{ color: "#fff" }}
-                      >
-                        HFT
-                      </Typography>
                       Maxima
                     </Typography>
                   ) : (
@@ -95,7 +88,7 @@ export default function Header() {
                     >
                       <img
                         src={logo}
-                        alt="HFTMaxima logo"
+                        alt="Maxima logo"
                         className={classes.logo}
                       />
                       <Typography

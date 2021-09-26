@@ -1,99 +1,12 @@
 import { makeStyles } from "@material-ui/core";
+import image from "../../images/next.jpg";
 export default makeStyles((theme) => ({
-  Container: {
-    display: " flex",
-    height: "320px",
-    margin: "4em auto",
-    width: "640px",
-    [theme.breakpoints.down("xs")]: {
-      display: "flex",
-      flexDirection: "column",
-      width: "400px",
-      height:'1%',
-    },
-  },
-  left: {
-    background: "#fff",
-    height: "calc(100% - 40px)",
-    top: "20px",
-    position: "relative",
-    width: " 50%",
-    minHeight: "100%",
-    "& .MuiButton-root": {
-      textTransform:'capitalize',
-      marginTop: "1em",
-      width:'100%',
-      padding:theme.spacing(1)
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
-      maxHeight: "270px",
-      div:{
-        display:'block',
-      },
-      marginBottom:theme.spacing(5)
-    },
-  },
-  leftRegister: {
-    background: "#fff",
-    height: "calc(100% - 40px)",
-    top: "20px",
-    position: "relative",
-    width: " 50%",
-    minHeight: "120%",
-    "& .MuiButton-root": {
-      textTransform: "capitalize",
-      marginTop: "1em",
-      padding:theme.spacing(2),
-    },
-    [theme.breakpoints.down("xs")]: {
-      height: "100%",
-      width: "100%",
-      maxHeight: "350px",
-      marginBottom:theme.spacing(13),
-      "& .MuiButton-root": {
-        marginTop: "1em",
-        width:'100%',
-        padding:theme.spacing(1)
-      },
-      display:'block',
-    },
-  },
-  right: {
-    background: " #170041",
-    boxShadow: "0px 0px 40px 16px rgba(0,0,0,0.22)",
-    color: "#F1F1F2",
-    position: "relative",
-    width: "50%",
-    [theme.breakpoints.down("xs")]: {
-      flexShrink: 0,
-      height: "100%",
-      width: "100%",
-      maxHeight: "350px",
-    },
-  },
-  rightRegister: {
-    background: " #170041",
-    boxShadow: "0px 0px 40px 16px rgba(0,0,0,0.22)",
-    color: "#F1F1F2",
-    position: "relative",
-    width: "50%",
-    height: "140%",
-    [theme.breakpoints.down("xs")]: {
-      flexShrink: 0,
-      flexDirection: "column",
-      height: "190%",
-      width: "100%",
-      maxHeight: "350px",
-      display: "block",
-    },
-  },
   form: {
     marginTop: "40px",
     position: "absolute",
     "& .MuiInputBase-root": {
       width: "85%",
-      background: "#fdfdfd",
+      background: "#fff",
       color: "#000",
     },
     "& .MuiFormControl-root": {
@@ -105,9 +18,10 @@ export default makeStyles((theme) => ({
       marginTop: "40px",
       transition: "color 300ms",
       textTransform: "capitalize",
+      width: "85%",
       "&:hover": {
         color: "#fff",
-        background: "#9bc400",
+        background: "#008900",
       },
     },
   },
@@ -119,6 +33,8 @@ export default makeStyles((theme) => ({
         color: "#164A41",
       },
     },
+    width: "85%",
+    marginBottom: theme.spacing(3),
   },
   facebook: {
     background: "#fff",
@@ -132,11 +48,213 @@ export default makeStyles((theme) => ({
     "& .MuiSvgIcon-root": {
       color: "#101357",
     },
+    width: "85%",
+  },
+
+  logo: {
+    height: 40,
+    position: "relative",
+    marginRight: theme.spacing(1),
+  },
+  divLogo: {
+    marginBottom: theme.spacing(3),
+    marginTop: theme.spacing(7),
+    "& .MuiTypography-h5": {
+      color: "#fff",
+    },
+    [theme.breakpoints.down("sm")]: {
+      "& .MuiTypography-h5": {
+        color: "#008900",
+      },
+    },
+  },
+  divForm: {
+    marginLeft: "11%",
+    "& .MuiButton-root": {
+      marginRight: "12%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "2.5%",
+    },
+  },
+  divButton: {
+    margin: theme.spacing(10),
+    "& .MuiButton-root": {
+      textTransform: "capitalize",
+    },
+  },
+  container: {
+    background: "#000",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    [theme.breakpoints.down("sm")]: {
+      background: "#fff",
+      opacity: ".6",
+    },
+  },
+  leftImage: {
+    background: "#fff",
+    height: "103vh",
+    position: "relative",
+    objectFit: "contain",
+    backgroundSize: "cover",
+    opacity: ".6",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+  div: {
+    margin: theme.spacing(10),
   },
   divTop: {
-    marginTop: "1em",
+    bottom: 90,
+    position: "absolute",
+    marginLeft: "6.5%",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+    [theme.breakpoints.down("sm")]: {},
   },
-  page: {
-   
+  divRight: {
+    marginTop: "8px",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "8px",
+    },
   },
+  xs: {
+    "& .MuiTypography-h4": {
+      fontWeight: "450",
+      color: "#008900",
+    },
+    "& .MuiTypography-caption": {
+      fontWeight: "450",
+      color: "#d9d9d9",
+    },
+    "& .MuiTypography-subtitle2": {
+      cursor: "pointer",
+      color: "#008900",
+      marginRight: "5%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      color: "#000",
+      "& .MuiTypography-root": {
+        color: "#111",
+      },
+    },
+    [theme.breakpoints.up("sm")]: {
+      "& .MuiTypography-subtitle1": {},
+    },
+  },
+  rightImage: {
+    background: "#fff",
+    height: "103vh",
+    opacity: ".6",
+    position: "relative",
+  },
+  rightdivLogo: {
+    marginBottom: theme.spacing(3),
+    marginTop: theme.spacing(4),
+    "& .MuiTypography-h5": {
+      color: "#000",
+    },
+    [theme.breakpoints.down("sm")]: {
+      "& .MuiTypography-h5": {
+        color: "#008900",
+      },
+    },
+  },
+  rightdivForm: {
+    marginLeft: "11%",
+    "& .MuiButton-root": {
+      marginRight: "12%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "3.5%",
+    },
+    marginTop: "-4%",
+  },
+  rightXs: {
+    "& .MuiTypography-h4": {
+      fontWeight: "450",
+      color: "#008900",
+    },
+    "& .MuiTypography-caption": {
+      fontWeight: "450",
+      color: "#d9d9d9",
+    },
+    "& .MuiTypography-subtitle2": {
+      cursor: "pointer",
+      color: "#008900",
+      marginRight: "5%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      color: "#000",
+      "& .MuiTypography-root": {
+        color: "#111",
+      },
+    },
+    [theme.breakpoints.up("sm")]: {
+      "& .MuiTypography-subtitle1": {},
+    },
+  },
+  rightDiv: {
+    margin: theme.spacing(10),
+    marginLeft:'15%',
+    marginRight:'15%',
+    '& .MuiTypography-body2':{
+        color:'#fff',
+    },
+    '& .MuiTypography-subtitle2':{
+      marginRight:'5%',
+  }
+  },
+  rightDivRight: {
+    marginTop: "8px",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "8px",
+    },
+    background: `url(${image})`,
+    height: "102vh",
+    position: "relative",
+    objectFit: "contain",
+    backgroundSize: "cover",
+    opacity:'.6',
+    [theme.breakpoints.down("xs")]:{
+      display:'none'
+    }
+  },
+  rightDivButton: {
+    margin: theme.spacing(10),
+    "& .MuiButton-root": {
+      textTransform: "capitalize",
+      marginBottom:theme.spacing(4),
+    },
+    marginLeft:'15%',
+  },
+  rightDiv1: {
+    '& .MuiTypography-subtitle2':{
+      marginRight:'24%',
+    },
+    '& .MuiTypography-body2':{
+      color:'#fff',
+  },
+    marginTop:'-10%',
+},
+rightDiv2: {
+  [theme.breakpoints.up("sm")]: {
+    display:'none',
+  },
+  [theme.breakpoints.down("xs")]: {
+    display:'block',
+    bottom:25,
+    position:'absolute',
+    marginLeft: "4.5%",
+    '& .MuiTypography-body2':{
+      color:'#000',
+  },
+  },
+}
 }));

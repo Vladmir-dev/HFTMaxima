@@ -1,12 +1,12 @@
 import { makeStyles } from "@material-ui/core";
 export default makeStyles((theme) => ({
-  logo:{
-    height:40,
-    position:'relative',
-    marginRight:theme.spacing(1)
-},
+                                                                                                                                                                                                                                                                                                                                                      logo:{
+                                                                                                                                                                                                                                                                                                                                                        height:40,
+                                                                                                                                                                                                                                                                                                                                                        position:'relative',
+                                                                                                                                                                                                                                                                                                                                                        marginRight:theme.spacing(1)
+                                                                                                                                                                                                                                                                                                                                                    },
   div: {
-    "& .MuiTypography-root": {
+    "& .MuiTypography-root": {                                                                                                                                                                                                                                                                                                                  
       margin: theme.spacing(2),
       fontWeight: "600",
       position: "relative",
@@ -144,20 +144,6 @@ export default makeStyles((theme) => ({
     }
     
   },
-  userdiv: {
-    display: "flex",
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-    "& .MuiTypography-root": {
-      color: "#8e8e90",
-      marginTop: "1.5em",
-      marginLeft: theme.spacing(2),
-    },
-    "& .MuiSvgIcon-root": {
-      color: "#8e8e90",
-    },
-  },
   xs:{
     display:'none',
     [theme.breakpoints.down("md")]:{
@@ -171,8 +157,12 @@ export default makeStyles((theme) => ({
     }
   },
   menu:{
+    display:'none',
     '& .MuiSvgIcon-root':{
       position:'relative',
+    },
+    [theme.breakpoints.down("sm")]:{
+     display:'block',
     }
   }
 }));
