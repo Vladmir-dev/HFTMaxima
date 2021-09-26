@@ -5,7 +5,6 @@ export default makeStyles((theme) => ({
     marginTop: "40px",
     position: "absolute",
     "& .MuiInputBase-root": {
-
       background: "#fff",
       color: "#000",
     },
@@ -18,6 +17,7 @@ export default makeStyles((theme) => ({
       marginTop: "40px",
       transition: "color 300ms",
       textTransform: "capitalize",
+      width: "100%",
       "&:hover": {
         color: "#fff",
         background: "#008900",
@@ -34,6 +34,9 @@ export default makeStyles((theme) => ({
     },
     width: "85%",
     marginBottom: theme.spacing(3),
+    [theme.breakpoints.only("sm")]: {
+      marginTop: '-20%',
+    },
   },
   facebook: {
     background: "#fff",
@@ -48,6 +51,9 @@ export default makeStyles((theme) => ({
       color: "#101357",
     },
     width: "85%",
+    [theme.breakpoints.only("sm")]: {
+      marginTop: '-10%',
+    },
   },
 
   logo: {
@@ -68,18 +74,31 @@ export default makeStyles((theme) => ({
     },
   },
   divForm: {
-    marginLeft: "11%",
+    margin: "0px 0px 0px 26%",
     "& .MuiButton-root": {
       marginRight: "12%",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "2.5%",
+      marginLeft: "10%",
+    },
+    [theme.breakpoints.up("md")]: {
+      "& .MuiButton-root": {
+        color: "#fff",
+        background: "#008900",
+      },
+    },
+    [theme.breakpoints.only("sm")]: {
+      marginLeft: "17%",
     },
   },
   divButton: {
     margin: theme.spacing(10),
     "& .MuiButton-root": {
       textTransform: "capitalize",
+    },
+    [theme.breakpoints.only("sm")]: {
+      width: "85%",
+      marginLeft:'13%',
     },
   },
   container: {
@@ -107,11 +126,14 @@ export default makeStyles((theme) => ({
   },
   div: {
     margin: theme.spacing(10),
+    [theme.breakpoints.only("sm")]: {
+      margin: theme.spacing(7),
+    },
   },
   divTop: {
     bottom: 90,
     position: "absolute",
-    marginLeft: "6.5%",
+    marginLeft: "15%",
     [theme.breakpoints.up("sm")]: {
       display: "none",
     },
@@ -142,9 +164,19 @@ export default makeStyles((theme) => ({
       "& .MuiTypography-root": {
         color: "#111",
       },
+      "& .MuiTypography-subtitle2": {
+        marginLeft: "10%",
+      },
     },
-    [theme.breakpoints.up("sm")]: {
-      "& .MuiTypography-subtitle1": {},
+    [theme.breakpoints.up("md")]: {
+      "& .MuiTypography-subtitle2": {
+        marginLeft: "10%",
+      },
+    },
+    [theme.breakpoints.only("sm")]: {
+      "& .MuiTypography-subtitle2": {
+        marginLeft: "10%",
+      },
     },
   },
   rightImage: {
@@ -166,12 +198,22 @@ export default makeStyles((theme) => ({
     },
   },
   rightdivForm: {
-    marginLeft: "11%",
+    marginLeft: "26%",
     "& .MuiButton-root": {
       marginRight: "12%",
+      background:'#008900',
+      '&:hover':{
+        background:'#fff',
+        opacity:".9",
+        color:'#008900'
+      },
+      color:'#fff'
     },
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: "3.5%",
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "9%",
+    },
+    [theme.breakpoints.only("sm")]: {
+      marginLeft: "16%",
     },
     marginTop: "-4%",
   },
@@ -201,14 +243,16 @@ export default makeStyles((theme) => ({
   },
   rightDiv: {
     margin: theme.spacing(10),
-    marginLeft:'15%',
-    marginRight:'15%',
-    '& .MuiTypography-body2':{
-        color:'#fff',
+    marginLeft: "15%",
+    marginRight: "15%",
+    "& .MuiTypography-body2": {
+      color: "#fff",
     },
-    '& .MuiTypography-subtitle2':{
-      marginRight:'5%',
-  }
+    "& .MuiTypography-subtitle2": {
+      marginRight: "5%",
+    },
+    
+    
   },
   rightDivRight: {
     marginTop: "8px",
@@ -220,40 +264,48 @@ export default makeStyles((theme) => ({
     position: "relative",
     objectFit: "contain",
     backgroundSize: "cover",
-    opacity:'.6',
-    [theme.breakpoints.down("xs")]:{
-      display:'none'
-    }
+    opacity: ".6",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
   rightDivButton: {
     margin: theme.spacing(10),
     "& .MuiButton-root": {
       textTransform: "capitalize",
-      marginBottom:theme.spacing(4),
+      marginBottom: theme.spacing(4),
     },
-    marginLeft:'15%',
+    marginLeft: "15%",
+    [theme.breakpoints.only('sm')]:{
+      "& .MuiButton-root": {
+        margin: "2% 0 0 2%",
+        width:'100%',
+        marginBottom: theme.spacing(4),
+      },
+    }
   },
   rightDiv1: {
-    '& .MuiTypography-subtitle2':{
-      marginRight:'24%',
+    "& .MuiTypography-subtitle2": {
+      marginRight: "24%",
     },
-    '& .MuiTypography-body2':{
-      color:'#fff',
+    "& .MuiTypography-body2": {
+      color: "#fff",
+    },
+    marginTop: "-10%",
+   
   },
-    marginTop:'-10%',
-},
-rightDiv2: {
-  [theme.breakpoints.up("sm")]: {
-    display:'none',
+  rightDiv2: {
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+      bottom: 25,
+      position: "absolute",
+      marginLeft: "13%",
+      "& .MuiTypography-body2": {
+        color: "#000",
+      },
+    },
   },
-  [theme.breakpoints.down("xs")]: {
-    display:'block',
-    bottom:25,
-    position:'absolute',
-    marginLeft: "4.5%",
-    '& .MuiTypography-body2':{
-      color:'#000',
-  },
-  },
-}
 }));

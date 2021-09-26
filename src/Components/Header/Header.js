@@ -131,7 +131,7 @@ export default function Header() {
 
               <Grid
                 item
-                className={`${classes.gridB} ${classes.div}  ${classes.lg}`}
+                className={`${classes.gridB} ${classes.lg}`}
                 align="center"
               >
                 <Grid item className={classes.div}>
@@ -140,10 +140,10 @@ export default function Header() {
                     aria-haspopup="true"
                     onMouseEnter={handlePopoverOpen}
                     onMouseLeave={handlePopoverClose}
-                    style={{ position: "relative" }}
+                    style={{ position: "relative",display:'flex' }}
                   >
                     Products
-                    <ExpandMoreOutlinedIcon fontSize='small'/>
+                    <ExpandMoreOutlinedIcon fontSize='small' />
                   </Typography>
                   <Popover
                     id="mouse-over-popover"
@@ -165,7 +165,7 @@ export default function Header() {
                     <Customized.MenuPaper />
                   </Popover>
                   <Typography component={Link} to="/" variant="subtitle2">
-                    Featured In
+                    FeaturedIn
                   </Typography>
                   <Typography
                     component={Link}

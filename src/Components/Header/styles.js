@@ -1,12 +1,12 @@
 import { makeStyles } from "@material-ui/core";
 export default makeStyles((theme) => ({
-                                                                                                                                                                                                                                                                                                                                                      logo:{
-                                                                                                                                                                                                                                                                                                                                                        height:40,
-                                                                                                                                                                                                                                                                                                                                                        position:'relative',
-                                                                                                                                                                                                                                                                                                                                                        marginRight:theme.spacing(1)
-                                                                                                                                                                                                                                                                                                                                                    },
+  logo: {
+    height: 40,
+    position: "relative",
+    marginRight: theme.spacing(1),
+  },
   div: {
-    "& .MuiTypography-root": {                                                                                                                                                                                                                                                                                                                  
+    "& .MuiTypography-root": {
       margin: theme.spacing(2),
       fontWeight: "600",
       position: "relative",
@@ -16,14 +16,14 @@ export default makeStyles((theme) => ({
       color: "#fff",
       transition: "width .3s",
       "&:hover": {
-        display: "block",
-        borderBottom:'2px solid #008900'
+        display: "inline-block",
+        borderBottom: "2px solid #008900",
       },
     },
     "& .MuiSvgIcon-root": {
       position: "relative",
       display: "inline-block",
-      marginBottom:'-5%'
+      marginBottom: "-9%",
     },
     display: "flex",
     alignItems: "center",
@@ -82,7 +82,7 @@ export default makeStyles((theme) => ({
       color: "#000",
       "&:hover": {
         display: "block",
-        borderBottom:'2px solid #008900'
+        borderBottom: "2px solid #008900",
       },
     },
     "& .MuiSvgIcon-root": {
@@ -100,7 +100,7 @@ export default makeStyles((theme) => ({
       fontWeight: "600",
       position: "relative",
     },
-  
+
     "& .MuiSvgIcon-root": {
       marginRight: theme.spacing(1),
       marginLeft: theme.spacing(1),
@@ -119,50 +119,49 @@ export default makeStyles((theme) => ({
       width: "60%",
     },
     position: "relative",
-    opacity:'.9',
+    opacity: ".9",
   },
   popper1: {
     "& .MuiPopover-paper": {
       width: "60%",
     },
     position: "relative",
-    opacity:'.9',
-    marginTop:'-30%',
-    [theme.breakpoints.down("sm")]:{
-      display:({xsMenuOpen})=>  (xsMenuOpen ? 'flex':'none'),
+    opacity: ".9",
+    marginTop: "-30%",
+    [theme.breakpoints.down("sm")]: {
+      display: ({ xsMenuOpen }) => (xsMenuOpen ? "flex" : "none"),
       "& .MuiPopover-paper": {
         width: "100vw",
-        height:'70vh',
-        margin:'-5% 2% 0% -3.5%'
+        height: "70vh",
+        margin: "-5% 2% 0% -3.5%",
       },
       "& .MuiTypography-root": {
-        color:'#000'
+        color: "#000",
       },
     },
-    [theme.breakpoints.up("sm")]:{
-      display:({xsMenuOpen})=>  (xsMenuOpen ? 'none':'none')
-    }
-    
-  },
-  xs:{
-    display:'none',
-    [theme.breakpoints.down("md")]:{
-      display:'block'
-    }
-  },
-  lg:{
-    display:'none',
-    [theme.breakpoints.up("md")]:{
-      display:'block'
-    }
-  },
-  menu:{
-    display:'none',
-    '& .MuiSvgIcon-root':{
-      position:'relative',
+    [theme.breakpoints.up("sm")]: {
+      display: ({ xsMenuOpen }) => (xsMenuOpen ? "none" : "none"),
     },
-    [theme.breakpoints.down("sm")]:{
-     display:'block',
-    }
-  }
+  },
+  xs: {
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+    },
+  },
+  lg: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "block",
+    },
+  },
+  menu: {
+    display: "none",
+    "& .MuiSvgIcon-root": {
+      position: "relative",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+    },
+  },
 }));

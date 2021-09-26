@@ -10,7 +10,8 @@ export default function Input({
   ...others
 }) {
   return (
-    <TextField
+    <Grid item xs={12}>
+      <TextField
       name={name}
       value={value}
       onChange={onChange}
@@ -20,5 +21,6 @@ export default function Input({
       {...others}
       fullWidth
     />
+    </Grid>
   );
 }

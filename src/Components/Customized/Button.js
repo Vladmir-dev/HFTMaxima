@@ -1,5 +1,5 @@
 import React from "react";
-import { Button as MuiButton } from "@material-ui/core";
+import { Button as MuiButton, Grid } from "@material-ui/core";
 export default function Button({
   name,
   value,
@@ -12,7 +12,8 @@ export default function Button({
   ...others
 }) {
   return (
-    <MuiButton
+    <Grid item xs={12} >
+      <MuiButton
       name={name}
       value={value}
       onChange={onChange}
@@ -24,5 +25,6 @@ export default function Button({
     >
       {text}
     </MuiButton>
+    </Grid>
   );
 }

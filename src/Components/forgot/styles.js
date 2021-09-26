@@ -37,9 +37,13 @@ export default makeStyles((theme) => ({
       color: "#000",
     },
     [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(13),
       "& .MuiTypography-h5": {
         color: "#008900",
       },
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: theme.spacing(13),
     },
   },
   rightdivForm: {
@@ -47,23 +51,56 @@ export default makeStyles((theme) => ({
     "& .MuiButton-root": {
       marginRight: "12%",
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       marginLeft: "15%",
+    },
+    [theme.breakpoints.only("sm")]: {
+      marginLeft: "20%",
+    },
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "30%",
     },
     marginTop: "-4%",
   },
   rightDiv: {
     margin: theme.spacing(10),
-    marginLeft:'15%',
-    marginRight:'15%',
-},
-container: {
-  background: "#fff",
-  width: "100%",
-  height: "100%",
-  position: "absolute",
-  top: 0,
-  left: 0,
-  opacity: ".6",
-},
+    marginLeft: "15%",
+    marginRight: "15%",
+  },
+  container: {
+    background: "#fff",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    opacity: ".6",
+  },
+  rightXs: {
+    "& .MuiTypography-h4": {
+      fontWeight: "450",
+      color: "#008900",
+    },
+    "& .MuiTypography-caption": {
+      fontWeight: "450",
+      color: "#d9d9d9",
+    },
+    "& .MuiTypography-subtitle2": {
+      cursor: "pointer",
+      color: "#008900",
+      marginRight: "5%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      color: "#000",
+      "& .MuiTypography-root": {
+        color: "#111",
+      },
+    },
+    rightImage: {
+      background: "#fff",
+      height: "103vh",
+      opacity: ".9",
+      position: "relative",
+    },
+  },
 }));
