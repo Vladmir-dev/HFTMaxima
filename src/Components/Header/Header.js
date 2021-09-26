@@ -14,7 +14,6 @@ import logo from "../../images/price.png";
 import useStyles from "./styles";
 import Popover from "@mui/material/Popover";
 import MenuIcon from "@material-ui/icons/Menu";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 export default function Header() {
   const [xsMenuOpen, setXsMenuOpen] = useState(false);
@@ -56,7 +55,7 @@ export default function Header() {
       position="fixed"
       elevation={0}
       xs={12}
-    > 
+    >
       <Container>
         <Toolbar>
           <Grid container alignItems="center">
@@ -110,7 +109,7 @@ export default function Header() {
                     <MenuIcon />
                   </IconButton>
                   <Popover
-                    id={id} 
+                    id={id}
                     open={openMenu}
                     anchorEl={anchorEl}
                     onClose={handleClose}
@@ -140,10 +139,10 @@ export default function Header() {
                     aria-haspopup="true"
                     onMouseEnter={handlePopoverOpen}
                     onMouseLeave={handlePopoverClose}
-                    style={{ position: "relative",display:'flex' }}
+                    style={{ position: "relative", display: "flex" }}
                   >
                     Products
-                    <ExpandMoreOutlinedIcon fontSize='small' />
+                    <ExpandMoreOutlinedIcon fontSize="small" />
                   </Typography>
                   <Popover
                     id="mouse-over-popover"
