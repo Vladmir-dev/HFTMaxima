@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     marginTop: "40px",
     position: "absolute",
     "& .MuiInputBase-root": {
-      width: "85%",
+
       background: "#fff",
       color: "#000",
     },
@@ -18,7 +18,6 @@ export default makeStyles((theme) => ({
       marginTop: "40px",
       transition: "color 300ms",
       textTransform: "capitalize",
-      width: "85%",
       "&:hover": {
         color: "#fff",
         background: "#008900",
@@ -92,7 +91,7 @@ export default makeStyles((theme) => ({
     left: 0,
     [theme.breakpoints.down("sm")]: {
       background: "#fff",
-      opacity: ".6",
+      opacity: ".9  ",
     },
   },
   leftImage: {
@@ -101,7 +100,7 @@ export default makeStyles((theme) => ({
     position: "relative",
     objectFit: "contain",
     backgroundSize: "cover",
-    opacity: ".6",
+    opacity: ".9",
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
@@ -116,10 +115,10 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       display: "none",
     },
-    [theme.breakpoints.down("sm")]: {},
   },
   divRight: {
     marginTop: "8px",
+    opacity: ".8",
     [theme.breakpoints.down("xs")]: {
       marginTop: "8px",
     },
@@ -151,7 +150,7 @@ export default makeStyles((theme) => ({
   rightImage: {
     background: "#fff",
     height: "103vh",
-    opacity: ".6",
+    opacity: ".9",
     position: "relative",
   },
   rightdivLogo: {

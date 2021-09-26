@@ -18,7 +18,7 @@ export default function Button({
       onChange={onChange}
       variant={variant || "contained"}
       label={label}
-      size={size || "small"}
+      size={size || "medium"}
       color={color || "default"}
       {...others}
     >
