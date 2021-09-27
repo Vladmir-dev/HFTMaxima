@@ -11,8 +11,8 @@ export default function Cards() {
   const classes = useStyles();
   return (
     <Grid container className={classes.gridC1}>
-      <Grid item xs={12} sm={4} md={4} className={classes.xs}>
-        <Slide bottom>
+      <Grid item xs={12} sm={4} className={classes.xs}>
+        <Slide duration={2000} bottom >
           <Card
             text="Login"
             icon={<PersonIcon fontSize="large" />}
@@ -23,8 +23,8 @@ export default function Cards() {
         </Slide>
       </Grid>
 
-      <Grid item xs={12} sm={4} md={4} className={classes.xs}>
-        <Slide bottom>
+      <Grid item xs={12} sm={4} className={classes.xs}>
+        <Slide duration={2000} bottom >
           <Card
             text="Download Now"
             icon={<PodcastsIcon fontSize="large" />}
@@ -35,7 +35,7 @@ export default function Cards() {
       </Grid>
 
       <Grid item xs={12} sm={4} className={classes.xs}>
-        <Slide bottom>
+        <Slide duration={2000} bottom >
           <Card
             text="Watch Now"
             icon={<YouTubeIcon fontSize="large" />}

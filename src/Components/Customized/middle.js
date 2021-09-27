@@ -6,7 +6,6 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import RubberBand from "react-reveal/RubberBand";
 import { Link } from "react-router-dom";
 import { Customized } from "./Customized";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
@@ -234,9 +233,9 @@ export function Middle({
           <Customized.Button text="Learn more" component={Link} to={to} />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <RubberBand>
+
             <img src={image} alt="HFTmaxima web" className={classes.image} />
-          </RubberBand>
+
         </Grid>
       </Grid>
     </Grid>
