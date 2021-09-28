@@ -89,27 +89,18 @@ export default function Register() {
           <div className={classes.rightDiv2}>
             <Typography variant="body2" gutterBottom align="right">
               Already have an account?
-              <Typography
-                variant="subtitle2"
-                component={Link}
-                to="/auth/login"
-              >
+              <Typography variant="subtitle2" component={Link} to="/auth/login">
                 Sign in!
               </Typography>
             </Typography>
           </div>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          className={classes.rightDivRight}
-        >
+        <Grid item xs={12} sm={6} className={classes.rightDivRight}>
           <div className={classes.rightDiv}>
             <Typography variant="body2" gutterBottom color="textSecondary">
               By Signing up, you agree to the terms and conditions for HFTmaxima
-              application. For safe trading with our tools you must agree to the platform 
-              polices and terms of service. Any violation has a fine.
+              application. For safe trading with our tools you must agree to the
+              platform polices and terms of service. Any violation has a fine.
             </Typography>
           </div>
           <div className={classes.rightDivButton}>
@@ -139,15 +130,11 @@ export default function Register() {
           <div className={classes.rightDiv1}>
             <Typography variant="body2" gutterBottom align="right">
               Already have an account?
-              <Typography
-                variant="subtitle2"
-                component={Link}
-                to="/auth/login"
-              >
+              <Typography variant="subtitle2" component={Link} to="/auth/login">
                 Sign in!
               </Typography>
             </Typography>
-          </div>  
+          </div>
         </Grid>
       </Grid>
     </main>

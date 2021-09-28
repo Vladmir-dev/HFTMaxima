@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { Customized } from "../../Components/Customized/Customized";
 import { Form, UseForm } from "../Customized/UseForm";
 import { initialState } from "../../state";
@@ -35,30 +35,30 @@ export default function Login() {
   };
   return (
     <main className={classes.container}>
-      <Grid container spacing={6} justify='center'>
+      <Grid container spacing={6} justify="center">
         <Grid item xs={12} sm={6} className={classes.leftImage}>
-        <div className={classes.div}>
-        <Typography
+          <div className={classes.div}>
+            <Typography
               variant="h4"
-              style={{ fontWeight: "bold"}}
+              style={{ fontWeight: "bold" }}
               gutterBottom
             >
-              Welcome! To <span style={{color:'#008900'}}>Maxima.</span>
+              Welcome! To <span style={{ color: "#008900" }}>Maxima.</span>
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ fontWeight: "300"}}
+              style={{ fontWeight: "300" }}
               gutterBottom
             >
-              We got you covered in your trading interest, have your
-              way with our platform. Our interest is giving you the best experience a trader can ever 
-              receive. Learn basic skills to make profit and regulate volatility.
-              Play around with our features and you might get lucky but this is only possible if you login with
-              your email
+              We got you covered in your trading interest, have your way with
+              our platform. Our interest is giving you the best experience a
+              trader can ever receive. Learn basic skills to make profit and
+              regulate volatility. Play around with our features and you might
+              get lucky but this is only possible if you login with your email
             </Typography>
             <Typography
               variant="h6"
-              style={{ fontWeight: "100"}}
+              style={{ fontWeight: "100" }}
               align="center"
             >
               Or
@@ -103,22 +103,13 @@ export default function Login() {
         </Grid>
         <Grid item xs={12} sm={6} align="center" className={classes.divRight}>
           <div className={classes.divLogo}>
-            <Typography
-              component={Link}
-              to="/"
-              variant="h5"
-              align="center"
-            >
+            <Typography component={Link} to="/" variant="h5" align="center">
               <img src={logo} alt="Maxima logo" className={classes.logo} />
               Maxima
             </Typography>
           </div>
           <div className={classes.xs}>
-            <Typography
-              variant="h4"
-              gutterBottom
-
-            >
+            <Typography variant="h4" gutterBottom>
               Sign in to Maxima
             </Typography>
             <Typography variant="caption" gutterBottom>
@@ -126,10 +117,7 @@ export default function Login() {
             </Typography>
           </div>
           <div className={classes.divForm}>
-            <Form
-              onSubmit={handleSubmit}
-              className={classes.form}
-            >
+            <Form onSubmit={handleSubmit} className={classes.form}>
               <Customized.Input
                 label="Email"
                 value={values.email}
@@ -151,7 +139,7 @@ export default function Login() {
                   variant="subtitle2"
                   align="center"
                   component={Link}
-                  to='/auth/forgot'
+                  to="/auth/forgot"
                 >
                   Forgot password?
                 </Typography>
@@ -159,7 +147,7 @@ export default function Login() {
               <Customized.Button text="Login" type="submit" fullWidth />
             </Form>
           </div>
-          <div className={classes.divTop} >
+          <div className={classes.divTop}>
             <Typography variant="body2" gutterBottom align="right">
               Don't have an account?
               <Typography
@@ -171,7 +159,6 @@ export default function Login() {
               </Typography>
             </Typography>
           </div>
-          
         </Grid>
       </Grid>
     </main>

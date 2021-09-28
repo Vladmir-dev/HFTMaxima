@@ -14,11 +14,8 @@ export default function Auth(state = initialState, action) {
         ...state,
         users: action?.payload,
       };
-      case LOGOUT:
-      localStorage.setItem(
-        "userProfile",
-        JSON.stringify(null)
-      );
+    case LOGOUT:
+      localStorage.setItem("userProfile", JSON.stringify(null));
       return {
         ...state,
         users: action?.payload,

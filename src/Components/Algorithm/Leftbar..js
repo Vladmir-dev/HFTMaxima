@@ -8,7 +8,6 @@ import {
   IconButton,
   List,
   ListItemIcon,
-  ListItem,
   ListItemText,
   Collapse,
 } from "@material-ui/core";

@@ -38,7 +38,7 @@ export default function ForgotForm() {
                 onChange={handleInputChange}
                 variant="outlined"
               />
-              <Customized.Button text="Submit" type="submit" />
+              <Customized.Button text="Reset Password" type="submit" />
             </Form>
           </div>
         </Grid>

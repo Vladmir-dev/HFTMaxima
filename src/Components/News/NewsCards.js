@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NewsCard from "./NewsCard";
 import { Grid, Grow, Typography } from "@material-ui/core";
 import useStyles from "./styles";
@@ -11,11 +11,16 @@ const infoCards = [
     info: "Business, Entertainment,General,Science,Health,Sports,Technology,War",
   },
   { color: "#4527a0", title: "News by Terms", info: "Bitcoin,PlayStation 5" },
-  { color: "#283593", title: "News by sources", info: "CNN,Wired,BBC,Time,IGN, Buzzfeed,ABC News" },
+  {
+    color: "#283593",
+    title: "News by sources",
+    info: "CNN,Wired,BBC,Time,IGN, Buzzfeed,ABC News",
+  },
 ];
 
-export default function NewsCards({ articles }) {
+export default function NewsCards({ articles}) {
   const classes = useStyles();
+
   if (!articles.length) {
     return (
       <Grow in>
@@ -47,13 +52,13 @@ export default function NewsCards({ articles }) {
                   </Typography>
                 )}
                 <Typography variant="h6">
-                  Try saying:<i>{infoCard.text}</i> 
+                  Try saying:<i>{infoCard.text}</i>
                 </Typography>
               </div>
             </Grid>
           ))}
         </Grid>
-      </Grow> 
+      </Grow>
     );
   }
   return (

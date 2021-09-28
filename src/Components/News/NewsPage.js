@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import wordsToNumbers from "words-to-numbers";
 import NewsCards from "./NewsCards";
-import { fetchNews } from "../../Axios/NewsApi";
+import RowCard from "./Row";
 const alanKey =
   "09b5bfdae0904e5f711da648627569242e956eca572e1d8b807a3e2338fdd0dc/stage";
 
 export default function NewsPage() {
   const [newsArticles, setNewsArticles] = useState([]);
-  const [news, setNews] = useState([]);
-  
-  console.log(news)
+ 
   useEffect(() => {
     alanBtn({
       key: alanKey,
@@ -36,6 +34,7 @@ export default function NewsPage() {
   return (
     <div>
       <NewsCards articles={newsArticles} />
+      <RowCard articles={newsArticles}/>
     </div>
   );
 }
