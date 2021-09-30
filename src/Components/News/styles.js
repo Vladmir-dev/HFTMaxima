@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 export default makeStyles((theme) => ({
   grid: {
     background: "#fff",
+    display:'flex',
   },
   container:{
     padding:'0 5%',
@@ -27,9 +28,7 @@ export default makeStyles((theme) => ({
   activeCard:{
     borderBottom:'10px solid #008900',
   },
-  grid:{
-    display:'flex',
-  },
+  
   details:{
     display:'flex',
     justifyContent:'space-between',

@@ -105,7 +105,7 @@ export default function Register() {
           </div>
           <div className={classes.rightDivButton}>
             <GoogleLogin
-              clientId={process.env.CLIENTID}
+              clientId={process.env.REACT_APP_CLIENTID}
               render={(renderProps) => (
                 <Customized.Button
                   className={classes.google}

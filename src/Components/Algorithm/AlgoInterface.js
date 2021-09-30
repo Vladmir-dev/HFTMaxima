@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { LOGOUT } from "../../Actions/types";
 import Leftbar from "./Leftbar.";
 import Topbar from "./Topbar";
-
+import useStyles from './styles';
 export default function AlgoInterface() {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -21,15 +21,16 @@ export default function AlgoInterface() {
     dispatch({ type: LOGOUT });
     history.push("/");
   };
+  const classes = useStyles()
   return (
-    <React.Fragment>
-      <Topbar />
+    <main className={classes.dashboardContainer}>
+      <Topbar /> 
      <Grid container>
      <Grid item sm={3} xs={2}>
         <Leftbar />
       </Grid>
       <Grid item sm={9} xs={10}></Grid>
      </Grid>
-    </React.Fragment>
+    </main>
   );
 }

@@ -66,7 +66,7 @@ export default function Login() {
           </div>
           <div className={classes.divButton}>
             <GoogleLogin
-              clientId={process.env.CLIENTID}
+              clientId={process.env.REACT_APP_CLIENTID}
               render={(renderProps) => (
                 <Customized.Button
                   className={classes.google}

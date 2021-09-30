@@ -2,51 +2,68 @@ import {
   AppBar,
   Toolbar,
   Container,
-  makeStyles,
   Typography,
   Avatar,
   Grid,
 } from "@material-ui/core";
 import { Badge, IconButton } from "@mui/material";
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import React from "react";
-import { Customized } from "../Customized/Customized";
-const useStyles = makeStyles((theme) => ({
-  top: {
-    width: "calc(100% - 238px)",
-    borderBottom: "1px solid silver",
-  },
-  flex: {
-    flexGrow: 1,
-  },
-  grid:{
-      display:'flex',
-      justifyContent:'space-between',
-      marginRight:'2%',
-      marginLeft:'2%',
-  }
-}));
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import React, { useState } from "react";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
+import useStyles from "./styles";
+import { themeConfig } from "../../Config/themeConfig";
 export default function Topbar() {
-  const classes = useStyles();
+  const [light, setLight] = useState(false);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("userProfile")));
+  const handleLight = () => {
+    setLight(!light);
+  };
+  const classes = useStyles({light});
+
   return (
     <Container>
-      <AppBar className={classes.top} color="inherit" elevation={0}>
+      <AppBar className={classes.top} color="inherit" position='fixed'>
         <Toolbar>
-          <Grid item>
-            <Typography variant="h6">Welcome! To Maxima</Typography>
+          <Grid item className={classes.iconButton}>
+            <IconButton onClick={handleLight}>
+              {light ? <LightModeOutlinedIcon /> : <NightlightOutlinedIcon />}
+            </IconButton>
           </Grid>
           <div className={classes.flex} />
           <Grid item className={classes.grid}>
-            <IconButton size='small'>
-              <Badge>
-                <NotificationsNoneIcon fontSize='small'/>
-              </Badge>
-            </IconButton>
-            <Avatar fontSize='small'></Avatar>
-            <Customized.Button text='Account' size='small'/>
+            <div className={classes.divSpace} align="center">
+              <IconButton>
+                <Badge>
+                  <NotificationsNoneIcon />
+                </Badge>
+              </IconButton>
+            </div>
+            <div className={classes.innerDivSpace}>
+              <div className={classes.text}>
+                <Typography variant="body1" align="center" noWrap>
+                {user.results.name}
+                </Typography>
+                <Typography variant="caption" align="center" noWrap>
+                  PaperAccount
+                </Typography>
+              </div>
+              <div className={classes.avatarBadge}>
+                <Badge
+                  variant="dot"
+                  overlap="circular"
+                  anchorOrign={{ vertical: "bottom", horizontal: "right" }}
+                >
+                  <Avatar fontSize="small" 
+                  src={user.results.imageUrl} 
+                  alt={user.results.name}
+                 >{user.results.name}</Avatar>
+                </Badge>
+              </div>
+            </div>
           </Grid>
         </Toolbar>
       </AppBar>
-    </Container>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    </Container>
   );
 }

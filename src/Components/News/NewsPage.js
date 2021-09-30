@@ -3,15 +3,13 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 import wordsToNumbers from "words-to-numbers";
 import NewsCards from "./NewsCards";
 import RowCard from "./Row";
-const alanKey =
-  "09b5bfdae0904e5f711da648627569242e956eca572e1d8b807a3e2338fdd0dc/stage";
 
 export default function NewsPage() {
   const [newsArticles, setNewsArticles] = useState([]);
  
   useEffect(() => {
     alanBtn({
-      key: alanKey,
+      key: process.env.REACT_APP_ALAN_KEY,
       onCommand: ({ command, articles, number }) => {
         if (command === "newsHeadlines") {
           setNewsArticles(articles);
