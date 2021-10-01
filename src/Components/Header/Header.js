@@ -90,13 +90,6 @@ export default function Header() {
                         alt="Maxima logo"
                         className={classes.logo}
                       />
-                      <Typography
-                        variant="h2 "
-                        align="center"
-                        style={{ color: "#000" }}
-                      >
-                        HFT
-                      </Typography>
                       Maxima
                     </Typography>
                   )}

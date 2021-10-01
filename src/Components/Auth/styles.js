@@ -23,6 +23,9 @@ export default makeStyles((theme) => ({
         background: "#008900",
       },
     },
+    [theme.breakpoints.down("xs")]: {
+      margin:'auto',
+    },
   },
   google: {
     background: "#fff",
@@ -39,21 +42,22 @@ export default makeStyles((theme) => ({
     },
   },
   facebook: {
-    background: "#fff",
-    "&:hover": {
-      background: "#101357",
-      color: "#fff",
-      "& .MuiSvgIcon-root": {
-        color: "#fff",
-      },
-    },
+    background: "#101357",
+    color: "#fff",
     "& .MuiSvgIcon-root": {
-      color: "#101357",
+      color: "#fff",
+      marginRight:'10px',
+      marginBottom:'-4px',
     },
     width: "85%",
     [theme.breakpoints.only("sm")]: {
       marginTop: '-10%',
+      width: "85%",
     },
+    height:'40px',
+    border:'0px transparent',
+    borderRadius:'4px',
+    boxShadow:30
   },
 
   logo: {
@@ -88,7 +92,7 @@ export default makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.only("sm")]: {
-      marginLeft: "17%",
+      marginLeft: "12%",
     },
   },
   divButton: {
@@ -128,6 +132,12 @@ export default makeStyles((theme) => ({
     margin: theme.spacing(10),
     [theme.breakpoints.only("sm")]: {
       margin: theme.spacing(7),
+    },
+  },
+  copydiv: {
+    [theme.breakpoints.only("sm")]: {
+      position:'absolute',
+      marginTop:'-16%',
     },
   },
   divTop: {
@@ -209,11 +219,13 @@ export default makeStyles((theme) => ({
       },
       color:'#fff'
     },
-    [theme.breakpoints.down("xs")]: {
-      marginLeft: "9%",
-    },
+    
     [theme.breakpoints.only("sm")]: {
-      marginLeft: "16%",
+      marginLeft: "10%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "12%",
+      marginTop:theme.spacing(2)
     },
     marginTop: "-4%",
   },
@@ -238,7 +250,9 @@ export default makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.up("sm")]: {
-      "& .MuiTypography-subtitle1": {},
+      "& .MuiTypography-subtitle1": {
+        bottom:10,
+      },
     },
   },
   rightDiv: {
@@ -274,6 +288,13 @@ export default makeStyles((theme) => ({
     "& .MuiButton-root": {
       textTransform: "capitalize",
       marginBottom: theme.spacing(4),
+      [theme.breakpoints.down('xs')]:{
+        display:'block',
+        "& .MuiButton-root": {
+         width:'70%'
+        },
+      }
+
     },
     marginLeft: "15%",
     [theme.breakpoints.only('sm')]:{
@@ -300,9 +321,9 @@ export default makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       display: "block",
-      bottom: 25,
+      bottom: '1%',
       position: "absolute",
-      marginLeft: "13%",
+      marginLeft: "14%",
       "& .MuiTypography-body2": {
         color: "#000",
       },

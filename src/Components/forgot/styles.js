@@ -55,7 +55,7 @@ export default makeStyles((theme) => ({
       marginLeft: "15%",
     },
     [theme.breakpoints.only("sm")]: {
-      marginLeft: "20%",
+      marginLeft: "15%",
     },
     [theme.breakpoints.up("md")]: {
       marginLeft: "30%",
@@ -103,4 +103,12 @@ export default makeStyles((theme) => ({
       position: "relative",
     },
   },
+  bott:{
+    bottom:'-20%',
+    '& .MuiTypography-subtitle1':{
+      bottom:'32%',
+      position:'absolute',
+      textAlign:'auto'
+    }
+  }
 }));

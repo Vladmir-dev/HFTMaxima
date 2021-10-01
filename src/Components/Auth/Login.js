@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { Customized } from "../../Components/Customized/Customized";
 import { Form, UseForm } from "../Customized/UseForm";
 import { initialState } from "../../state";
 import useStyles from "./styles";
 import GoogleLogin from "react-google-login";
+import FacebookLogin from "react-facebook-login";
 import { Image } from "../../images/Img";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { Link, useHistory } from "react-router-dom";
@@ -12,8 +13,10 @@ import { useDispatch } from "react-redux";
 import { GOOGLE_LOGIN } from "../../Actions/types";
 import logo from "../../images/price.png";
 export default function Login() {
-  const [openPopup, setOpenPopup] = React.useState(false);
   const dispatch = useDispatch();
+  const [login, setLogin] = useState(false);
+  const [data, setData] = useState({});
+  const [picture, setPicture] = useState("");
   const history = useHistory();
   const classes = useStyles();
   const { values, handleInputChange, setValues } = UseForm(initialState);
@@ -33,6 +36,15 @@ export default function Login() {
   const googleFailure = () => {
     console.log("Google sign in was unsuccessful, try again later");
   };
+  const facebookLogin = (response) => {
+    setData(response);
+    if (response.accessToken) {
+      setLogin(true);
+    } else {
+      setLogin(false);
+    }
+  };
+
   return (
     <main className={classes.container}>
       <Grid container spacing={6} justify="center">
@@ -81,14 +93,17 @@ export default function Login() {
               onSuccess={googleSuccess}
               onFailure={googleFailure}
             />
-            <Customized.Button
-              className={classes.facebook}
-              startIcon={<FacebookIcon />}
-              text="Sign in with facebook"
-              fullWidth
+            <FacebookLogin
+              appId={process.env.REACT_APP_FACEBOOK_KEY}
+              autoLoad={false}
+              fields="name,email,picture"
+              scope="public_profile"
+              callback={facebookLogin}
+              icon={<FacebookIcon fontSize="small" />}
+              cssClass={classes.facebook}
             />
           </div>
-          <div className={classes.div}>
+          <div className={`${classes.div} ${classes.copydiv}`}>
             <Typography variant="body2" gutterBottom align="right">
               Don't have an account?
               <Typography

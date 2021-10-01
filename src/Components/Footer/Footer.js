@@ -40,13 +40,6 @@ export default function Footer() {
                     alt="HFTMaxima logo"
                     className={classes.logo}
                   />
-                  <Typography
-                    variant="h2 "
-                    align="center"
-                    style={{ color: "#fff" }}
-                  >
-                    HFT
-                  </Typography>
                   Maxima
                 </Typography>
               </div>
@@ -78,7 +71,7 @@ export default function Footer() {
             >
               <div>
                 <Typography variant="subtitle2" align="center">
-                  @2021 HFTMaxima.com, All rights reserved
+                  @2021 Maxima.com, All rights reserved
                 </Typography>
               </div>
               <div>

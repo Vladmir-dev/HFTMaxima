@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Grid, Typography } from "@material-ui/core";
 import { Customized } from "../../Components/Customized/Customized";
 import { Form, UseForm } from "../Customized/UseForm";
@@ -10,8 +10,12 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import { Link, useHistory } from "react-router-dom";
 import { GOOGLE_LOGIN } from "../../Actions/types";
 import { useDispatch } from "react-redux";
+import FacebookLogin from "react-facebook-login";
 import logo from "../../images/price.png";
 export default function Register() {
+  const [login, setLogin] = useState(false);
+  const [data, setData] = useState({});
+  const [picture, setPicture] = useState("");
   const classes = useStyles();
   const history = useHistory();
   const dispatch = useDispatch();
@@ -32,7 +36,14 @@ export default function Register() {
   const googleFailure = () => {
     console.log("Google sign in was unsuccessful, try again later");
   };
-
+  const facebookLogin = (response) => {
+    setData(response);
+    if (response.accessToken) {
+      setLogin(true);
+    } else {
+      setLogin(false);
+    }
+  };
   return (
     <main className={classes.container}>
       <Grid container spacing={6} justify="center">
@@ -120,11 +131,14 @@ export default function Register() {
               onSuccess={googleSuccess}
               onFailure={googleFailure}
             />
-            <Customized.Button
-              className={classes.facebook}
-              startIcon={<FacebookIcon />}
-              text="Sign up with facebook"
-              fullWidth
+            <FacebookLogin
+              appId={process.env.REACT_APP_FACEBOOK_KEY}
+              autoLoad={false}
+              fields="name,email,picture"
+              scope="public_profile"
+              callback={facebookLogin}
+              icon={<FacebookIcon fontSize="small" />}
+              cssClass={classes.facebook}
             />
           </div>
           <div className={classes.rightDiv1}>

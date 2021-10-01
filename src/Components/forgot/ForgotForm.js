@@ -12,7 +12,7 @@ export default function ForgotForm() {
     UseForm(initialState);
   return (
     <main className={classes.container}>
-      <Grid container spacing={6} justify="center">
+      <Grid container spacing={6} justifyContent="center">
         <Grid item xs={12} sm={6} className={classes.rightImage} align="center">
           <div className={classes.rightdivLogo}>
             <Typography component={Link} to="/" variant="h5" align="center">
@@ -40,6 +40,11 @@ export default function ForgotForm() {
               />
               <Customized.Button text="Reset Password" type="submit" />
             </Form>
+          </div>
+          <div className={classes.bott}>
+            <Typography variant="subtitle1" component={Link} to="/auth/login">
+              Go back to login
+            </Typography>
           </div>
         </Grid>
       </Grid>
