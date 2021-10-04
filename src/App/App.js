@@ -7,8 +7,8 @@ import NewsPage from "../Components/News/NewsPage";
 import Support from "../Components/Support/Support";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
-import AlgoInterface from "../Components/Algorithm/AlgoInterface";
 import Forgot from "../Components/forgot/Forgot";
+import Dashboard from "../Components/Dashboard/Home";
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/auth/login" component={Login} />
         <Route exact path="/auth/register" component={Register} />
         <Route exact path="/auth/forgot" component={Forgot} />
-        <Route exact path="/algorithm" component={AlgoInterface} />
+        <Route exact path="/Dashboard" component={Dashboard} />
       </Switch>
       <CssBaseline />
     </ThemeProvider>

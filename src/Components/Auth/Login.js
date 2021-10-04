@@ -28,7 +28,7 @@ export default function Login() {
     const token = res?.tokenId;
     try {
       dispatch({ type: GOOGLE_LOGIN, payload: { results, token } });
-      history.push("/algorithm");
+      history.push("/dashboard");
     } catch (error) {
       console.log(error);
     }
