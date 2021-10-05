@@ -78,11 +78,12 @@ export default makeStyles((theme) => ({
     height: "100%",
     left: 0,
     top: 0,
-    position: "absolute",
+    position: "fixed",
     borderRight: "1px solid silver",
     background: "#111",
     color: "#fff",
     borderRadius: "none",
+
   },
 
   leftSidedivbutton: {
@@ -161,9 +162,7 @@ export default makeStyles((theme) => ({
     marginTop: theme.spacing(1),
   },
   // Home styles
-  container: {
-    background: "#000",
-  },
+
   // topmenu styles
   sx: {
     overflow: "visible",
@@ -188,4 +187,13 @@ export default makeStyles((theme) => ({
       zIndex: 0,
     },
   },
+  //main styles
+  spaceup:{
+    background:'#333',
+    marginTop:theme.spacing(10)
+  },
+  background:{
+    background:'#333',
+  }
+
 }));
