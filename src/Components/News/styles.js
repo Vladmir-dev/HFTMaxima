@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles((theme) => ({
   grid: {
-    background: "#fff",
+    background: "#020221",
     display:'flex',
   },
   container:{
@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
   activeCard:{
     borderBottom:'10px solid #008900',
   },
-  
+
   details:{
     display:'flex',
     justifyContent:'space-between',

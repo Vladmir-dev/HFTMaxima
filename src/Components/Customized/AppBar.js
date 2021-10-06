@@ -102,7 +102,7 @@ export default function AppBar() {
                 <div className={classes.flex}>
                   <LaunchIcon fontSize="small" />
                   <Typography variant="subtitle2" component={Link} to="/">
-                    Go to HFTmaxima
+                    Go to Maxima
                   </Typography>
                 </div>
               </Grid>
@@ -110,8 +110,7 @@ export default function AppBar() {
             <Grid item container direction="row">
               <Grid item>
                 <Typography variant="body1">
-                  How can we help you? Consider yourself lucky,answers to your
-                  questions are here.
+                  How can we help you? We have the solutions to the questions asked here.
                 </Typography>
               </Grid>
             </Grid>

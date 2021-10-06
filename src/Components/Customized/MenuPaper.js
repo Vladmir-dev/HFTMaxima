@@ -40,7 +40,7 @@ export default function MenuPaper() {
               <Typography variant="subtitle2">Top FAQs</Typography>
             </div>
             <Item
-              subTitle="Why HFTMaxima"
+              subTitle="Why Maxima"
               captionTitle="Best at its algorithm"
               ialt="HFMaxima Icon"
               image={image2}
@@ -48,7 +48,7 @@ export default function MenuPaper() {
             />
             <Item
               subTitle="Guidance"
-              captionTitle="A D-tour of HFTMaxima"
+              captionTitle="A D-tour of Maxima"
               icon="Help Icon"
               image={image5}
               to="/support"

@@ -109,7 +109,7 @@ export default function Register() {
         <Grid item xs={12} sm={6} className={classes.rightDivRight}>
           <div className={classes.rightDiv}>
             <Typography variant="body2" gutterBottom color="textSecondary">
-              By Signing up, you agree to the terms and conditions for HFTmaxima
+              By Signing up, you agree to the terms and conditions for Maxima
               application. For safe trading with our tools you must agree to the
               platform polices and terms of service. Any violation has a fine.
             </Typography>

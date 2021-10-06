@@ -28,10 +28,10 @@ export default function Middles() {
         image={image14}
         titleMiddle="Maxima mobile "
         middleSubtitle=" Developed specifically with feedback from traders like you, the
-            latest addition to the Maxima site is a web-based software that
-            features a streamlined trading experiences. It's perfect for those
-            who want to trade equities and derivatives while accessing essential
-            tools from their everyday browser."/>
+        latest addition to the Maxima site is a web-based software that
+        features a streamlined trading experiences. It's perfect for those
+        who want to trade equities and derivatives while accessing essential
+        tools from their everyday browser."/>
 
           </Fade>
     </div>

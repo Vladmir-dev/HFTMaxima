@@ -8,7 +8,7 @@ const infoCards = [
   {
     color: "#1565c0",
     title: "News by Catogeries",
-    info: "Business, Entertainment,General,Science,Health,Sports,Technology,War",
+    info: "Entertainment,Business,General,Science,Health,Sports,Technology,War",
   },
   { color: "#4527a0", title: "News by Terms", info: "Bitcoin,PlayStation 5" },
   {

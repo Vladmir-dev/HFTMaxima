@@ -3,7 +3,7 @@ import React from "react";
 import { SupportMid } from "./middle";
 import books from "../../images/books.png";
 const useStyles = makeStyles((theme) => ({
-  container: { 
+  container: {
     marginTop: "1.7em",
     margin:'0 auto',
   },
@@ -37,8 +37,8 @@ export default function Supports() {
         <Paper elevation={0} style={{margin:'0 auto'}}>
           <Grid item>
             <SupportMid
-              topTitle="Get started on HFTMaxima"
-              topSubtitle="How to verify your account and contact HFTMaxima"
+              topTitle="Get started on Maxima"
+              topSubtitle="How to verify your account and contact Maxima"
               middleTitle="23 articles in this section"
               middleSubtitle="Written by Mayanja James and Hall Enoch Asanda"
               src={books}
@@ -52,7 +52,7 @@ export default function Supports() {
         <Paper elevation={0} style={{margin:'0 auto'}}>
           <Grid item>
             <SupportMid
-              topTitle="How to Transact on HFTMaxima"
+              topTitle="How to Transact on Maxima"
               topSubtitle="How to use the demo account with virtual money and place your trade"
               middleTitle="11 articles in this section"
               middleSubtitle="Written by Pius Tumwebaze"
@@ -66,7 +66,7 @@ export default function Supports() {
         <Paper elevation={0} style={{margin:'0 auto'}}>
           <Grid item>
             <SupportMid
-              topTitle="HFTMaxima notificatons"
+              topTitle="Maxima notificatons"
               topSubtitle="Information to look for the right time to trade especially with your busy schedule"
               middleTitle="8 articles in this section"
               middleSubtitle="Written by Pius Tumwembaze"
@@ -96,8 +96,8 @@ export default function Supports() {
         <Paper elevation={0} style={{margin:'0 auto'}}>
           <Grid item>
             <SupportMid
-              topTitle="HFTMaxima terms and conditions"
-              topSubtitle="HFMaxima polices"
+              topTitle="Maxima terms and conditions"
+              topSubtitle="Maxima polices"
               middleTitle="1 article in this section"
               middleSubtitle="Written by Mayanja James"
               src={books}
@@ -110,7 +110,7 @@ export default function Supports() {
         <Paper elevation={0} style={{margin:'0 auto'}}>
           <Grid item>
             <SupportMid
-              topTitle="HFTMaxima Virtual Account"
+              topTitle="Maxima Virtual Account"
               topSubtitle="All you need is a demo account to exercise your luck"
               middleTitle="4 articles in this section"
               middleSubtitle="Written by Pius Tumwebaze"
@@ -124,7 +124,7 @@ export default function Supports() {
         <Paper elevation={0} style={{margin:'0 auto'}}>
           <Grid item>
             <SupportMid
-              topTitle=" HFTMaxima Charts"
+              topTitle=" Maxima Charts"
               topSubtitle="Visualize trade changes on our charts"
               middleTitle="10 articles in this section"
               middleSubtitle="Written by Wycoff"
@@ -138,7 +138,7 @@ export default function Supports() {
         <Paper elevation={0} style={{margin:'0 auto'}}>
           <Grid item>
             <SupportMid
-              topTitle="HFTMaxima: World Wide"
+              topTitle="Maxima: World Wide"
               topSubtitle="Frequently asked questions for Users globally"
               middleTitle="20 articles in this section"
               middleSubtitle="Written by the API system"

@@ -36,9 +36,9 @@ export default function MainLow() {
         <Grid item className={classes.rowMargin} xs={12}>
           <div>
             <Typography variant="subtitle2">
-              HFTmaxima Trading Network is brought to you by HFTmaxima company.
-              HFTmaxima is a company that supports or is supported by the
-              HFTmaxima website application. The HFTmaxima is not a financial
+              Maxima Trading Network is brought to you by Maxima company.
+              Maxima is a software product that is supported by the
+              Maxima website application. Maxima is not a financial
               adviser but it helps traders get an efficent automated trading
               experience while maximazing profits.
             </Typography>

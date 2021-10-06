@@ -15,9 +15,9 @@ export default function Main() {
           <Grid item container className={classes.grid} xs={12}>
             <div className={classes.div}>
               <Pulse>
-                <Typography variant="h6" gutterBottom>HFTmaxima Trading Platforms</Typography>
+                <Typography variant="h6" gutterBottom>Maxima Trading Platforms</Typography>
                 <Typography variant="h3" gutterBottom>Have power over your Trading</Typography>
-                <Typography variant="body2" gutterBottom>Enrich your Trading skills with HFTMaxima Algorithm and accomplish your goals</Typography>
+                <Typography variant="body2" gutterBottom>Enrich your Trading skills with the Maxima Algorithm and accomplish your goals</Typography>
               </Pulse>
               </div>
             <div className={classes.div1}>

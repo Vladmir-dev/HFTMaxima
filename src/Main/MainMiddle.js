@@ -12,19 +12,18 @@ export default function MainMiddle() {
         <Grid item container direction="row" className={classes.rowMargin}>
           <div>
             <Typography variant="h4" gutterBottom>
-              Why Choose HFTMaxima ?
+              Why Choose Maxima?
             </Typography>
             <Typography variant="h6" gutterBottom>
               Our Website is in great niche to understand your challenges as a
               trader.
             </Typography>
             <Typography variant="subtitle1" component="p">
-              HFTmaxima Trading Platform, after a proficient study on similar
-              trading application systems, a better and advanced website
-              potraying all the insights to forex trade.Now you can have your
-              way with the trade either on mobile and website. Real time
-              feedbacks from charts and traders, no matter how you prefer to
-              trade, you always have access to the innovative features traders
+              Maxima Trading Platform, after a proficient study on similar
+              trading application systems, designed a better and advanced website
+              potraying all the insights to ForEx trade. Now you can have your
+              way with the trade either on mobile and website. Real-time
+              feedbacks from charts and traders with access to the innovative features traders
               ask for the most.
             </Typography>
           </div>
@@ -38,7 +37,7 @@ export default function MainMiddle() {
           container
         >
           <Typography variant="h4" align="center">
-            Start Trading Now
+            Start Your Journey Now
           </Typography>
           <Customized.Cards />
         </Grid>

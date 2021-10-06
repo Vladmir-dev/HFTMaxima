@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
       "& .MuiTab-root": {
         marginleft:'70%',
       },
-     
+
     }
   },
 }));
@@ -98,9 +98,9 @@ export default function TabContent() {
         <Middle
           image={image14}
           titleMiddle="We turn real feedback into real-time innovation"
-          middleSubtitle=" Developed specifically with feedback from traders like you, the
-            latest addition to the HFTmaxima site is a web-based software that
-            features a streamlined trading experiences. It's perfect for those
+          middleSubtitle=" Developed specifically with feedback from traders like you with the
+            latest addition to the Maxima site is a web-based software that
+            features a fascinating trading experience. It's perfect for those
             who want to trade equities and derivatives while accessing essential
             tools from their everyday browser."
         />
@@ -108,32 +108,28 @@ export default function TabContent() {
       <TabPanel value={value} index={1}>
         <Middle
           image={image12}
-          titleMiddle="Built by the trading obsessed"
-          middleSubtitle="The people who build thinkorswim aren't just experts,
-           they're avid and experienced traders, 
-           driven to make sure the platform remains 
-           one of the most innovative on the market."
+          titleMiddle="Built by the trading phanatics"
+          middleSubtitle="The Maxima platform was designed with the help of
+          avid and experienced traders driven to make sure the platform remains
+          one of the most intereactive on the market."
         />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Middle
           image={image11}
           titleMiddle="Join a community of passionate traders"
-          middleSubtitle="Build a more informed strategy 
-          and drum up new ideas with the help from a community of traders.  
-          Our in-platform chat rooms, social media discussion on @thinkorswim, 
-          in-person market drive events, along with live and on-demand webcasts
-           and workshops not only expand your knowledge — but your trading network, too.."
+          middleSubtitle="Build a more informed strategy with the help from our community of traders.
+          Our in-platform chat rooms, social media discussion on @Maxima,
+          and workshops not only expand your knowledge — but your trading network  and networth too.."
         />
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Middle
           image={image13}
           titleMiddle="Answers to your toughest trading questions"
-          middleSubtitle=" Our trade desk is filled with former floor traders who know the ins and outs of the 
-          market. They're availabe day and night to help you when you need it the most. Whether it's to get out
-          check trade, fine-tune a strategy or help your master out trading platforms, they can do it all. You can
-          get in touch at 569864233 or share your screen with our in-app chat."
+          middleSubtitle=" Our platform is filled with resources written by traders who know the ins and outs of the
+          market. And all content is availabe day and night to help you when you need it the most. You can
+          get in touch at 039780788691 or share your screen with our in-app chat."
           to="/support"
         />
       </TabPanel>

@@ -16,7 +16,7 @@ export default function Cards() {
           <Card
             text="Login"
             icon={<PersonIcon fontSize="large" />}
-            textTitle="HFTmaxima Website"
+            textTitle="Maxima Website"
             textSubtitle="Login and access your Essential trading tools in a web-based platform"
             to="/auth/login"
           />
@@ -28,7 +28,7 @@ export default function Cards() {
           <Card
             text="Download Now"
             icon={<PodcastsIcon fontSize="large" />}
-            textTitle="HFTmaxima Community"
+            textTitle="Maxima Community"
             textSubtitle="A community fully customized software-based trading platform"
           />
         </Slide>
