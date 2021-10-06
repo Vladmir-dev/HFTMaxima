@@ -10,6 +10,7 @@ import InputBase from "./InputBase";
 import Supports from "./Supports";
 import Popup from "./Popup";
 import Lists from "./List";
+import { PapLayoutDetail, PapLayoutPassword, PapLayout1 } from "./PapLayout";
 export const Customized = {
   Button,
   Input,
@@ -23,4 +24,7 @@ export const Customized = {
   Supports,
   Popup,
   Lists,
+  PapLayoutDetail,
+  PapLayoutPassword,
+  PapLayout1,
 };

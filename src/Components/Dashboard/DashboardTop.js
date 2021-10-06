@@ -22,9 +22,9 @@ import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { Customized } from "../Customized/Customized";
 import Notification from "./views/Notification";
-export default function DashboardTop({user,setUser}) {
+export default function DashboardTop({ user, setUser }) {
   const classes = useStyles();
-  const [notifications,setNotifications] = useState(0)
+  const [notifications, setNotifications] = useState(0);
   const dispatch = useDispatch();
   const [openPopup, setOpenPopup] = useState(false);
   const history = useHistory();
@@ -64,7 +64,10 @@ export default function DashboardTop({user,setUser}) {
           <Grid item className={classes.grid}>
             <div className={classes.divSpace} align="center">
               <IconButton onClick={handleOpenPopup}>
-                <Badge badgeContent={user ? notifications + 1 : null} color='secondary'>
+                <Badge
+                  badgeContent={user ? notifications + 1 : null}
+                  color="secondary"
+                >
                   <NotificationsNoneIcon />
                 </Badge>
               </IconButton>
@@ -111,21 +114,32 @@ export default function DashboardTop({user,setUser}) {
                   className={classes.sx}
                   elevation={0}
                 >
-                  <MenuItem>{user.results.email}</MenuItem>
-                  <MenuItem component={Link} to='/dashboard/profile'>
-                    <Avatar /> Profile
+                  <MenuItem>
+                    <Typography
+                      align="center"
+                      variant="h6"
+                      styles={{ fontWeight: "bold" }}
+                    >
+                      {user.results.email}
+                    </Typography>
                   </MenuItem>
-                  <MenuItem component={Link} to='/dashboard/accounts'>
-                    <Avatar /> My account
+                  <MenuItem component={Link} to="/dashboard/profile">
+                    <Avatar src={user.results.imageUrl} /> Profile
+                  </MenuItem>
+                  <MenuItem component={Link} to="/dashboard/accounts">
+                    <Avatar src={user.results.imageUrl} /> My account
                   </MenuItem>
                   <Divider />
                   <MenuItem>
-                    <ListItemIcon>
-                      <PersonAdd fontSize="small" component={Link} to='/dashboard/accounts'/>
-                    </ListItemIcon>
-                    Add another account
+                    <Typography
+                      align="center"
+                      variant="subtitle2"
+                      styles={{ fontWeight: "bold" }}
+                    >
+                      Manage your account
+                    </Typography>
                   </MenuItem>
-                  <MenuItem component={Link} to='/dashboard/settings'>
+                  <MenuItem component={Link} to="/dashboard/settings">
                     <ListItemIcon>
                       <Settings fontSize="small" />
                     </ListItemIcon>
@@ -139,8 +153,11 @@ export default function DashboardTop({user,setUser}) {
                   </MenuItem>
                 </Menu>
               </div>
-              <Customized.Popup openPopup={openPopup} setOpenPopup={setOpenPopup}>
-                <Notification user={user.results.name}/>
+              <Customized.Popup
+                openPopup={openPopup}
+                setOpenPopup={setOpenPopup}
+              >
+                <Notification user={user.results.name} />
               </Customized.Popup>
             </div>
           </Grid>

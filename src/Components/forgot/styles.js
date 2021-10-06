@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import image2 from "../../images/image2.jpg";
 
 export default makeStyles((theme) => ({
   form: {
@@ -34,7 +35,7 @@ export default makeStyles((theme) => ({
     marginBottom: theme.spacing(3),
     marginTop: theme.spacing(4),
     "& .MuiTypography-h5": {
-      color: "#000",
+      color: "#fff",
     },
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(13),
@@ -50,6 +51,8 @@ export default makeStyles((theme) => ({
     marginLeft: "25%",
     "& .MuiButton-root": {
       marginRight: "12%",
+      background:'#008900',
+      color:'#fff'
     },
     [theme.breakpoints.down("xs")]: {
       marginLeft: "15%",
@@ -68,27 +71,22 @@ export default makeStyles((theme) => ({
     marginRight: "15%",
   },
   container: {
-    background: "#fff",
+    background: `url(${image2}) 50% 50%`,
     width: "100%",
     height: "100%",
     position: "absolute",
     top: 0,
     left: 0,
-    opacity: ".6",
+    objectFit: "contain",
+    backgroundRepeat: "no-repeat",
   },
   rightXs: {
     "& .MuiTypography-h4": {
       fontWeight: "450",
       color: "#008900",
     },
-    "& .MuiTypography-caption": {
-      fontWeight: "450",
-      color: "#d9d9d9",
-    },
-    "& .MuiTypography-subtitle2": {
-      cursor: "pointer",
-      color: "#008900",
-      marginRight: "5%",
+    "& .MuiTypography-body2": {
+      color: "#fff",
     },
     [theme.breakpoints.down("xs")]: {
       color: "#000",
@@ -103,12 +101,13 @@ export default makeStyles((theme) => ({
       position: "relative",
     },
   },
-  bott:{
-    bottom:'-20%',
-    '& .MuiTypography-subtitle1':{
-      bottom:'32%',
-      position:'absolute',
-      textAlign:'auto'
-    }
-  }
+  bott: {
+    bottom: "-20%",
+    "& .MuiTypography-subtitle1": {
+      bottom: "32%",
+      position: "absolute",
+      textAlign: "auto",
+      color:'#008900'
+    },
+  },
 }));
