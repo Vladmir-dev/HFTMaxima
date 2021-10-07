@@ -87,7 +87,7 @@ export default function TabContent() {
       <Tabs
         value={value}
         onChange={handleChange}
-        aria-label="simple tabs example"
+        aria-label="Maixima tabs"
       >
         <Tab label="Constant Innovation" {...a11yProps(0)} />
         <Tab label="Trader-built" {...a11yProps(1)} />

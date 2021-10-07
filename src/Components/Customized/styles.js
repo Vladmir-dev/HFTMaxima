@@ -24,25 +24,23 @@ export default makeStyles((theme) => ({
         color: "#008900",
       },
     },
-    [theme.breakpoints.down("xs")]:{
-      '& .MuiListItemButton-root':{
-        alignItems:'center',
-        width:'100%',
+    [theme.breakpoints.down("xs")]: {
+      "& .MuiListItemButton-root": {
+        alignItems: "center",
+        width: "100%",
       },
-      '& .MuiListItemText-root':{
-        alignItems:'center',
-        marginLeft:'5%',
+      "& .MuiListItemText-root": {
+        alignItems: "center",
+        marginLeft: "5%",
       },
-      
-    }
-
+    },
   },
   nested: {
     paddingLeft: theme.spacing(4),
   },
   cardRoot: {
     maxWidth: 250,
-    maxHeight:230,
+    maxHeight: 230,
     borderRadius: "12px",
     backgroundColor: theme.palette.background.default,
     "& .MuiTypography-root": {
@@ -76,7 +74,7 @@ export default makeStyles((theme) => ({
       },
     },
     margin: "0px auto",
-    marginBottom:'50%',
+    marginBottom: "50%",
   },
   gridC1: {
     display: "flex",
@@ -85,16 +83,16 @@ export default makeStyles((theme) => ({
       color: "#008900",
       margin: "4% 0% 0% 43%",
     },
-    marginLeft:'12%',
+    marginLeft: "12%",
   },
-  xs:{
-    [theme.breakpoints.down("xs")]:{
+  xs: {
+    [theme.breakpoints.down("xs")]: {
       display: "flex",
-      flexDirection:'column',
-      marginBottom:theme.spacing(6)
+      flexDirection: "column",
+      marginBottom: theme.spacing(6),
     },
   },
- 
+
   menu: {
     background: theme.palette.background.paper,
     maxWidth: "50%",
@@ -171,4 +169,19 @@ export default makeStyles((theme) => ({
       },
     },
   },
+  // Popup styles
+  dialog: {
+    "& .MuiDialog-paper": {
+      width: "26%",
+      padding: theme.spacing(3),
+      margin: "30px auto",
+    },
+    "& .MuiDialogContent-root": {
+      marginRight: theme.spacing(-2),
+      marginLeft: theme.spacing(-2.5),
+    },
+  },
+  button:{
+    marginLeft:'83%',
+},
 }));

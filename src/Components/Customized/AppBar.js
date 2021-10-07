@@ -1,6 +1,6 @@
 import React from "react";
 import LaunchIcon from "@material-ui/icons/Launch";
-import logo2 from "../../images/logo2.png";
+import logo from "../../images/price.png";
 import {
   AppBar as MuiAppBar,
   Container,
@@ -56,16 +56,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(1),
       flex: 1,
     },
-    [theme.breakpoints.down("xs")]:{
-      display:'flex',
-      flexDirection:'column',
+    [theme.breakpoints.down("xs")]: {
+      display: "flex",
+      flexDirection: "column",
       "& .MuiPaper-root": {
         width: "100%",
       },
       "& .MuiInputBase-input": {
         width: "100%",
       },
-    }
+    },
   },
   flex: {
     display: "flex",
@@ -81,20 +81,45 @@ const useStyles = makeStyles((theme) => ({
       width: "50rem",
     },
   },
+  logo: {
+    height: 40,
+    position: "relative",
+    marginLeft: theme.spacing(3),
+  },
+  divLogo: {
+    paddingLeft: theme.spacing(2),
+    color: "#fff",
+  },
+  appbar:{
+    background:'#008900'
+  }
 }));
 export default function AppBar() {
   const classes = useStyles();
   return (
-    <MuiAppBar position="static">
+    <MuiAppBar position="fixed" className={classes.appbar}>
       <Container>
         <Toolbar>
           <Grid container className={classes.container}>
             <Grid item container direction="row" alignItems="center">
               <Grid item align="center">
-                <div>
-                  <Typography component={Link} to="/  ">
-                    <img src={logo2} alt="HFTMaxima logo" />
-                  </Typography>
+                <div className={classes.divLogoMenuFlex}>
+                  <div className={classes.divLogo}>
+                    <Typography
+                      component={Link}
+                      to="/"
+                      variant="h5"
+                      align="center"
+                      style={{ color: "#fff" }}
+                    >
+                      <img
+                        src={logo}
+                        alt="Maxima logo"
+                        className={classes.logo}
+                      />
+                      Maxima
+                    </Typography>
+                  </div>
                 </div>
               </Grid>
               <Grid item sm></Grid>

@@ -6,6 +6,7 @@ import logo from "../../images/price.png";
 import { Link } from "react-router-dom";
 import { Form, UseForm } from "../Customized/UseForm";
 import { initialState } from "../../state";
+
 export default function ForgotForm() {
   const classes = useStyles();
   const { values, handleInputChange, setValues, handleSubmit } =
@@ -15,7 +16,7 @@ export default function ForgotForm() {
       <Grid container spacing={6} justifyContent="center">
         <Grid item xs={12} sm={6} className={classes.rightImage} align="center">
           <div className={classes.rightdivLogo}>
-            <Typography component={Link} to="/" variant="h5" align="center">
+            <Typography component={Link} to="/" variant="h5" align="center" >
               <img src={logo} alt="Maxima logo" className={classes.logo} />
               Maxima
             </Typography>

@@ -10,6 +10,16 @@ import InputBase from "./InputBase";
 import Supports from "./Supports";
 import Popup from "./Popup";
 import Lists from "./List";
+import Select from "./Select";
+import {
+  PapLayoutDetail,
+  PapLayoutPassword,
+  PapLayout1,
+  PapLayoutContact,
+  PapLayoutPasswordCaption,
+  PapLayoutPayments,
+  PapLayoutPaymentsContact,
+} from "./PapLayout";
 export const Customized = {
   Button,
   Input,
@@ -23,4 +33,12 @@ export const Customized = {
   Supports,
   Popup,
   Lists,
+  PapLayoutDetail,
+  PapLayoutPassword,
+  PapLayoutContact,
+  PapLayoutPasswordCaption,
+  PapLayout1,
+  PapLayoutPayments,
+  PapLayoutPaymentsContact,
+  Select,
 };

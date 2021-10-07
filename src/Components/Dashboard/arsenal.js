@@ -36,9 +36,18 @@ export const items = [
 
 ];
 
-export const menuitems = [
+export const steps = [
     {
-        id:'profile',
-        title:'Profile',
+      label: 'Proifle',
+      description: "You can now complete your profile and enjoy nice features from Maxima",
     },
-]
+    {
+      label: 'Account',
+      description:
+        'An ad group contains one or more ads which target a shared set of keywords.',
+    },
+    {
+      label: 'Settings',
+      description: "Make changes to your account whenever you want",
+    },
+  ];

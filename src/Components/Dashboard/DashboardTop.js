@@ -14,19 +14,19 @@ import React, { useState } from "react";
 import useStyles from "./styles";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { ListItemIcon, MenuItem } from "@mui/material";
-import PersonAdd from "@material-ui/icons/PersonAdd";
 import Settings from "@material-ui/icons/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { LOGOUT } from "../../Actions/types";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-export default function DashboardTop() {
+import { Link, useHistory } from "react-router-dom";
+import { Customized } from "../Customized/Customized";
+import Notification from "./views/Notification";
+export default function DashboardTop({ user, setUser }) {
   const classes = useStyles();
+  const [notifications, setNotifications] = useState(0);
   const dispatch = useDispatch();
+  const [openPopup, setOpenPopup] = useState(false);
   const history = useHistory();
-  const [user, setUser] = useState(
-    JSON.parse(localStorage.getItem("userProfile"))
-  );
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -39,6 +39,9 @@ export default function DashboardTop() {
     dispatch({ type: LOGOUT });
     history.push("/");
     setUser(null);
+  };
+  const handleOpenPopup = () => {
+    setOpenPopup(true);
   };
   return (
     <AppBar
@@ -59,8 +62,11 @@ export default function DashboardTop() {
           <div className={classes.flexG} />
           <Grid item className={classes.grid}>
             <div className={classes.divSpace} align="center">
-              <IconButton>
-                <Badge>
+              <IconButton onClick={handleOpenPopup}>
+                <Badge
+                  badgeContent={user ? notifications + 1 : null}
+                  color="secondary"
+                >
                   <NotificationsNoneIcon />
                 </Badge>
               </IconButton>
@@ -107,21 +113,32 @@ export default function DashboardTop() {
                   className={classes.sx}
                   elevation={0}
                 >
-                  <MenuItem>{user.results.email}</MenuItem>
                   <MenuItem>
-                    <Avatar /> Profile
+                    <Typography
+                      align="center"
+                      variant="h6"
+                      styles={{ fontWeight: "bold" }}
+                    >
+                      {user.results.email}
+                    </Typography>
                   </MenuItem>
-                  <MenuItem>
-                    <Avatar /> My account
+                  <MenuItem component={Link} to="/dashboard/accounts">
+                    <Avatar src={user.results.imageUrl} />
+                    <Typography align="center" variant="subtitle2" style={{marginLeft:'3%'}}>
+                      My account
+                    </Typography>
                   </MenuItem>
                   <Divider />
                   <MenuItem>
-                    <ListItemIcon>
-                      <PersonAdd fontSize="small" />
-                    </ListItemIcon>
-                    Add another account
+                    <Typography
+                      align="center"
+                      variant="subtitle2"
+                      styles={{ fontWeight: "bold" }}
+                    >
+                      Manage your account
+                    </Typography>
                   </MenuItem>
-                  <MenuItem>
+                  <MenuItem component={Link} to="/dashboard/settings">
                     <ListItemIcon>
                       <Settings fontSize="small" />
                     </ListItemIcon>
@@ -135,6 +152,12 @@ export default function DashboardTop() {
                   </MenuItem>
                 </Menu>
               </div>
+              <Customized.Popup
+                openPopup={openPopup}
+                setOpenPopup={setOpenPopup}
+              >
+                <Notification user={user.results.name} />
+              </Customized.Popup>
             </div>
           </Grid>
         </Grid>
