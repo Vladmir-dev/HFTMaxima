@@ -14,7 +14,6 @@ import React, { useState } from "react";
 import useStyles from "./styles";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { ListItemIcon, MenuItem } from "@mui/material";
-import PersonAdd from "@material-ui/icons/PersonAdd";
 import Settings from "@material-ui/icons/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { LOGOUT } from "../../Actions/types";
@@ -123,11 +122,11 @@ export default function DashboardTop({ user, setUser }) {
                       {user.results.email}
                     </Typography>
                   </MenuItem>
-                  <MenuItem component={Link} to="/dashboard/profile">
-                    <Avatar src={user.results.imageUrl} /> Profile
-                  </MenuItem>
                   <MenuItem component={Link} to="/dashboard/accounts">
-                    <Avatar src={user.results.imageUrl} /> My account
+                    <Avatar src={user.results.imageUrl} />
+                    <Typography align="center" variant="subtitle2" style={{marginLeft:'3%'}}>
+                      My account
+                    </Typography>
                   </MenuItem>
                   <Divider />
                   <MenuItem>

@@ -10,18 +10,18 @@ export default makeStyles((theme) => ({
   },
   //profile
   profileContainer: {
-    margin: theme.spacing(12),
     "& .MuiButton-root": {
       textDecoration: "capitilize",
     },
     "& .MuiPaper-root": {
       width: "100%",
-      border: "1px solid silver",
     },
   },
   profileTitle: {
     marginBottom: theme.spacing(4),
-    marginLeft: "4%",
+    marginLeft: "5%",
+    fontWeight: "200",
+    fontSize:10,
   },
   profileLeft: {
     marginRight: "0",
@@ -33,7 +33,7 @@ export default makeStyles((theme) => ({
   leftUp: {
     marginBottom: theme.spacing(7),
     "& .MuiButton-root": {
-      margin: "8% 8% 8% 5.5%",
+      margin: "8% 8% 8% 4.5%",
       width: "90%",
       background: "#008900",
       color: "#fff",
@@ -43,8 +43,7 @@ export default makeStyles((theme) => ({
     },
   },
   leftDownFlex: {
-    display: "flex",
-    justifyContent: "space-between",
+    display: "block",
     "& .MuiButton-root": {
       borderRadius: "20px",
       background: "#ff1e00",
@@ -52,6 +51,7 @@ export default makeStyles((theme) => ({
       padding: "-2% 1rem -2% 1rem",
       fontWeight: " 600",
       position: "relative",
+      marginTop: "4%",
     },
     "& .MuiPaper-root": {
       width: "100%",
@@ -68,15 +68,38 @@ export default makeStyles((theme) => ({
   },
   leftDownTypo: {
     margin: theme.spacing(2),
-    "& .MuiCard-root": {
-      marginBottom: theme.spacing(4),
-    },
     "& .MuiTypography-body2": {
-      margin: theme.spacing(4),
+      margin: "4% 0% 0% 1%",
     },
     "& .MuiSvgIcon-root": {
       color: "#f2d53c",
       marginRight: "2%",
+    },
+  },
+  //security styles
+  securityPaper: {
+    marginBottom: theme.spacing(7),
+    "& .MuiButton-root": {
+      textTransform: "capitalize",
+      marginTop: theme.spacing(4),
+      marginLeft: "3%",
+      "&:hover": {
+        background: "#008900",
+        color: "#fff",
+      },
+    },
+  },
+  // payments styles
+  paymentsPaper: {
+    marginBottom: theme.spacing(7),
+    "& .MuiButton-root": {
+      textTransform: "capitalize",
+      marginTop: theme.spacing(4),
+      marginLeft: "3%",
+      "&:hover": {
+        background: "#008900",
+        color: "#fff",
+      },
     },
   },
 }));

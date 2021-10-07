@@ -156,9 +156,6 @@ export default function Header() {
                   >
                     <Customized.MenuPaper />
                   </Popover>
-                  <Typography component={Link} to="/" variant="subtitle2">
-                    FeaturedIn
-                  </Typography>
                   <Typography
                     component={Link}
                     to="/support"
