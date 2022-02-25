@@ -5,12 +5,11 @@ import { Customized } from "../Customized/Customized";
 import logo from "../../images/price.png";
 import { Link } from "react-router-dom";
 import { Form, UseForm } from "../Customized/UseForm";
-import { initialState } from "../../state";
 
 export default function ForgotForm() {
   const classes = useStyles();
-  const { values, handleInputChange, setValues, handleSubmit } =
-    UseForm(initialState);
+  const { values, handleInputChange,handleSubmit } =
+    UseForm();
   return (
     <main className={classes.container}>
       <Grid container spacing={6} justifyContent="center">

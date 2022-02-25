@@ -5,13 +5,14 @@ import { Route, Switch } from "react-router-dom";
 import Home from "../Components/Home/Home";
 import NewsPage from "../Components/News/NewsPage";
 import Support from "../Components/Support/Support";
-import Login from "../Components/Auth/Login";
-import Register from "../Components/Auth/Register";
+import Login from "../views/Auth/Login";
+import Register from "../views/Auth/Register";
 import Forgot from "../Components/forgot/Forgot";
 import Dashboard from "../Components/Dashboard/Home";
 import Profile from "../Components/Dashboard/views/Profile";
 import Accounts from "../Components/Dashboard/views/Accounts";
 import Settings from "../Components/Dashboard/views/Settings";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>

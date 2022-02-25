@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { Customized } from "../../Components/Customized/Customized";
-import { Form, UseForm } from "../Customized/UseForm";
-import { initialState } from "../../state";
+import { Form, UseForm } from "../../Components/Customized/UseForm";
 import useStyles from "./styles";
 import GoogleLogin from "react-google-login";
 import FacebookLogin from "react-facebook-login";
@@ -12,6 +11,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { GOOGLE_LOGIN } from "../../Actions/types";
 import logo from "../../images/price.png";
+import { loginUser } from "../../Actions/authActions";
 export default function Login() {
   const dispatch = useDispatch();
   const [login, setLogin] = useState(false);
@@ -19,9 +19,11 @@ export default function Login() {
   const [picture, setPicture] = useState("");
   const history = useHistory();
   const classes = useStyles();
-  const { values, handleInputChange, setValues } = UseForm(initialState);
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const { loginValues, handleInputChange, handleFormClear } = UseForm();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(loginUser(loginValues));
+    handleFormClear();
   };
   const googleSuccess = (res) => {
     const results = res?.profileObj;
@@ -134,16 +136,16 @@ export default function Login() {
           <div className={classes.divForm}>
             <Form onSubmit={handleSubmit} className={classes.form}>
               <Customized.Input
-                label="Email"
-                value={values.email}
-                name="email"
-                type="email"
+                label="Username"
+                value={loginValues.username}
+                name="username"
+                // type="text"
                 onChange={handleInputChange}
                 variant="outlined"
               />
               <Customized.Input
                 label="Password"
-                value={values.password}
+                value={loginValues.password}
                 name="password"
                 type="password"
                 onChange={handleInputChange}

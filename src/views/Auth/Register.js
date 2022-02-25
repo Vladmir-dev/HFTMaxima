@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Container, Grid, Typography } from "@material-ui/core";
 import { Customized } from "../../Components/Customized/Customized";
-import { Form, UseForm } from "../Customized/UseForm";
-import { initialState } from "../../state";
+import { Form, UseForm } from "../../Components/Customized/UseForm";
 import useStyles from "./styles";
 import GoogleLogin from "react-google-login";
 import { Image } from "../../images/Img";
@@ -12,6 +11,8 @@ import { GOOGLE_LOGIN } from "../../Actions/types";
 import { useDispatch } from "react-redux";
 import FacebookLogin from "react-facebook-login";
 import logo from "../../images/price.png";
+import { registerUser } from "../../Actions/authActions";
+import { useSelector } from "react-redux";
 export default function Register() {
   const [login, setLogin] = useState(false);
   const [data, setData] = useState({});
@@ -19,9 +20,13 @@ export default function Register() {
   const classes = useStyles();
   const history = useHistory();
   const dispatch = useDispatch();
-  const { values, handleInputChange, setValues } = UseForm(initialState);
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const props = useSelector((state) => state.Auth);
+  console.log(props);
+  const { registerValues, handleInputChange, handleFormClear } = UseForm();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(registerUser(registerValues));
+    handleFormClear();
   };
   const googleSuccess = (res) => {
     const results = res?.profileObj;
@@ -64,23 +69,23 @@ export default function Register() {
           </div>
           <div className={classes.rightdivForm}>
             <Form onSubmit={handleSubmit} className={classes.form}>
-              <Customized.Input
+              {/* <Customized.Input
                 label="First Name"
-                value={values.firstName}
+                value={registerValues.firstName}
                 name="firstName"
                 onChange={handleInputChange}
                 variant="outlined"
-              />
+              /> */}
               <Customized.Input
-                label="Last Name"
-                value={values.lastName}
-                name="lastName"
+                label="Username"
+                value={registerValues.username}
+                name="username"
                 onChange={handleInputChange}
                 variant="outlined"
               />
               <Customized.Input
                 label="Email"
-                value={values.email}
+                value={registerValues.email}
                 name="email"
                 type="email"
                 onChange={handleInputChange}
@@ -88,7 +93,7 @@ export default function Register() {
               />
               <Customized.Input
                 label="Password"
-                value={values.password}
+                value={registerValues.password}
                 name="password"
                 type="password"
                 onChange={handleInputChange}
