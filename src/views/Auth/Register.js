@@ -13,6 +13,8 @@ import FacebookLogin from "react-facebook-login";
 import logo from "../../images/price.png";
 import { registerUser } from "../../Actions/authActions";
 import { useSelector } from "react-redux";
+import Fade from 'react-reveal/Fade';
+
 export default function Register() {
   const [login, setLogin] = useState(false);
   const [data, setData] = useState({});
@@ -99,6 +101,25 @@ export default function Register() {
                 onChange={handleInputChange}
                 variant="outlined"
               />
+               <Fade bottom collapse when={!!(registerValues.password.length < 7 && registerValues.password.length > 0)}>
+          <div style={{ display: 'block',color:"red" }}
+          >
+            Password is Weak
+          </div>
+        </Fade>
+        <Fade bottom collapse when={!!(registerValues.password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/))}>
+        
+          <div style={{ display: 'block',color:"orange" }}
+          >
+            Password is Strong
+          </div>
+        </Fade>
+        <Fade bottom collapse when={!!(registerValues.password.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/))}>
+          <div style={{ display: 'block',color:"green" }}
+          >
+            Password is Very Strong
+          </div>          
+        </Fade>
               <Customized.Button text="Sign up" type="submit" />
             </Form>
           </div>
